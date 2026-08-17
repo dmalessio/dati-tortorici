@@ -22,6 +22,10 @@ cache_html/
 ehthumbs.db
 Thumbs.db
 
+# Script di test, scratch ed elaborazione locale
+scripts/
+*.py
+
 # File sorgenti e documenti grezzi / binari
 *.pdf
 *.xlsx
