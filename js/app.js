@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupStickyYearBar();
   setupNavigationTabs();
   setupPyramidControls();
+  setupHistoryControls();
   setupDataExplorer();
 
   // 1. Sticky Year Scrubber Controller (Sempre attivo durante lo scorrimento)
@@ -206,6 +207,19 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         const mode = btn.getAttribute('data-pyramid-mode');
         window.AppCharts.setPyramidMode(mode);
+      });
+    });
+  }
+
+  // 3b. Controlli vista Storico / Censimenti e Andamento Annuale
+  function setupHistoryControls() {
+    const buttons = document.querySelectorAll('[data-history-mode]');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const mode = btn.getAttribute('data-history-mode');
+        window.AppCharts.setHistoryMode(mode);
       });
     });
   }

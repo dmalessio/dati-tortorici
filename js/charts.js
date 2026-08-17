@@ -248,11 +248,34 @@ window.AppCharts = (function() {
     container.innerHTML = html;
   }
 
-  // 4. Grafico Storico Censimenti (1861-2021) con etichette su tutti i punti
+  let historyMode = 'censuses'; // 'censuses' | 'annual'
+
+  function setHistoryMode(mode) {
+    historyMode = mode;
+    renderHistoryChart();
+    highlightHistoryYear(currentYear);
+  }
+
+  // 4. Grafico Storico: Censimenti (1861-2021) oppure Andamento Annuale (2001-2024)
   function renderHistoryChart() {
     const container = document.getElementById('history-chart-svg');
     if (!container) return;
 
+    const cardTitle = document.getElementById('history-card-title');
+    const cardSubtitle = document.getElementById('history-card-subtitle');
+
+    if (historyMode === 'censuses') {
+      if (cardTitle) cardTitle.textContent = 'Popolazione legale ai censimenti generali ISTAT';
+      if (cardSubtitle) cardSubtitle.textContent = '160 anni di rilevazioni ufficiali: dal 1861 al censimento permanente 2021';
+      renderCensusesView(container);
+    } else {
+      if (cardTitle) cardTitle.textContent = 'Andamento annuale della popolazione residente (2001–2024)';
+      if (cardSubtitle) cardSubtitle.textContent = 'Rilevamento ISTAT al 31 dicembre con bilancio delle famiglie';
+      renderAnnualPopulationView(container);
+    }
+  }
+
+  function renderCensusesView(container) {
     const censimenti = data.censimenti_storici;
     const width = 800;
     const height = 310;
@@ -305,18 +328,106 @@ window.AppCharts = (function() {
            onmouseenter="window.AppCharts.showTooltip(event, 'Censimento ${c.anno}', 'Popolazione legale: <strong>${formatInt(c.popolazione_residente)}</strong> ab.<br>${c.note_storiche}')"
            onmouseleave="window.AppCharts.hideTooltip()">
           
-          <!-- Cerchio marcatore -->
           <circle cx="${x}" cy="${y}" r="${isPeak ? 6 : 4}" fill="${isPeak ? '#dc2626' : '#1e40af'}" stroke="#ffffff" stroke-width="2"/>
           
-          <!-- Etichetta valore popolazione per ogni censimento -->
           <text x="${x}" y="${y + yOffset}" font-size="${isPeak ? 10.5 : 8.8}" font-weight="${isPeak ? '800' : '700'}" 
                 fill="${isPeak ? '#dc2626' : '#0f172a'}" text-anchor="middle" font-family="var(--font-mono)"
                 style="paint-order: stroke fill; stroke: #ffffff; stroke-width: 3.5px; stroke-linejoin: round;">
             ${isPeak ? 'Picco: ' : ''}${formatInt(c.popolazione_residente)}
           </text>
 
-          <!-- Etichetta anno asse X -->
           <text x="${x}" y="${height - padding.bottom + 16}" font-size="10" fill="#64748b" text-anchor="middle" transform="rotate(-45, ${x}, ${height - padding.bottom + 16})">${c.anno}</text>
+        </g>
+      `;
+    });
+
+    svg += `</svg>`;
+    container.innerHTML = svg;
+  }
+
+  function renderAnnualPopulationView(container) {
+    const list = data.popolazione_andamento.map(p => {
+      const yr = parseInt(String(p.anno_riferimento).replace(/\D/g, ''));
+      return {
+        anno: yr,
+        popolazione: p.popolazione_residente,
+        variazione_assoluta: p.variazione_assoluta,
+        variazione_percentuale: p.variazione_percentuale,
+        famiglie: p.numero_famiglie,
+        componenti_famiglia: p.media_componenti_famiglia
+      };
+    }).sort((a, b) => a.anno - b.anno);
+
+    const width = 800;
+    const height = 310;
+    const padding = { top: 40, right: 30, bottom: 45, left: 55 };
+
+    const minYear = 2001;
+    const maxYear = 2024;
+    const maxPop = 8000;
+    const minPop = 5000;
+
+    const xScale = (yr) => padding.left + ((yr - minYear) / (maxYear - minYear)) * (width - padding.left - padding.right);
+    const yScale = (val) => height - padding.bottom - ((val - minPop) / (maxPop - minPop)) * (height - padding.top - padding.bottom);
+
+    let pathD = '';
+    list.forEach((p, idx) => {
+      const x = xScale(p.anno);
+      const y = yScale(p.popolazione);
+      pathD += (idx === 0 ? `M ${x},${y}` : ` L ${x},${y}`);
+    });
+
+    let svg = `<svg viewBox="0 0 ${width} ${height}" class="w-full h-auto" style="overflow: visible;">
+      <!-- Griglia orizzontale di riferimento -->
+      <line x1="${padding.left}" y1="${yScale(5500)}" x2="${width - padding.right}" y2="${yScale(5500)}" stroke="#e2e8f0" stroke-dasharray="3"/>
+      <text x="${padding.left - 8}" y="${yScale(5500) + 4}" font-size="10" fill="#64748b" text-anchor="end">5.500</text>
+
+      <line x1="${padding.left}" y1="${yScale(6000)}" x2="${width - padding.right}" y2="${yScale(6000)}" stroke="#e2e8f0" stroke-dasharray="3"/>
+      <text x="${padding.left - 8}" y="${yScale(6000) + 4}" font-size="10" fill="#64748b" text-anchor="end">6.000</text>
+
+      <line x1="${padding.left}" y1="${yScale(6500)}" x2="${width - padding.right}" y2="${yScale(6500)}" stroke="#e2e8f0" stroke-dasharray="3"/>
+      <text x="${padding.left - 8}" y="${yScale(6500) + 4}" font-size="10" fill="#64748b" text-anchor="end">6.500</text>
+
+      <line x1="${padding.left}" y1="${yScale(7000)}" x2="${width - padding.right}" y2="${yScale(7000)}" stroke="#e2e8f0" stroke-dasharray="3"/>
+      <text x="${padding.left - 8}" y="${yScale(7000) + 4}" font-size="10" fill="#64748b" text-anchor="end">7.000</text>
+
+      <line x1="${padding.left}" y1="${yScale(7500)}" x2="${width - padding.right}" y2="${yScale(7500)}" stroke="#e2e8f0" stroke-dasharray="3"/>
+      <text x="${padding.left - 8}" y="${yScale(7500) + 4}" font-size="10" fill="#64748b" text-anchor="end">7.500</text>
+
+      <defs>
+        <linearGradient id="annualPopGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0284c7" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="#0284c7" stop-opacity="0.0"/>
+        </linearGradient>
+      </defs>
+      <path d="${pathD} L ${xScale(2024)},${yScale(minPop)} L ${xScale(2001)},${yScale(minPop)} Z" fill="url(#annualPopGrad)"/>
+      <path d="${pathD}" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+    `;
+
+    list.forEach((p, idx) => {
+      const x = xScale(p.anno);
+      const y = yScale(p.popolazione);
+      const yOffset = (idx % 2 === 0) ? -10 : -22;
+      const isKey = p.anno === 2001 || p.anno === 2024 || p.anno === 2011 || p.anno === currentYear;
+
+      const varText = p.variazione_assoluta !== null ? `${p.variazione_assoluta > 0 ? '+' : ''}${p.variazione_assoluta} ab. (${p.variazione_percentuale}%)` : 'Anno base di partenza';
+      const famText = p.famiglie ? `<br>Famiglie: <strong>${formatInt(p.famiglie)}</strong> (media: ${formatFloat(p.componenti_famiglia)} comp.)` : '';
+
+      svg += `
+        <g class="history-point-group" id="point-year-${p.anno}" style="cursor: pointer;"
+           onmouseenter="window.AppCharts.showTooltip(event, 'Popolazione al 31 dic ${p.anno}', 'Residenti: <strong>${formatInt(p.popolazione)}</strong> ab.<br>Variazione annua: <strong>${varText}</strong>${famText}')"
+           onmouseleave="window.AppCharts.hideTooltip()">
+          
+          <circle cx="${x}" cy="${y}" r="${p.anno === currentYear ? 6 : 3.5}" fill="${p.anno === currentYear ? '#d97706' : '#0284c7'}" stroke="#ffffff" stroke-width="2"/>
+          
+          <!-- Etichette sfalsate per evitare sovrapposizioni -->
+          <text x="${x}" y="${y + yOffset}" font-size="${isKey ? 8.8 : 7.8}" font-weight="${isKey ? '800' : '600'}" 
+                fill="${p.anno === currentYear ? '#d97706' : '#0f172a'}" text-anchor="middle" font-family="var(--font-mono)"
+                style="paint-order: stroke fill; stroke: #ffffff; stroke-width: 3px; stroke-linejoin: round;">
+            ${formatInt(p.popolazione)}
+          </text>
+
+          <text x="${x}" y="${height - padding.bottom + 16}" font-size="9.5" fill="#64748b" text-anchor="middle" transform="rotate(-45, ${x}, ${height - padding.bottom + 16})">${p.anno}</text>
         </g>
       `;
     });
@@ -328,8 +439,8 @@ window.AppCharts = (function() {
   function highlightHistoryYear(year) {
     document.querySelectorAll('.history-point-group circle').forEach(c => {
       if (c.getAttribute('fill') !== '#dc2626') {
-        c.setAttribute('fill', '#1e40af');
-        c.setAttribute('r', '4');
+        c.setAttribute('fill', historyMode === 'censuses' ? '#1e40af' : '#0284c7');
+        c.setAttribute('r', '3.5');
       }
     });
     const target = document.getElementById(`point-year-${year}`);
@@ -337,7 +448,7 @@ window.AppCharts = (function() {
       const circle = target.querySelector('circle');
       if (circle) {
         circle.setAttribute('fill', '#d97706');
-        circle.setAttribute('r', '7');
+        circle.setAttribute('r', '6.5');
       }
     }
   }
@@ -550,6 +661,7 @@ window.AppCharts = (function() {
     init,
     setYear,
     setPyramidMode,
+    setHistoryMode,
     showTooltip,
     hideTooltip
   };

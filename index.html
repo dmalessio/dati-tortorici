@@ -370,20 +370,24 @@
       <div id="country-cards-wrapper" style="margin-top: 0.75rem;"></div>
     </section>
 
-    <!-- SEZIONE 6: Censimenti Storici (1861-2021) -->
+    <!-- SEZIONE 6: Censimenti Storici e Andamento Annuale -->
     <section id="sezione-censimenti" class="section-block">
       <div class="section-header">
         <div class="section-header-text">
-          <h2>Cronologia secolare dei censimenti generali (1861–2021)</h2>
-          <p>160 anni di rilevazioni ufficiali: dal primo censimento post-unitario al massimo storico del 1921 fino al censimento permanente.</p>
+          <h2>Serie storica della popolazione: censimenti e andamento annuale</h2>
+          <p>Evoluzione demografica secolare (1861–2021) e dinamica annuale recente (2001–2024).</p>
+        </div>
+        <div class="chart-controls">
+          <button class="btn-toggle active" data-history-mode="censuses">Censimenti storici (1861–2021)</button>
+          <button class="btn-toggle" data-history-mode="annual">Andamento annuale (2001–2024)</button>
         </div>
       </div>
 
       <div class="chart-card">
         <div class="chart-card-header">
           <div class="chart-title-wrap">
-            <h3>Popolazione legale ai censimenti generali ISTAT</h3>
-            <span>Passa il cursore sui punti per leggere le note storiche di ciascun censimento</span>
+            <h3 id="history-card-title">Popolazione legale ai censimenti generali ISTAT</h3>
+            <span id="history-card-subtitle">160 anni di rilevazioni ufficiali: dal 1861 al censimento permanente 2021</span>
           </div>
         </div>
         <div id="history-chart-svg" style="padding: 0.5rem 0;"></div>
@@ -557,10 +561,10 @@
   </footer>
 
   <!-- Script applicativi con cache-busting -->
-  <script src="js/data.js?v=2.2"></script>
-  <script src="js/charts.js?v=2.2"></script>
-  <script src="js/map.js?v=2.2"></script>
-  <script src="js/simulator.js?v=2.2"></script>
-  <script src="js/app.js?v=2.2"></script>
+  <script src="js/data.js?v=2.3"></script>
+  <script src="js/charts.js?v=2.3"></script>
+  <script src="js/map.js?v=2.3"></script>
+  <script src="js/simulator.js?v=2.3"></script>
+  <script src="js/app.js?v=2.3"></script>
 </body>
 </html>
