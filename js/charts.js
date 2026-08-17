@@ -45,6 +45,15 @@ window.AppCharts = (function() {
 
   function setPyramidMode(mode) {
     pyramidMode = mode;
+    const titleEl = document.getElementById('pyramid-card-title');
+    const subEl = document.getElementById('pyramid-card-subtitle');
+    if (pyramidMode === 'gender') {
+      if (titleEl) titleEl.textContent = 'Piramide demografica per età e genere';
+      if (subEl) subEl.textContent = 'Maschi a sinistra (azzurro), femmine a destra (bordeaux)';
+    } else {
+      if (titleEl) titleEl.textContent = 'Composizione demografica per stato civile';
+      if (subEl) subEl.textContent = 'Ripartizione per classe d’età (Celibi/Nubili, Coniugati, Vedovi, Divorziati)';
+    }
     renderPyramid(currentYear, pyramidMode);
   }
 
