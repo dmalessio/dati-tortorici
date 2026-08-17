@@ -94,74 +94,58 @@ window.AppCharts = (function() {
       html += `<div class="pyramid-row">`;
       
       if (mode === 'gender') {
-        const mTip = `Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct(totCohort > 0 ? (f.maschi/totCohort)*100 : 0)} della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
-        const fTip = `Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct(totCohort > 0 ? (f.femmine/totCohort)*100 : 0)} della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
-        const rowTip = `Fascia ${f.fascia_eta} anni (${year})<br>Totale: <strong>${formatInt(totCohort)}</strong> residenti<br><span style="color:#38bdf8;">●</span> Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct(totCohort > 0 ? (f.maschi/totCohort)*100 : 0)})<br><span style="color:#f43f5e;">●</span> Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct(totCohort > 0 ? (f.femmine/totCohort)*100 : 0)})`;
-
-        html += `<div class="pyramid-side male">
-                  <div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
-                       onmouseenter="window.AppCharts.showTooltip(event, 'Maschi ${f.fascia_eta} anni (${year})', '${mTip}')" 
-                       onclick="window.AppCharts.showTooltip(event, 'Maschi ${f.fascia_eta} anni (${year})', '${mTip}')"
-                       onmouseleave="window.AppCharts.hideTooltip()"></div>
-                </div>`;
-
-        html += `<div class="pyramid-label" 
-                      onmouseenter="window.AppCharts.showTooltip(event, 'Fascia ${f.fascia_eta} anni (${year})', '${rowTip}')"
-                      onclick="window.AppCharts.showTooltip(event, 'Fascia ${f.fascia_eta} anni (${year})', '${rowTip}')"
-                      onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>`;
-
-        html += `<div class="pyramid-side female">
-                  <div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
-                       onmouseenter="window.AppCharts.showTooltip(event, 'Femmine ${f.fascia_eta} anni (${year})', '${fTip}')" 
-                       onclick="window.AppCharts.showTooltip(event, 'Femmine ${f.fascia_eta} anni (${year})', '${fTip}')"
-                       onmouseleave="window.AppCharts.hideTooltip()"></div>
-                </div>`;
+        html += `
+          <div class="pyramid-side male">
+            <div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
+                 onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')" 
+                 onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')"
+                 onmouseleave="window.AppCharts.hideTooltip()"></div>
+          </div>
+          <div class="pyramid-label" 
+               onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
+               onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
+               onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>
+          <div class="pyramid-side female">
+            <div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
+                 onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'female')" 
+                 onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'female')"
+                 onmouseleave="window.AppCharts.hideTooltip()"></div>
+          </div>
+        `;
       } else if (mode === 'civil') {
         const celPct = totCohort > 0 ? (f.celibi_nubili / totCohort) : 0;
         const conPct = totCohort > 0 ? (f.coniugati / totCohort) : 0;
         const vedPct = totCohort > 0 ? (f.vedovi / totCohort) : 0;
         const divPct = totCohort > 0 ? (f.divorziati / totCohort) : 0;
 
-        const tipAll = `Fascia ${f.fascia_eta} anni (${year})<br>` +
-          `Totale residenti: <strong>${formatInt(totCohort)}</strong><br>` +
-          `<span style="color:#60a5fa;">●</span> Celibi / Nubili: <strong>${formatInt(f.celibi_nubili)}</strong> (<strong>${formatPct(celPct * 100)}</strong>)<br>` +
-          `<span style="color:#34d399;">●</span> Coniugati: <strong>${formatInt(f.coniugati)}</strong> (<strong>${formatPct(conPct * 100)}</strong>)<br>` +
-          `<span style="color:#cbd5e1;">●</span> Vedovi: <strong>${formatInt(f.vedovi)}</strong> (<strong>${formatPct(vedPct * 100)}</strong>)<br>` +
-          `<span style="color:#fbbf24;">●</span> Divorziati: <strong>${formatInt(f.divorziati)}</strong> (<strong>${formatPct(divPct * 100)}</strong>)`;
-
-        const tipCel = `Celibi / Nubili • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.celibi_nubili)}</strong> residenti<br>Incidenza: <strong>${formatPct(celPct * 100)}</strong> della fascia`;
-        const tipCon = `Coniugati • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.coniugati)}</strong> residenti<br>Incidenza: <strong>${formatPct(conPct * 100)}</strong> della fascia`;
-        const tipVed = `Vedovi • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.vedovi)}</strong> residenti<br>Incidenza: <strong>${formatPct(vedPct * 100)}</strong> della fascia`;
-        const tipDiv = `Divorziati • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.divorziati)}</strong> residenti<br>Incidenza: <strong>${formatPct(divPct * 100)}</strong> della fascia`;
-
-        const renderSideCivil = (pctWidth, genderLabel) => `
+        const renderSideCivil = (pctWidth) => `
           <div class="pyramid-stacked-bar" style="width: ${pctWidth}%;"
-               onmouseenter="window.AppCharts.showTooltip(event, '${genderLabel} ${f.fascia_eta} anni (${year})', '${tipAll}')"
-               onclick="window.AppCharts.showTooltip(event, '${genderLabel} ${f.fascia_eta} anni (${year})', '${tipAll}')"
+               onmouseenter="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
+               onclick="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
                onmouseleave="window.AppCharts.hideTooltip()">
             <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Celibi/Nubili • ${f.fascia_eta} anni', '${tipCel}')"
-                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Celibi/Nubili • ${f.fascia_eta} anni', '${tipCel}')"></div>
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"
+                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"></div>
             <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Coniugati • ${f.fascia_eta} anni', '${tipCon}')"
-                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Coniugati • ${f.fascia_eta} anni', '${tipCon}')"></div>
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"
+                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"></div>
             <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Vedovi • ${f.fascia_eta} anni', '${tipVed}')"
-                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Vedovi • ${f.fascia_eta} anni', '${tipVed}')"></div>
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"
+                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"></div>
             <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Divorziati • ${f.fascia_eta} anni', '${tipDiv}')"
-                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Divorziati • ${f.fascia_eta} anni', '${tipDiv}')"></div>
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"
+                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"></div>
           </div>
         `;
 
-        html += `<div class="pyramid-side male">${renderSideCivil(mPct, 'Maschi')}</div>`;
-
-        html += `<div class="pyramid-label"
-                      onmouseenter="window.AppCharts.showTooltip(event, 'Stato civile • Fascia ${f.fascia_eta} anni', '${tipAll}')"
-                      onclick="window.AppCharts.showTooltip(event, 'Stato civile • Fascia ${f.fascia_eta} anni', '${tipAll}')"
-                      onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>`;
-
-        html += `<div class="pyramid-side female">${renderSideCivil(fPct, 'Femmine')}</div>`;
+        html += `
+          <div class="pyramid-side male">${renderSideCivil(mPct)}</div>
+          <div class="pyramid-label"
+               onmouseenter="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
+               onclick="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
+               onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>
+          <div class="pyramid-side female">${renderSideCivil(fPct)}</div>
+        `;
       }
 
       html += `</div>`;
@@ -660,6 +644,63 @@ window.AppCharts = (function() {
     container.innerHTML = html;
   }
 
+  function showPyramidGenderTip(event, year, ageIndex, side) {
+    const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year);
+    if (!piramideData || !piramideData.fasce || !piramideData.fasce[ageIndex]) return;
+    const f = piramideData.fasce[ageIndex];
+    const totCohort = f.totale;
+
+    if (side === 'male') {
+      const pct = totCohort > 0 ? (f.maschi / totCohort) * 100 : 0;
+      const content = `Maschi: <strong>${formatInt(f.maschi)}</strong> residenti (<strong>${formatPct(pct)}</strong> della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
+      showTooltip(event, `Maschi ${f.fascia_eta} anni (${year})`, content);
+    } else if (side === 'female') {
+      const pct = totCohort > 0 ? (f.femmine / totCohort) * 100 : 0;
+      const content = `Femmine: <strong>${formatInt(f.femmine)}</strong> residenti (<strong>${formatPct(pct)}</strong> della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
+      showTooltip(event, `Femmine ${f.fascia_eta} anni (${year})`, content);
+    } else {
+      const mPct = totCohort > 0 ? (f.maschi / totCohort) * 100 : 0;
+      const fPct = totCohort > 0 ? (f.femmine / totCohort) * 100 : 0;
+      const content = `Totale residenti: <strong>${formatInt(totCohort)}</strong><br>` +
+        `<span style="color:#38bdf8;">●</span> Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct(mPct)})<br>` +
+        `<span style="color:#f43f5e;">●</span> Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct(fPct)})`;
+      showTooltip(event, `Fascia ${f.fascia_eta} anni (${year})`, content);
+    }
+  }
+
+  function showPyramidCivilTip(event, year, ageIndex, subType) {
+    const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year);
+    if (!piramideData || !piramideData.fasce || !piramideData.fasce[ageIndex]) return;
+    const f = piramideData.fasce[ageIndex];
+    const totCohort = f.totale;
+
+    const celPct = totCohort > 0 ? (f.celibi_nubili / totCohort) * 100 : 0;
+    const conPct = totCohort > 0 ? (f.coniugati / totCohort) * 100 : 0;
+    const vedPct = totCohort > 0 ? (f.vedovi / totCohort) * 100 : 0;
+    const divPct = totCohort > 0 ? (f.divorziati / totCohort) * 100 : 0;
+
+    if (subType === 'celibi') {
+      const content = `Conteggio: <strong>${formatInt(f.celibi_nubili)}</strong> residenti<br>Incidenza: <strong>${formatPct(celPct)}</strong> della fascia`;
+      showTooltip(event, `Celibi / Nubili • ${f.fascia_eta} anni (${year})`, content);
+    } else if (subType === 'coniugati') {
+      const content = `Conteggio: <strong>${formatInt(f.coniugati)}</strong> residenti<br>Incidenza: <strong>${formatPct(conPct)}</strong> della fascia`;
+      showTooltip(event, `Coniugati • ${f.fascia_eta} anni (${year})`, content);
+    } else if (subType === 'vedovi') {
+      const content = `Conteggio: <strong>${formatInt(f.vedovi)}</strong> residenti<br>Incidenza: <strong>${formatPct(vedPct)}</strong> della fascia`;
+      showTooltip(event, `Vedovi • ${f.fascia_eta} anni (${year})`, content);
+    } else if (subType === 'divorziati') {
+      const content = `Conteggio: <strong>${formatInt(f.divorziati)}</strong> residenti<br>Incidenza: <strong>${formatPct(divPct)}</strong> della fascia`;
+      showTooltip(event, `Divorziati • ${f.fascia_eta} anni (${year})`, content);
+    } else {
+      const content = `Totale residenti: <strong>${formatInt(totCohort)}</strong><br>` +
+        `<span style="color:#60a5fa;">●</span> Celibi / Nubili: <strong>${formatInt(f.celibi_nubili)}</strong> (<strong>${formatPct(celPct)}</strong>)<br>` +
+        `<span style="color:#34d399;">●</span> Coniugati: <strong>${formatInt(f.coniugati)}</strong> (<strong>${formatPct(conPct)}</strong>)<br>` +
+        `<span style="color:#cbd5e1;">●</span> Vedovi: <strong>${formatInt(f.vedovi)}</strong> (<strong>${formatPct(vedPct)}</strong>)<br>` +
+        `<span style="color:#fbbf24;">●</span> Divorziati: <strong>${formatInt(f.divorziati)}</strong> (<strong>${formatPct(divPct)}</strong>)`;
+      showTooltip(event, `Stato civile • ${f.fascia_eta} anni (${year})`, content);
+    }
+  }
+
   // Tooltip con protezione bordi viewport mobile
   function showTooltip(event, title, content) {
     let tooltip = document.getElementById('app-universal-tooltip');
@@ -670,7 +711,7 @@ window.AppCharts = (function() {
       document.body.appendChild(tooltip);
       
       document.addEventListener('touchstart', (e) => {
-        if (!e.target.closest('.history-point-group') && !e.target.closest('.pyramid-bar') && !e.target.closest('.country-card')) {
+        if (!e.target.closest('.history-point-group') && !e.target.closest('.pyramid-bar') && !e.target.closest('.country-card') && !e.target.closest('.pyramid-stacked-bar') && !e.target.closest('.pyramid-row')) {
           hideTooltip();
         }
       }, { passive: true });
@@ -705,6 +746,8 @@ window.AppCharts = (function() {
     setYear,
     setPyramidMode,
     setHistoryMode,
+    showPyramidGenderTip,
+    showPyramidCivilTip,
     showTooltip,
     hideTooltip
   };
