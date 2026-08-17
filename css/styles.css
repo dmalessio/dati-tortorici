@@ -615,7 +615,7 @@ a:hover {
 .segment-vedovi { background-color: var(--color-vedovi); }
 .segment-divorziati { background-color: var(--color-divorziati); }
 
-/* Vista Composizione Stato Civile a Barra Unica */
+/* Vista Composizione Stato Civile a Barre Proporzionali */
 .civil-container {
   display: flex;
   flex-direction: column;
@@ -640,9 +640,9 @@ a:hover {
 }
 
 .civil-age-label {
-  width: 58px;
-  min-width: 58px;
-  max-width: 58px;
+  width: 54px;
+  min-width: 54px;
+  max-width: 54px;
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-subtle);
@@ -650,14 +650,23 @@ a:hover {
   flex-shrink: 0;
 }
 
-.civil-bar-track {
+.civil-track-wrapper {
   flex: 1 1 0%;
   min-width: 0;
   height: 14px;
   display: flex;
-  border-radius: 3px;
+  align-items: center;
+  background-color: rgba(241, 245, 249, 0.6);
+  border-radius: 2px;
+}
+
+.civil-stacked-bar {
+  height: 100%;
+  display: flex;
+  border-radius: 2px;
   overflow: hidden;
-  background-color: #e2e8f0;
+  transition: width 0.25s ease;
+  cursor: pointer;
 }
 
 .civil-cohort-total {

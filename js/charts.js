@@ -133,12 +133,14 @@ window.AppCharts = (function() {
                 <div class="legend-item" style="color: var(--text-subtle); font-size: 0.8rem;">Popolazione ${year}: <strong>${formatInt(piramideData.totale.totale)}</strong> residenti</div>
               </div>`;
     } else {
-      // Vista Stato Civile a Barra Unica Sovrapposta per Fascia d'Età (100%)
+      // Vista Stato Civile a Barre Proporzionali alla popolazione di coorte
       html += '<div class="civil-container">';
+      const maxCohort = GLOBAL_MAX_PYRAMID * 2; // Scala equivalente coerente con la piramide
 
       for (let i = fasce.length - 1; i >= 0; i--) {
         const f = fasce[i];
         const totCohort = f.totale;
+        const barWidthPct = Math.min(100, (totCohort / maxCohort) * 100);
         const celPct = totCohort > 0 ? (f.celibi_nubili / totCohort) : 0;
         const conPct = totCohort > 0 ? (f.coniugati / totCohort) : 0;
         const vedPct = totCohort > 0 ? (f.vedovi / totCohort) : 0;
@@ -152,19 +154,21 @@ window.AppCharts = (function() {
             
             <div class="civil-age-label">${f.fascia_eta}</div>
 
-            <div class="civil-bar-track">
-              <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"
-                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"
-                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"></div>
-              <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"
-                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"
-                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"></div>
-              <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"
-                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"
-                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"></div>
-              <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"
-                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"
-                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"></div>
+            <div class="civil-track-wrapper">
+              <div class="civil-stacked-bar" style="width: ${barWidthPct}%;">
+                <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"
+                     onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"
+                     onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"></div>
+                <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"
+                     onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"
+                     onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"></div>
+                <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"
+                     onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"
+                     onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"></div>
+                <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"
+                     onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"
+                     onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"></div>
+              </div>
             </div>
 
             <div class="civil-cohort-total">${formatInt(totCohort)} ab.</div>
