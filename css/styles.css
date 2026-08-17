@@ -543,6 +543,13 @@ a:hover {
   height: 19px;
   gap: 0.4rem;
   width: 100%;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.pyramid-row:hover {
+  background-color: rgba(226, 232, 240, 0.5);
 }
 
 .pyramid-label {
@@ -572,7 +579,7 @@ a:hover {
 .pyramid-bar {
   height: 100%;
   border-radius: 2px;
-  transition: width 0.25s ease;
+  transition: width 0.25s ease, filter 0.15s ease;
   position: relative;
   cursor: pointer;
   max-width: 100%;
@@ -581,7 +588,7 @@ a:hover {
 .pyramid-bar.male-bar { background-color: var(--color-male); }
 .pyramid-bar.female-bar { background-color: var(--color-female); }
 
-.pyramid-bar:hover { filter: brightness(1.1); }
+.pyramid-bar:hover { filter: brightness(1.15); }
 
 .pyramid-stacked-bar {
   height: 100%;
@@ -590,11 +597,17 @@ a:hover {
   overflow: hidden;
   transition: width 0.25s ease;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .stacked-segment {
   height: 100%;
-  transition: width 0.25s ease;
+  transition: width 0.25s ease, filter 0.15s ease;
+  cursor: pointer;
+}
+
+.stacked-segment:hover {
+  filter: brightness(1.22);
 }
 
 .segment-celibi { background-color: var(--color-celibi); }

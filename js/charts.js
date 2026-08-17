@@ -93,50 +93,76 @@ window.AppCharts = (function() {
 
       html += `<div class="pyramid-row">`;
       
-      // Lato Maschi
-      html += `<div class="pyramid-side male">`;
       if (mode === 'gender') {
-        html += `<div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
-                     onmouseenter="window.AppCharts.showTooltip(event, 'Maschi ${f.fascia_eta} anni (${year})', '${formatInt(f.maschi)} residenti (${formatPct(totCohort > 0 ? (f.maschi/totCohort)*100 : 0)} della classe)')" 
-                     onmouseleave="window.AppCharts.hideTooltip()"></div>`;
+        const mTip = `Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct(totCohort > 0 ? (f.maschi/totCohort)*100 : 0)} della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
+        const fTip = `Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct(totCohort > 0 ? (f.femmine/totCohort)*100 : 0)} della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
+        const rowTip = `Fascia ${f.fascia_eta} anni (${year})<br>Totale: <strong>${formatInt(totCohort)}</strong> residenti<br><span style="color:#38bdf8;">●</span> Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct(totCohort > 0 ? (f.maschi/totCohort)*100 : 0)})<br><span style="color:#f43f5e;">●</span> Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct(totCohort > 0 ? (f.femmine/totCohort)*100 : 0)})`;
+
+        html += `<div class="pyramid-side male">
+                  <div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
+                       onmouseenter="window.AppCharts.showTooltip(event, 'Maschi ${f.fascia_eta} anni (${year})', '${mTip}')" 
+                       onclick="window.AppCharts.showTooltip(event, 'Maschi ${f.fascia_eta} anni (${year})', '${mTip}')"
+                       onmouseleave="window.AppCharts.hideTooltip()"></div>
+                </div>`;
+
+        html += `<div class="pyramid-label" 
+                      onmouseenter="window.AppCharts.showTooltip(event, 'Fascia ${f.fascia_eta} anni (${year})', '${rowTip}')"
+                      onclick="window.AppCharts.showTooltip(event, 'Fascia ${f.fascia_eta} anni (${year})', '${rowTip}')"
+                      onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>`;
+
+        html += `<div class="pyramid-side female">
+                  <div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
+                       onmouseenter="window.AppCharts.showTooltip(event, 'Femmine ${f.fascia_eta} anni (${year})', '${fTip}')" 
+                       onclick="window.AppCharts.showTooltip(event, 'Femmine ${f.fascia_eta} anni (${year})', '${fTip}')"
+                       onmouseleave="window.AppCharts.hideTooltip()"></div>
+                </div>`;
       } else if (mode === 'civil') {
         const celPct = totCohort > 0 ? (f.celibi_nubili / totCohort) : 0;
         const conPct = totCohort > 0 ? (f.coniugati / totCohort) : 0;
         const vedPct = totCohort > 0 ? (f.vedovi / totCohort) : 0;
         const divPct = totCohort > 0 ? (f.divorziati / totCohort) : 0;
 
-        html += `<div class="pyramid-stacked-bar" style="width: ${mPct}%;">
-                  <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"></div>
-                  <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"></div>
-                  <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"></div>
-                  <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"></div>
-                </div>`;
+        const tipAll = `Fascia ${f.fascia_eta} anni (${year})<br>` +
+          `Totale residenti: <strong>${formatInt(totCohort)}</strong><br>` +
+          `<span style="color:#60a5fa;">●</span> Celibi / Nubili: <strong>${formatInt(f.celibi_nubili)}</strong> (<strong>${formatPct(celPct * 100)}</strong>)<br>` +
+          `<span style="color:#34d399;">●</span> Coniugati: <strong>${formatInt(f.coniugati)}</strong> (<strong>${formatPct(conPct * 100)}</strong>)<br>` +
+          `<span style="color:#cbd5e1;">●</span> Vedovi: <strong>${formatInt(f.vedovi)}</strong> (<strong>${formatPct(vedPct * 100)}</strong>)<br>` +
+          `<span style="color:#fbbf24;">●</span> Divorziati: <strong>${formatInt(f.divorziati)}</strong> (<strong>${formatPct(divPct * 100)}</strong>)`;
+
+        const tipCel = `Celibi / Nubili • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.celibi_nubili)}</strong> residenti<br>Incidenza: <strong>${formatPct(celPct * 100)}</strong> della fascia`;
+        const tipCon = `Coniugati • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.coniugati)}</strong> residenti<br>Incidenza: <strong>${formatPct(conPct * 100)}</strong> della fascia`;
+        const tipVed = `Vedovi • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.vedovi)}</strong> residenti<br>Incidenza: <strong>${formatPct(vedPct * 100)}</strong> della fascia`;
+        const tipDiv = `Divorziati • ${f.fascia_eta} anni (${year})<br>Conteggio: <strong>${formatInt(f.divorziati)}</strong> residenti<br>Incidenza: <strong>${formatPct(divPct * 100)}</strong> della fascia`;
+
+        const renderSideCivil = (pctWidth, genderLabel) => `
+          <div class="pyramid-stacked-bar" style="width: ${pctWidth}%;"
+               onmouseenter="window.AppCharts.showTooltip(event, '${genderLabel} ${f.fascia_eta} anni (${year})', '${tipAll}')"
+               onclick="window.AppCharts.showTooltip(event, '${genderLabel} ${f.fascia_eta} anni (${year})', '${tipAll}')"
+               onmouseleave="window.AppCharts.hideTooltip()">
+            <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Celibi/Nubili • ${f.fascia_eta} anni', '${tipCel}')"
+                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Celibi/Nubili • ${f.fascia_eta} anni', '${tipCel}')"></div>
+            <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Coniugati • ${f.fascia_eta} anni', '${tipCon}')"
+                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Coniugati • ${f.fascia_eta} anni', '${tipCon}')"></div>
+            <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Vedovi • ${f.fascia_eta} anni', '${tipVed}')"
+                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Vedovi • ${f.fascia_eta} anni', '${tipVed}')"></div>
+            <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"
+                 onmouseenter="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Divorziati • ${f.fascia_eta} anni', '${tipDiv}')"
+                 onclick="event.stopPropagation(); window.AppCharts.showTooltip(event, 'Divorziati • ${f.fascia_eta} anni', '${tipDiv}')"></div>
+          </div>
+        `;
+
+        html += `<div class="pyramid-side male">${renderSideCivil(mPct, 'Maschi')}</div>`;
+
+        html += `<div class="pyramid-label"
+                      onmouseenter="window.AppCharts.showTooltip(event, 'Stato civile • Fascia ${f.fascia_eta} anni', '${tipAll}')"
+                      onclick="window.AppCharts.showTooltip(event, 'Stato civile • Fascia ${f.fascia_eta} anni', '${tipAll}')"
+                      onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>`;
+
+        html += `<div class="pyramid-side female">${renderSideCivil(fPct, 'Femmine')}</div>`;
       }
-      html += `</div>`;
-
-      // Etichetta centrale fissa
-      html += `<div class="pyramid-label">${f.fascia_eta}</div>`;
-
-      // Lato Femmine
-      html += `<div class="pyramid-side female">`;
-      if (mode === 'gender') {
-        html += `<div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
-                     onmouseenter="window.AppCharts.showTooltip(event, 'Femmine ${f.fascia_eta} anni (${year})', '${formatInt(f.femmine)} residenti (${formatPct(totCohort > 0 ? (f.femmine/totCohort)*100 : 0)} della classe)')" 
-                     onmouseleave="window.AppCharts.hideTooltip()"></div>`;
-      } else if (mode === 'civil') {
-        const celPct = totCohort > 0 ? (f.celibi_nubili / totCohort) : 0;
-        const conPct = totCohort > 0 ? (f.coniugati / totCohort) : 0;
-        const vedPct = totCohort > 0 ? (f.vedovi / totCohort) : 0;
-        const divPct = totCohort > 0 ? (f.divorziati / totCohort) : 0;
-
-        html += `<div class="pyramid-stacked-bar" style="width: ${fPct}%;">
-                  <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"></div>
-                  <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"></div>
-                  <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"></div>
-                  <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"></div>
-                </div>`;
-      }
-      html += `</div>`;
 
       html += `</div>`;
     }
