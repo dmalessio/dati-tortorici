@@ -31,3 +31,11 @@ Thumbs.db
 *.doc
 *.rar
 *.7z
+
+# ==============================================================================
+# GARANZIA TOTALE: Non ignorare MAI i file di dati nella cartella data/
+# ==============================================================================
+!data/
+!data/**
+!data/*.csv
+!data/*.json
