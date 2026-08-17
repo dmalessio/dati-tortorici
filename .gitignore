@@ -21,3 +21,13 @@ cache_html/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# File sorgenti e documenti grezzi / binari
+*.pdf
+*.xlsx
+*.xls
+*.zip
+*.docx
+*.doc
+*.rar
+*.7z
