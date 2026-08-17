@@ -615,6 +615,63 @@ a:hover {
 .segment-vedovi { background-color: var(--color-vedovi); }
 .segment-divorziati { background-color: var(--color-divorziati); }
 
+/* Vista Composizione Stato Civile a Barra Unica */
+.civil-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0.25rem 0;
+  width: 100%;
+}
+
+.civil-row {
+  display: flex;
+  align-items: center;
+  height: 19px;
+  gap: 0.6rem;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.civil-row:hover {
+  background-color: rgba(226, 232, 240, 0.5);
+}
+
+.civil-age-label {
+  width: 58px;
+  min-width: 58px;
+  max-width: 58px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+.civil-bar-track {
+  flex: 1 1 0%;
+  min-width: 0;
+  height: 14px;
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.civil-cohort-total {
+  width: 65px;
+  min-width: 65px;
+  max-width: 65px;
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
 .pyramid-legend {
   display: flex;
   justify-content: center;

@@ -81,7 +81,7 @@ window.AppCharts = (function() {
     document.querySelectorAll('.kpi-year-label').forEach(el => el.textContent = year);
   }
 
-  // 2. Piramide delle Età (Scala globale fissa a 210 residenti per classe)
+  // 2. Piramide delle Età (Genere) oppure Composizione per Stato Civile
   function renderPyramid(year, mode = 'gender') {
     const container = document.getElementById('pyramid-chart-container');
     if (!container) return;
@@ -92,89 +92,95 @@ window.AppCharts = (function() {
     const fasce = piramideData.fasce;
     const maxVal = GLOBAL_MAX_PYRAMID;
 
-    let html = '<div class="pyramid-container">';
+    let html = '';
 
-    for (let i = fasce.length - 1; i >= 0; i--) {
-      const f = fasce[i];
-      const mPct = Math.min(100, (f.maschi / maxVal) * 100);
-      const fPct = Math.min(100, (f.femmine / maxVal) * 100);
-      const totCohort = f.totale;
+    if (mode === 'gender') {
+      html += '<div class="pyramid-container">';
 
-      html += `<div class="pyramid-row">`;
-      
-      if (mode === 'gender') {
+      for (let i = fasce.length - 1; i >= 0; i--) {
+        const f = fasce[i];
+        const mPct = Math.min(100, (f.maschi / maxVal) * 100);
+        const fPct = Math.min(100, (f.femmine / maxVal) * 100);
+
         html += `
-          <div class="pyramid-side male">
-            <div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
-                 onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')" 
-                 onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')"
-                 onmouseleave="window.AppCharts.hideTooltip()"></div>
-          </div>
-          <div class="pyramid-label" 
-               onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
-               onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
-               onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>
-          <div class="pyramid-side female">
-            <div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
+          <div class="pyramid-row">
+            <div class="pyramid-side male">
+              <div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
+                   onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')" 
+                   onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')"
+                   onmouseleave="window.AppCharts.hideTooltip()"></div>
+            </div>
+            <div class="pyramid-label" 
+                 onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
+                 onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
+                 onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>
+            <div class="pyramid-side female">
+              <div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
                  onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'female')" 
                  onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'female')"
                  onmouseleave="window.AppCharts.hideTooltip()"></div>
+            </div>
           </div>
         `;
-      } else if (mode === 'civil') {
+      }
+
+      html += '</div>';
+
+      // Legenda Genere
+      html += `<div class="pyramid-legend">
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-male);"></span> Maschi (${formatInt(piramideData.totale.maschi)} • ${formatPct((piramideData.totale.maschi/piramideData.totale.totale)*100)})</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-female);"></span> Femmine (${formatInt(piramideData.totale.femmine)} • ${formatPct((piramideData.totale.femmine/piramideData.totale.totale)*100)})</div>
+                <div class="legend-item" style="color: var(--text-subtle); font-size: 0.8rem;">Popolazione ${year}: <strong>${formatInt(piramideData.totale.totale)}</strong> residenti</div>
+              </div>`;
+    } else {
+      // Vista Stato Civile a Barra Unica Sovrapposta per Fascia d'Età (100%)
+      html += '<div class="civil-container">';
+
+      for (let i = fasce.length - 1; i >= 0; i--) {
+        const f = fasce[i];
+        const totCohort = f.totale;
         const celPct = totCohort > 0 ? (f.celibi_nubili / totCohort) : 0;
         const conPct = totCohort > 0 ? (f.coniugati / totCohort) : 0;
         const vedPct = totCohort > 0 ? (f.vedovi / totCohort) : 0;
         const divPct = totCohort > 0 ? (f.divorziati / totCohort) : 0;
 
-        const renderSideCivil = (pctWidth) => `
-          <div class="pyramid-stacked-bar" style="width: ${pctWidth}%;"
+        html += `
+          <div class="civil-row"
                onmouseenter="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
                onclick="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
                onmouseleave="window.AppCharts.hideTooltip()">
-            <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"
-                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"></div>
-            <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"
-                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"></div>
-            <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"
-                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"></div>
-            <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"
-                 onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"
-                 onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"></div>
-          </div>
-        `;
+            
+            <div class="civil-age-label">${f.fascia_eta}</div>
 
-        html += `
-          <div class="pyramid-side male">${renderSideCivil(mPct)}</div>
-          <div class="pyramid-label"
-               onmouseenter="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
-               onclick="window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'all')"
-               onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>
-          <div class="pyramid-side female">${renderSideCivil(fPct)}</div>
+            <div class="civil-bar-track">
+              <div class="stacked-segment segment-celibi" style="width: ${celPct * 100}%;"
+                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"
+                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'celibi')"></div>
+              <div class="stacked-segment segment-coniugati" style="width: ${conPct * 100}%;"
+                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"
+                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'coniugati')"></div>
+              <div class="stacked-segment segment-vedovi" style="width: ${vedPct * 100}%;"
+                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"
+                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'vedovi')"></div>
+              <div class="stacked-segment segment-divorziati" style="width: ${divPct * 100}%;"
+                   onmouseenter="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"
+                   onclick="event.stopPropagation(); window.AppCharts.showPyramidCivilTip(event, ${year}, ${i}, 'divorziati')"></div>
+            </div>
+
+            <div class="civil-cohort-total">${formatInt(totCohort)} ab.</div>
+          </div>
         `;
       }
 
-      html += `</div>`;
-    }
+      html += '</div>';
 
-    html += '</div>';
-
-    // Legenda
-    if (mode === 'gender') {
+      // Legenda Stato Civile con totali e percentuali
+      const tot = piramideData.totale.totale;
       html += `<div class="pyramid-legend">
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-male);"></span> Maschi (${formatInt(piramideData.totale.maschi)})</div>
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-female);"></span> Femmine (${formatInt(piramideData.totale.femmine)})</div>
-                <div class="legend-item" style="color: var(--text-subtle); font-size: 0.8rem;">Popolazione ${year}: <strong>${formatInt(piramideData.totale.totale)}</strong> residenti</div>
-              </div>`;
-    } else if (mode === 'civil') {
-      html += `<div class="pyramid-legend">
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-celibi);"></span> Celibi / Nubili (${formatInt(piramideData.totale.celibi_nubili)})</div>
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-coniugati);"></span> Coniugati (${formatInt(piramideData.totale.coniugati)})</div>
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-vedovi);"></span> Vedovi (${formatInt(piramideData.totale.vedovi)})</div>
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-divorziati);"></span> Divorziati (${formatInt(piramideData.totale.divorziati)})</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-celibi);"></span> Celibi / Nubili (${formatInt(piramideData.totale.celibi_nubili)} • ${formatPct((piramideData.totale.celibi_nubili/tot)*100)})</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-coniugati);"></span> Coniugati (${formatInt(piramideData.totale.coniugati)} • ${formatPct((piramideData.totale.coniugati/tot)*100)})</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-vedovi);"></span> Vedovi (${formatInt(piramideData.totale.vedovi)} • ${formatPct((piramideData.totale.vedovi/tot)*100)})</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-divorziati);"></span> Divorziati (${formatInt(piramideData.totale.divorziati)} • ${formatPct((piramideData.totale.divorziati/tot)*100)})</div>
               </div>`;
     }
 
