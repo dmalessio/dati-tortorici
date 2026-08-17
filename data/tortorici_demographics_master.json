@@ -11896,9 +11896,9 @@
       "reddito_medio_per_dichiarante_euro": 10035,
       "reddito_medio_pro_capite_residente_euro": 7913,
       "lavoro_dipendente_contribuenti": 2983,
-      "lavoro_dipendente_ammontare": 0,
+      "lavoro_dipendente_ammontare": 27799534,
       "pensioni_contribuenti": 2219,
-      "pensioni_ammontare": 0
+      "pensioni_ammontare": 23217726
     },
     {
       "anno": 2010,
@@ -11909,22 +11909,22 @@
       "reddito_medio_per_dichiarante_euro": 10196,
       "reddito_medio_pro_capite_residente_euro": 7775,
       "lavoro_dipendente_contribuenti": 2803,
-      "lavoro_dipendente_ammontare": 0,
+      "lavoro_dipendente_ammontare": 26343845,
       "pensioni_contribuenti": 2151,
-      "pensioni_ammontare": 0
+      "pensioni_ammontare": 23023598
     },
     {
       "anno": 2011,
-      "contribuenti_dichiaranti": 1690,
+      "contribuenti_dichiaranti": 5026,
       "popolazione_residente": 6716,
-      "percentuale_popolazione_dichiarante": 25.2,
-      "ammontare_imponibile_totale_euro": 23810897,
-      "reddito_medio_per_dichiarante_euro": 14089,
-      "reddito_medio_pro_capite_residente_euro": 3545,
-      "lavoro_dipendente_contribuenti": 657,
-      "lavoro_dipendente_ammontare": 0,
-      "pensioni_contribuenti": 741,
-      "pensioni_ammontare": 0
+      "percentuale_popolazione_dichiarante": 74.8,
+      "ammontare_imponibile_totale_euro": 52084521,
+      "reddito_medio_per_dichiarante_euro": 10363,
+      "reddito_medio_pro_capite_residente_euro": 7755,
+      "lavoro_dipendente_contribuenti": 2716,
+      "lavoro_dipendente_ammontare": 25741130,
+      "pensioni_contribuenti": 2104,
+      "pensioni_ammontare": 23189986
     },
     {
       "anno": 2012,
@@ -11935,9 +11935,9 @@
       "reddito_medio_per_dichiarante_euro": 10340,
       "reddito_medio_pro_capite_residente_euro": 7814,
       "lavoro_dipendente_contribuenti": 2610,
-      "lavoro_dipendente_ammontare": 0,
+      "lavoro_dipendente_ammontare": 24282827,
       "pensioni_contribuenti": 2090,
-      "pensioni_ammontare": 0
+      "pensioni_ammontare": 23391506
     },
     {
       "anno": 2013,
@@ -11948,9 +11948,9 @@
       "reddito_medio_per_dichiarante_euro": 10778,
       "reddito_medio_pro_capite_residente_euro": 8025,
       "lavoro_dipendente_contribuenti": 2556,
-      "lavoro_dipendente_ammontare": 0,
+      "lavoro_dipendente_ammontare": 24922065,
       "pensioni_contribuenti": 2039,
-      "pensioni_ammontare": 0
+      "pensioni_ammontare": 23839615
     },
     {
       "anno": 2014,
@@ -11961,9 +11961,9 @@
       "reddito_medio_per_dichiarante_euro": 10831,
       "reddito_medio_pro_capite_residente_euro": 8034,
       "lavoro_dipendente_contribuenti": 2551,
-      "lavoro_dipendente_ammontare": 0,
+      "lavoro_dipendente_ammontare": 24863602,
       "pensioni_contribuenti": 2004,
-      "pensioni_ammontare": 0
+      "pensioni_ammontare": 23756886
     },
     {
       "anno": 2015,
@@ -12081,19 +12081,6 @@
       "lavoro_dipendente_ammontare": 28657915,
       "pensioni_contribuenti": 1832,
       "pensioni_ammontare": 26564135
-    },
-    {
-      "anno": 2024,
-      "contribuenti_dichiaranti": 4113,
-      "popolazione_residente": 5531,
-      "percentuale_popolazione_dichiarante": 74.4,
-      "ammontare_imponibile_totale_euro": 61623028,
-      "reddito_medio_per_dichiarante_euro": 15253,
-      "reddito_medio_pro_capite_residente_euro": 11141,
-      "lavoro_dipendente_contribuenti": 2138,
-      "lavoro_dipendente_ammontare": 29519106,
-      "pensioni_contribuenti": 1828,
-      "pensioni_ammontare": 27768274
     }
   ],
   "parco_veicolare": [
