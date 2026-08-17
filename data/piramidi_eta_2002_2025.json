@@ -1,0 +1,5402 @@
+[
+  {
+    "anno": 2002,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 184,
+        "femmine": 151,
+        "celibi_nubili": 335,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 335
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 199,
+        "femmine": 190,
+        "celibi_nubili": 389,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 389
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 262,
+        "femmine": 228,
+        "celibi_nubili": 490,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 490
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 266,
+        "femmine": 255,
+        "celibi_nubili": 519,
+        "coniugati": 2,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 521
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 281,
+        "femmine": 277,
+        "celibi_nubili": 506,
+        "coniugati": 50,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 558
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 279,
+        "femmine": 257,
+        "celibi_nubili": 358,
+        "coniugati": 178,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 536
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 299,
+        "femmine": 260,
+        "celibi_nubili": 247,
+        "coniugati": 309,
+        "vedovi": 3,
+        "divorziati": 0,
+        "totale": 559
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 269,
+        "femmine": 270,
+        "celibi_nubili": 148,
+        "coniugati": 386,
+        "vedovi": 4,
+        "divorziati": 1,
+        "totale": 539
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 271,
+        "femmine": 253,
+        "celibi_nubili": 130,
+        "coniugati": 381,
+        "vedovi": 9,
+        "divorziati": 4,
+        "totale": 524
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 207,
+        "femmine": 213,
+        "celibi_nubili": 80,
+        "coniugati": 328,
+        "vedovi": 10,
+        "divorziati": 2,
+        "totale": 420
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 208,
+        "femmine": 205,
+        "celibi_nubili": 72,
+        "coniugati": 314,
+        "vedovi": 25,
+        "divorziati": 2,
+        "totale": 413
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 149,
+        "femmine": 165,
+        "celibi_nubili": 40,
+        "coniugati": 259,
+        "vedovi": 15,
+        "divorziati": 0,
+        "totale": 314
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 171,
+        "femmine": 218,
+        "celibi_nubili": 40,
+        "coniugati": 315,
+        "vedovi": 34,
+        "divorziati": 0,
+        "totale": 389
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 188,
+        "femmine": 218,
+        "celibi_nubili": 43,
+        "coniugati": 303,
+        "vedovi": 59,
+        "divorziati": 1,
+        "totale": 406
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 172,
+        "femmine": 201,
+        "celibi_nubili": 36,
+        "coniugati": 245,
+        "vedovi": 92,
+        "divorziati": 0,
+        "totale": 373
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 141,
+        "femmine": 214,
+        "celibi_nubili": 39,
+        "coniugati": 182,
+        "vedovi": 133,
+        "divorziati": 1,
+        "totale": 355
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 71,
+        "femmine": 131,
+        "celibi_nubili": 17,
+        "coniugati": 71,
+        "vedovi": 113,
+        "divorziati": 1,
+        "totale": 202
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 51,
+        "femmine": 87,
+        "celibi_nubili": 8,
+        "coniugati": 45,
+        "vedovi": 85,
+        "divorziati": 0,
+        "totale": 138
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 17,
+        "femmine": 27,
+        "celibi_nubili": 0,
+        "coniugati": 11,
+        "vedovi": 33,
+        "divorziati": 0,
+        "totale": 44
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 6,
+        "femmine": 10,
+        "celibi_nubili": 0,
+        "coniugati": 3,
+        "vedovi": 13,
+        "divorziati": 0,
+        "totale": 16
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 0,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 0
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3691,
+      "femmine": 3830,
+      "celibi_nubili": 3497,
+      "coniugati": 3382,
+      "vedovi": 628,
+      "divorziati": 14,
+      "totale": 7521
+    }
+  },
+  {
+    "anno": 2003,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 162,
+        "femmine": 171,
+        "celibi_nubili": 333,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 333
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 182,
+        "femmine": 164,
+        "celibi_nubili": 346,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 346
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 245,
+        "femmine": 211,
+        "celibi_nubili": 456,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 456
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 269,
+        "femmine": 249,
+        "celibi_nubili": 515,
+        "coniugati": 3,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 518
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 272,
+        "femmine": 271,
+        "celibi_nubili": 501,
+        "coniugati": 41,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 543
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 279,
+        "femmine": 246,
+        "celibi_nubili": 380,
+        "coniugati": 145,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 525
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 267,
+        "femmine": 256,
+        "celibi_nubili": 251,
+        "coniugati": 270,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 523
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 279,
+        "femmine": 261,
+        "celibi_nubili": 166,
+        "coniugati": 368,
+        "vedovi": 4,
+        "divorziati": 2,
+        "totale": 540
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 263,
+        "femmine": 265,
+        "celibi_nubili": 123,
+        "coniugati": 391,
+        "vedovi": 10,
+        "divorziati": 4,
+        "totale": 528
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 225,
+        "femmine": 217,
+        "celibi_nubili": 98,
+        "coniugati": 336,
+        "vedovi": 6,
+        "divorziati": 2,
+        "totale": 442
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 201,
+        "femmine": 208,
+        "celibi_nubili": 69,
+        "coniugati": 312,
+        "vedovi": 26,
+        "divorziati": 2,
+        "totale": 409
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 166,
+        "femmine": 173,
+        "celibi_nubili": 48,
+        "coniugati": 274,
+        "vedovi": 17,
+        "divorziati": 0,
+        "totale": 339
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 160,
+        "femmine": 210,
+        "celibi_nubili": 40,
+        "coniugati": 299,
+        "vedovi": 30,
+        "divorziati": 1,
+        "totale": 370
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 184,
+        "femmine": 219,
+        "celibi_nubili": 46,
+        "coniugati": 299,
+        "vedovi": 57,
+        "divorziati": 1,
+        "totale": 403
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 187,
+        "femmine": 202,
+        "celibi_nubili": 31,
+        "coniugati": 268,
+        "vedovi": 89,
+        "divorziati": 1,
+        "totale": 389
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 132,
+        "femmine": 189,
+        "celibi_nubili": 39,
+        "coniugati": 170,
+        "vedovi": 111,
+        "divorziati": 1,
+        "totale": 321
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 87,
+        "femmine": 151,
+        "celibi_nubili": 21,
+        "coniugati": 98,
+        "vedovi": 118,
+        "divorziati": 1,
+        "totale": 238
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 52,
+        "femmine": 91,
+        "celibi_nubili": 9,
+        "coniugati": 46,
+        "vedovi": 88,
+        "divorziati": 0,
+        "totale": 143
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 15,
+        "femmine": 31,
+        "celibi_nubili": 0,
+        "coniugati": 7,
+        "vedovi": 39,
+        "divorziati": 0,
+        "totale": 46
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 4,
+        "femmine": 7,
+        "celibi_nubili": 0,
+        "coniugati": 3,
+        "vedovi": 7,
+        "divorziati": 1,
+        "totale": 11
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3632,
+      "femmine": 3793,
+      "celibi_nubili": 3472,
+      "coniugati": 3330,
+      "vedovi": 606,
+      "divorziati": 17,
+      "totale": 7425
+    }
+  },
+  {
+    "anno": 2004,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 159,
+        "femmine": 170,
+        "celibi_nubili": 329,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 329
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 162,
+        "femmine": 160,
+        "celibi_nubili": 322,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 322
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 232,
+        "femmine": 195,
+        "celibi_nubili": 427,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 427
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 262,
+        "femmine": 244,
+        "celibi_nubili": 502,
+        "coniugati": 4,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 506
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 272,
+        "femmine": 254,
+        "celibi_nubili": 470,
+        "coniugati": 55,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 526
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 273,
+        "femmine": 242,
+        "celibi_nubili": 338,
+        "coniugati": 177,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 515
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 259,
+        "femmine": 253,
+        "celibi_nubili": 245,
+        "coniugati": 266,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 512
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 273,
+        "femmine": 251,
+        "celibi_nubili": 158,
+        "coniugati": 360,
+        "vedovi": 5,
+        "divorziati": 1,
+        "totale": 524
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 261,
+        "femmine": 263,
+        "celibi_nubili": 121,
+        "coniugati": 389,
+        "vedovi": 11,
+        "divorziati": 3,
+        "totale": 524
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 231,
+        "femmine": 223,
+        "celibi_nubili": 100,
+        "coniugati": 338,
+        "vedovi": 13,
+        "divorziati": 3,
+        "totale": 454
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 187,
+        "femmine": 205,
+        "celibi_nubili": 66,
+        "coniugati": 303,
+        "vedovi": 20,
+        "divorziati": 3,
+        "totale": 392
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 186,
+        "femmine": 182,
+        "celibi_nubili": 54,
+        "coniugati": 289,
+        "vedovi": 25,
+        "divorziati": 0,
+        "totale": 368
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 158,
+        "femmine": 194,
+        "celibi_nubili": 38,
+        "coniugati": 285,
+        "vedovi": 29,
+        "divorziati": 0,
+        "totale": 352
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 165,
+        "femmine": 212,
+        "celibi_nubili": 43,
+        "coniugati": 270,
+        "vedovi": 62,
+        "divorziati": 2,
+        "totale": 377
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 190,
+        "femmine": 207,
+        "celibi_nubili": 34,
+        "coniugati": 276,
+        "vedovi": 86,
+        "divorziati": 1,
+        "totale": 397
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 136,
+        "femmine": 198,
+        "celibi_nubili": 38,
+        "coniugati": 174,
+        "vedovi": 121,
+        "divorziati": 1,
+        "totale": 334
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 95,
+        "femmine": 158,
+        "celibi_nubili": 23,
+        "coniugati": 104,
+        "vedovi": 126,
+        "divorziati": 0,
+        "totale": 253
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 46,
+        "femmine": 78,
+        "celibi_nubili": 7,
+        "coniugati": 38,
+        "vedovi": 78,
+        "divorziati": 1,
+        "totale": 124
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 23,
+        "femmine": 35,
+        "celibi_nubili": 3,
+        "coniugati": 13,
+        "vedovi": 42,
+        "divorziati": 0,
+        "totale": 58
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 3,
+        "femmine": 8,
+        "celibi_nubili": 0,
+        "coniugati": 1,
+        "vedovi": 10,
+        "divorziati": 0,
+        "totale": 11
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3573,
+      "femmine": 3733,
+      "celibi_nubili": 3318,
+      "coniugati": 3342,
+      "vedovi": 630,
+      "divorziati": 16,
+      "totale": 7306
+    }
+  },
+  {
+    "anno": 2005,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 167,
+        "femmine": 156,
+        "celibi_nubili": 323,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 323
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 169,
+        "femmine": 154,
+        "celibi_nubili": 323,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 323
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 218,
+        "femmine": 203,
+        "celibi_nubili": 421,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 421
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 259,
+        "femmine": 227,
+        "celibi_nubili": 484,
+        "coniugati": 2,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 486
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 254,
+        "femmine": 257,
+        "celibi_nubili": 443,
+        "coniugati": 67,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 511
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 270,
+        "femmine": 230,
+        "celibi_nubili": 347,
+        "coniugati": 153,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 500
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 250,
+        "femmine": 249,
+        "celibi_nubili": 233,
+        "coniugati": 265,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 499
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 281,
+        "femmine": 251,
+        "celibi_nubili": 170,
+        "coniugati": 353,
+        "vedovi": 6,
+        "divorziati": 3,
+        "totale": 532
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 254,
+        "femmine": 254,
+        "celibi_nubili": 108,
+        "coniugati": 390,
+        "vedovi": 8,
+        "divorziati": 2,
+        "totale": 508
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 230,
+        "femmine": 230,
+        "celibi_nubili": 109,
+        "coniugati": 333,
+        "vedovi": 15,
+        "divorziati": 3,
+        "totale": 460
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 198,
+        "femmine": 208,
+        "celibi_nubili": 66,
+        "coniugati": 315,
+        "vedovi": 22,
+        "divorziati": 3,
+        "totale": 406
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 185,
+        "femmine": 187,
+        "celibi_nubili": 57,
+        "coniugati": 290,
+        "vedovi": 24,
+        "divorziati": 1,
+        "totale": 372
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 150,
+        "femmine": 171,
+        "celibi_nubili": 41,
+        "coniugati": 255,
+        "vedovi": 25,
+        "divorziati": 0,
+        "totale": 321
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 166,
+        "femmine": 212,
+        "celibi_nubili": 34,
+        "coniugati": 291,
+        "vedovi": 51,
+        "divorziati": 2,
+        "totale": 378
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 188,
+        "femmine": 217,
+        "celibi_nubili": 35,
+        "coniugati": 276,
+        "vedovi": 93,
+        "divorziati": 1,
+        "totale": 405
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 125,
+        "femmine": 180,
+        "celibi_nubili": 37,
+        "coniugati": 162,
+        "vedovi": 105,
+        "divorziati": 1,
+        "totale": 305
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 114,
+        "femmine": 172,
+        "celibi_nubili": 27,
+        "coniugati": 124,
+        "vedovi": 135,
+        "divorziati": 0,
+        "totale": 286
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 43,
+        "femmine": 83,
+        "celibi_nubili": 9,
+        "coniugati": 36,
+        "vedovi": 81,
+        "divorziati": 0,
+        "totale": 126
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 20,
+        "femmine": 39,
+        "celibi_nubili": 1,
+        "coniugati": 14,
+        "vedovi": 44,
+        "divorziati": 0,
+        "totale": 59
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 4,
+        "femmine": 8,
+        "celibi_nubili": 0,
+        "coniugati": 2,
+        "vedovi": 10,
+        "divorziati": 0,
+        "totale": 12
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 2,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3545,
+      "femmine": 3690,
+      "celibi_nubili": 3268,
+      "coniugati": 3328,
+      "vedovi": 622,
+      "divorziati": 17,
+      "totale": 7235
+    }
+  },
+  {
+    "anno": 2006,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 159,
+        "femmine": 156,
+        "celibi_nubili": 315,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 315
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 170,
+        "femmine": 143,
+        "celibi_nubili": 313,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 313
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 200,
+        "femmine": 198,
+        "celibi_nubili": 398,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 398
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 250,
+        "femmine": 212,
+        "celibi_nubili": 460,
+        "coniugati": 2,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 462
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 232,
+        "femmine": 255,
+        "celibi_nubili": 423,
+        "coniugati": 64,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 487
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 267,
+        "femmine": 224,
+        "celibi_nubili": 343,
+        "coniugati": 147,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 491
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 249,
+        "femmine": 242,
+        "celibi_nubili": 240,
+        "coniugati": 249,
+        "vedovi": 1,
+        "divorziati": 1,
+        "totale": 491
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 258,
+        "femmine": 250,
+        "celibi_nubili": 168,
+        "coniugati": 331,
+        "vedovi": 7,
+        "divorziati": 2,
+        "totale": 508
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 251,
+        "femmine": 251,
+        "celibi_nubili": 107,
+        "coniugati": 386,
+        "vedovi": 7,
+        "divorziati": 2,
+        "totale": 502
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 239,
+        "femmine": 238,
+        "celibi_nubili": 111,
+        "coniugati": 347,
+        "vedovi": 16,
+        "divorziati": 3,
+        "totale": 477
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 192,
+        "femmine": 200,
+        "celibi_nubili": 67,
+        "coniugati": 304,
+        "vedovi": 19,
+        "divorziati": 2,
+        "totale": 392
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 202,
+        "femmine": 210,
+        "celibi_nubili": 67,
+        "coniugati": 312,
+        "vedovi": 31,
+        "divorziati": 2,
+        "totale": 412
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 142,
+        "femmine": 154,
+        "celibi_nubili": 35,
+        "coniugati": 234,
+        "vedovi": 27,
+        "divorziati": 0,
+        "totale": 296
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 162,
+        "femmine": 212,
+        "celibi_nubili": 37,
+        "coniugati": 284,
+        "vedovi": 51,
+        "divorziati": 2,
+        "totale": 374
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 171,
+        "femmine": 212,
+        "celibi_nubili": 38,
+        "coniugati": 260,
+        "vedovi": 84,
+        "divorziati": 1,
+        "totale": 383
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 142,
+        "femmine": 187,
+        "celibi_nubili": 33,
+        "coniugati": 186,
+        "vedovi": 109,
+        "divorziati": 1,
+        "totale": 329
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 102,
+        "femmine": 166,
+        "celibi_nubili": 27,
+        "coniugati": 111,
+        "vedovi": 130,
+        "divorziati": 0,
+        "totale": 268
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 48,
+        "femmine": 92,
+        "celibi_nubili": 12,
+        "coniugati": 42,
+        "vedovi": 86,
+        "divorziati": 0,
+        "totale": 140
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 22,
+        "femmine": 40,
+        "celibi_nubili": 0,
+        "coniugati": 21,
+        "vedovi": 41,
+        "divorziati": 0,
+        "totale": 62
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 3,
+        "femmine": 8,
+        "celibi_nubili": 0,
+        "coniugati": 2,
+        "vedovi": 9,
+        "divorziati": 0,
+        "totale": 11
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 3,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 3,
+        "divorziati": 0,
+        "totale": 3
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3461,
+      "femmine": 3653,
+      "celibi_nubili": 3194,
+      "coniugati": 3282,
+      "vedovi": 621,
+      "divorziati": 17,
+      "totale": 7114
+    }
+  },
+  {
+    "anno": 2007,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 158,
+        "femmine": 154,
+        "celibi_nubili": 312,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 312
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 162,
+        "femmine": 139,
+        "celibi_nubili": 301,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 301
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 186,
+        "femmine": 180,
+        "celibi_nubili": 366,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 366
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 246,
+        "femmine": 211,
+        "celibi_nubili": 455,
+        "coniugati": 2,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 457
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 244,
+        "femmine": 244,
+        "celibi_nubili": 432,
+        "coniugati": 56,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 488
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 237,
+        "femmine": 236,
+        "celibi_nubili": 337,
+        "coniugati": 135,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 473
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 249,
+        "femmine": 234,
+        "celibi_nubili": 222,
+        "coniugati": 260,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 483
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 273,
+        "femmine": 236,
+        "celibi_nubili": 183,
+        "coniugati": 319,
+        "vedovi": 5,
+        "divorziati": 2,
+        "totale": 509
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 239,
+        "femmine": 247,
+        "celibi_nubili": 109,
+        "coniugati": 368,
+        "vedovi": 9,
+        "divorziati": 0,
+        "totale": 486
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 255,
+        "femmine": 246,
+        "celibi_nubili": 116,
+        "coniugati": 365,
+        "vedovi": 15,
+        "divorziati": 5,
+        "totale": 501
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 192,
+        "femmine": 209,
+        "celibi_nubili": 72,
+        "coniugati": 310,
+        "vedovi": 17,
+        "divorziati": 2,
+        "totale": 401
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 201,
+        "femmine": 207,
+        "celibi_nubili": 69,
+        "coniugati": 305,
+        "vedovi": 31,
+        "divorziati": 3,
+        "totale": 408
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 141,
+        "femmine": 163,
+        "celibi_nubili": 37,
+        "coniugati": 242,
+        "vedovi": 25,
+        "divorziati": 0,
+        "totale": 304
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 165,
+        "femmine": 210,
+        "celibi_nubili": 34,
+        "coniugati": 281,
+        "vedovi": 59,
+        "divorziati": 1,
+        "totale": 375
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 166,
+        "femmine": 205,
+        "celibi_nubili": 39,
+        "coniugati": 244,
+        "vedovi": 86,
+        "divorziati": 2,
+        "totale": 371
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 147,
+        "femmine": 184,
+        "celibi_nubili": 31,
+        "coniugati": 198,
+        "vedovi": 102,
+        "divorziati": 0,
+        "totale": 331
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 102,
+        "femmine": 179,
+        "celibi_nubili": 31,
+        "coniugati": 119,
+        "vedovi": 130,
+        "divorziati": 1,
+        "totale": 281
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 50,
+        "femmine": 88,
+        "celibi_nubili": 13,
+        "coniugati": 38,
+        "vedovi": 87,
+        "divorziati": 0,
+        "totale": 138
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 23,
+        "femmine": 39,
+        "celibi_nubili": 1,
+        "coniugati": 18,
+        "vedovi": 43,
+        "divorziati": 0,
+        "totale": 62
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 3,
+        "femmine": 7,
+        "celibi_nubili": 0,
+        "coniugati": 2,
+        "vedovi": 8,
+        "divorziati": 0,
+        "totale": 10
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 2,
+        "femmine": 2,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 4,
+        "divorziati": 0,
+        "totale": 4
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3441,
+      "femmine": 3620,
+      "celibi_nubili": 3160,
+      "coniugati": 3262,
+      "vedovi": 621,
+      "divorziati": 18,
+      "totale": 7061
+    }
+  },
+  {
+    "anno": 2008,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 179,
+        "femmine": 159,
+        "celibi_nubili": 338,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 338
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 150,
+        "femmine": 143,
+        "celibi_nubili": 293,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 293
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 170,
+        "femmine": 157,
+        "celibi_nubili": 327,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 327
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 227,
+        "femmine": 206,
+        "celibi_nubili": 433,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 433
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 256,
+        "femmine": 238,
+        "celibi_nubili": 446,
+        "coniugati": 48,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 494
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 229,
+        "femmine": 235,
+        "celibi_nubili": 328,
+        "coniugati": 136,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 464
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 250,
+        "femmine": 215,
+        "celibi_nubili": 235,
+        "coniugati": 228,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 465
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 240,
+        "femmine": 236,
+        "celibi_nubili": 165,
+        "coniugati": 306,
+        "vedovi": 4,
+        "divorziati": 1,
+        "totale": 476
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 253,
+        "femmine": 241,
+        "celibi_nubili": 120,
+        "coniugati": 364,
+        "vedovi": 9,
+        "divorziati": 1,
+        "totale": 494
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 252,
+        "femmine": 254,
+        "celibi_nubili": 108,
+        "coniugati": 377,
+        "vedovi": 15,
+        "divorziati": 6,
+        "totale": 506
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 207,
+        "femmine": 214,
+        "celibi_nubili": 86,
+        "coniugati": 320,
+        "vedovi": 12,
+        "divorziati": 3,
+        "totale": 421
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 188,
+        "femmine": 204,
+        "celibi_nubili": 58,
+        "coniugati": 298,
+        "vedovi": 34,
+        "divorziati": 2,
+        "totale": 392
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 153,
+        "femmine": 172,
+        "celibi_nubili": 43,
+        "coniugati": 257,
+        "vedovi": 25,
+        "divorziati": 0,
+        "totale": 325
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 153,
+        "femmine": 200,
+        "celibi_nubili": 35,
+        "coniugati": 263,
+        "vedovi": 54,
+        "divorziati": 1,
+        "totale": 353
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 164,
+        "femmine": 208,
+        "celibi_nubili": 42,
+        "coniugati": 243,
+        "vedovi": 87,
+        "divorziati": 0,
+        "totale": 372
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 156,
+        "femmine": 186,
+        "celibi_nubili": 26,
+        "coniugati": 206,
+        "vedovi": 110,
+        "divorziati": 0,
+        "totale": 342
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 94,
+        "femmine": 156,
+        "celibi_nubili": 32,
+        "coniugati": 108,
+        "vedovi": 109,
+        "divorziati": 1,
+        "totale": 250
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 57,
+        "femmine": 102,
+        "celibi_nubili": 14,
+        "coniugati": 44,
+        "vedovi": 101,
+        "divorziati": 0,
+        "totale": 159
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 23,
+        "femmine": 42,
+        "celibi_nubili": 2,
+        "coniugati": 15,
+        "vedovi": 48,
+        "divorziati": 0,
+        "totale": 65
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 3,
+        "femmine": 9,
+        "celibi_nubili": 0,
+        "coniugati": 2,
+        "vedovi": 10,
+        "divorziati": 0,
+        "totale": 12
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 2,
+        "celibi_nubili": 0,
+        "coniugati": 1,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 3
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3405,
+      "femmine": 3579,
+      "celibi_nubili": 3131,
+      "coniugati": 3216,
+      "vedovi": 620,
+      "divorziati": 17,
+      "totale": 6984
+    }
+  },
+  {
+    "anno": 2009,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 196,
+        "femmine": 147,
+        "celibi_nubili": 343,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 343
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 146,
+        "femmine": 147,
+        "celibi_nubili": 293,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 293
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 154,
+        "femmine": 150,
+        "celibi_nubili": 304,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 304
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 223,
+        "femmine": 192,
+        "celibi_nubili": 415,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 415
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 244,
+        "femmine": 237,
+        "celibi_nubili": 444,
+        "coniugati": 37,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 481
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 239,
+        "femmine": 224,
+        "celibi_nubili": 331,
+        "coniugati": 132,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 463
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 241,
+        "femmine": 211,
+        "celibi_nubili": 222,
+        "coniugati": 228,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 452
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 237,
+        "femmine": 233,
+        "celibi_nubili": 170,
+        "coniugati": 296,
+        "vedovi": 2,
+        "divorziati": 2,
+        "totale": 470
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 250,
+        "femmine": 239,
+        "celibi_nubili": 124,
+        "coniugati": 355,
+        "vedovi": 7,
+        "divorziati": 3,
+        "totale": 489
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 254,
+        "femmine": 255,
+        "celibi_nubili": 109,
+        "coniugati": 379,
+        "vedovi": 16,
+        "divorziati": 5,
+        "totale": 509
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 203,
+        "femmine": 221,
+        "celibi_nubili": 84,
+        "coniugati": 317,
+        "vedovi": 18,
+        "divorziati": 5,
+        "totale": 424
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 176,
+        "femmine": 204,
+        "celibi_nubili": 58,
+        "coniugati": 289,
+        "vedovi": 30,
+        "divorziati": 3,
+        "totale": 380
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 173,
+        "femmine": 176,
+        "celibi_nubili": 47,
+        "coniugati": 270,
+        "vedovi": 32,
+        "divorziati": 0,
+        "totale": 349
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 151,
+        "femmine": 189,
+        "celibi_nubili": 34,
+        "coniugati": 255,
+        "vedovi": 50,
+        "divorziati": 1,
+        "totale": 340
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 145,
+        "femmine": 203,
+        "celibi_nubili": 36,
+        "coniugati": 223,
+        "vedovi": 88,
+        "divorziati": 1,
+        "totale": 348
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 159,
+        "femmine": 192,
+        "celibi_nubili": 29,
+        "coniugati": 215,
+        "vedovi": 107,
+        "divorziati": 0,
+        "totale": 351
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 99,
+        "femmine": 163,
+        "celibi_nubili": 33,
+        "coniugati": 115,
+        "vedovi": 113,
+        "divorziati": 1,
+        "totale": 262
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 65,
+        "femmine": 110,
+        "celibi_nubili": 15,
+        "coniugati": 46,
+        "vedovi": 114,
+        "divorziati": 0,
+        "totale": 175
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 21,
+        "femmine": 37,
+        "celibi_nubili": 4,
+        "coniugati": 15,
+        "vedovi": 39,
+        "divorziati": 0,
+        "totale": 58
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 6,
+        "femmine": 9,
+        "celibi_nubili": 0,
+        "coniugati": 4,
+        "vedovi": 11,
+        "divorziati": 0,
+        "totale": 15
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 3,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 3,
+        "divorziati": 0,
+        "totale": 3
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3382,
+      "femmine": 3542,
+      "celibi_nubili": 3095,
+      "coniugati": 3176,
+      "vedovi": 630,
+      "divorziati": 23,
+      "totale": 6924
+    }
+  },
+  {
+    "anno": 2010,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 178,
+        "femmine": 146,
+        "celibi_nubili": 324,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 324
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 159,
+        "femmine": 134,
+        "celibi_nubili": 293,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 293
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 160,
+        "femmine": 145,
+        "celibi_nubili": 305,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 305
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 212,
+        "femmine": 193,
+        "celibi_nubili": 404,
+        "coniugati": 1,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 405
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 245,
+        "femmine": 226,
+        "celibi_nubili": 447,
+        "coniugati": 24,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 471
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 218,
+        "femmine": 234,
+        "celibi_nubili": 314,
+        "coniugati": 138,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 452
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 250,
+        "femmine": 198,
+        "celibi_nubili": 237,
+        "coniugati": 210,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 448
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 226,
+        "femmine": 233,
+        "celibi_nubili": 170,
+        "coniugati": 285,
+        "vedovi": 2,
+        "divorziati": 2,
+        "totale": 459
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 255,
+        "femmine": 242,
+        "celibi_nubili": 132,
+        "coniugati": 349,
+        "vedovi": 10,
+        "divorziati": 6,
+        "totale": 497
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 253,
+        "femmine": 248,
+        "celibi_nubili": 104,
+        "coniugati": 386,
+        "vedovi": 10,
+        "divorziati": 1,
+        "totale": 501
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 206,
+        "femmine": 228,
+        "celibi_nubili": 103,
+        "coniugati": 305,
+        "vedovi": 19,
+        "divorziati": 7,
+        "totale": 434
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 189,
+        "femmine": 204,
+        "celibi_nubili": 59,
+        "coniugati": 298,
+        "vedovi": 32,
+        "divorziati": 4,
+        "totale": 393
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 177,
+        "femmine": 185,
+        "celibi_nubili": 50,
+        "coniugati": 276,
+        "vedovi": 35,
+        "divorziati": 1,
+        "totale": 362
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 144,
+        "femmine": 168,
+        "celibi_nubili": 40,
+        "coniugati": 232,
+        "vedovi": 39,
+        "divorziati": 1,
+        "totale": 312
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 144,
+        "femmine": 207,
+        "celibi_nubili": 30,
+        "coniugati": 236,
+        "vedovi": 83,
+        "divorziati": 2,
+        "totale": 351
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 161,
+        "femmine": 201,
+        "celibi_nubili": 30,
+        "coniugati": 218,
+        "vedovi": 114,
+        "divorziati": 0,
+        "totale": 362
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 90,
+        "femmine": 156,
+        "celibi_nubili": 34,
+        "coniugati": 105,
+        "vedovi": 107,
+        "divorziati": 0,
+        "totale": 246
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 72,
+        "femmine": 112,
+        "celibi_nubili": 11,
+        "coniugati": 50,
+        "vedovi": 123,
+        "divorziati": 0,
+        "totale": 184
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 20,
+        "femmine": 40,
+        "celibi_nubili": 5,
+        "coniugati": 13,
+        "vedovi": 42,
+        "divorziati": 0,
+        "totale": 60
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 3,
+        "femmine": 10,
+        "celibi_nubili": 0,
+        "coniugati": 1,
+        "vedovi": 12,
+        "divorziati": 0,
+        "totale": 13
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 0,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 0
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3362,
+      "femmine": 3510,
+      "celibi_nubili": 3092,
+      "coniugati": 3127,
+      "vedovi": 628,
+      "divorziati": 25,
+      "totale": 6872
+    }
+  },
+  {
+    "anno": 2011,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 169,
+        "femmine": 131,
+        "celibi_nubili": 300,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 300
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 155,
+        "femmine": 140,
+        "celibi_nubili": 295,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 295
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 160,
+        "femmine": 139,
+        "celibi_nubili": 299,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 299
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 199,
+        "femmine": 186,
+        "celibi_nubili": 383,
+        "coniugati": 2,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 385
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 246,
+        "femmine": 211,
+        "celibi_nubili": 435,
+        "coniugati": 22,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 457
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 218,
+        "femmine": 233,
+        "celibi_nubili": 323,
+        "coniugati": 127,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 451
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 246,
+        "femmine": 199,
+        "celibi_nubili": 237,
+        "coniugati": 207,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 445
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 222,
+        "femmine": 220,
+        "celibi_nubili": 172,
+        "coniugati": 266,
+        "vedovi": 1,
+        "divorziati": 3,
+        "totale": 442
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 246,
+        "femmine": 240,
+        "celibi_nubili": 133,
+        "coniugati": 337,
+        "vedovi": 12,
+        "divorziati": 4,
+        "totale": 486
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 250,
+        "femmine": 243,
+        "celibi_nubili": 100,
+        "coniugati": 381,
+        "vedovi": 9,
+        "divorziati": 3,
+        "totale": 493
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 225,
+        "femmine": 233,
+        "celibi_nubili": 103,
+        "coniugati": 325,
+        "vedovi": 21,
+        "divorziati": 9,
+        "totale": 458
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 181,
+        "femmine": 196,
+        "celibi_nubili": 60,
+        "coniugati": 289,
+        "vedovi": 25,
+        "divorziati": 3,
+        "totale": 377
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 192,
+        "femmine": 201,
+        "celibi_nubili": 55,
+        "coniugati": 298,
+        "vedovi": 38,
+        "divorziati": 2,
+        "totale": 393
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 134,
+        "femmine": 154,
+        "celibi_nubili": 34,
+        "coniugati": 216,
+        "vedovi": 37,
+        "divorziati": 1,
+        "totale": 288
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 147,
+        "femmine": 204,
+        "celibi_nubili": 32,
+        "coniugati": 235,
+        "vedovi": 83,
+        "divorziati": 1,
+        "totale": 351
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 143,
+        "femmine": 191,
+        "celibi_nubili": 30,
+        "coniugati": 201,
+        "vedovi": 103,
+        "divorziati": 0,
+        "totale": 334
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 108,
+        "femmine": 160,
+        "celibi_nubili": 29,
+        "coniugati": 124,
+        "vedovi": 114,
+        "divorziati": 1,
+        "totale": 268
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 56,
+        "femmine": 116,
+        "celibi_nubili": 13,
+        "coniugati": 49,
+        "vedovi": 110,
+        "divorziati": 0,
+        "totale": 172
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 27,
+        "femmine": 44,
+        "celibi_nubili": 5,
+        "coniugati": 15,
+        "vedovi": 51,
+        "divorziati": 0,
+        "totale": 71
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 7,
+        "femmine": 12,
+        "celibi_nubili": 0,
+        "coniugati": 3,
+        "vedovi": 16,
+        "divorziati": 0,
+        "totale": 19
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3331,
+      "femmine": 3454,
+      "celibi_nubili": 3038,
+      "coniugati": 3097,
+      "vedovi": 621,
+      "divorziati": 29,
+      "totale": 6785
+    }
+  },
+  {
+    "anno": 2012,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 165,
+        "femmine": 149,
+        "celibi_nubili": 314,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 314
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 147,
+        "femmine": 140,
+        "celibi_nubili": 287,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 287
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 153,
+        "femmine": 129,
+        "celibi_nubili": 282,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 282
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 187,
+        "femmine": 167,
+        "celibi_nubili": 354,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 354
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 244,
+        "femmine": 203,
+        "celibi_nubili": 422,
+        "coniugati": 25,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 447
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 238,
+        "femmine": 223,
+        "celibi_nubili": 343,
+        "coniugati": 118,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 461
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 216,
+        "femmine": 202,
+        "celibi_nubili": 230,
+        "coniugati": 187,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 418
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 221,
+        "femmine": 213,
+        "celibi_nubili": 165,
+        "coniugati": 264,
+        "vedovi": 0,
+        "divorziati": 5,
+        "totale": 434
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 259,
+        "femmine": 226,
+        "celibi_nubili": 142,
+        "coniugati": 330,
+        "vedovi": 9,
+        "divorziati": 4,
+        "totale": 485
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 235,
+        "femmine": 241,
+        "celibi_nubili": 102,
+        "coniugati": 360,
+        "vedovi": 11,
+        "divorziati": 3,
+        "totale": 476
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 245,
+        "femmine": 238,
+        "celibi_nubili": 105,
+        "coniugati": 348,
+        "vedovi": 21,
+        "divorziati": 9,
+        "totale": 483
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 179,
+        "femmine": 202,
+        "celibi_nubili": 64,
+        "coniugati": 292,
+        "vedovi": 21,
+        "divorziati": 4,
+        "totale": 381
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 193,
+        "femmine": 196,
+        "celibi_nubili": 59,
+        "coniugati": 290,
+        "vedovi": 38,
+        "divorziati": 2,
+        "totale": 389
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 136,
+        "femmine": 162,
+        "celibi_nubili": 34,
+        "coniugati": 230,
+        "vedovi": 34,
+        "divorziati": 0,
+        "totale": 298
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 153,
+        "femmine": 199,
+        "celibi_nubili": 34,
+        "coniugati": 230,
+        "vedovi": 86,
+        "divorziati": 2,
+        "totale": 352
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 137,
+        "femmine": 186,
+        "celibi_nubili": 28,
+        "coniugati": 195,
+        "vedovi": 100,
+        "divorziati": 0,
+        "totale": 323
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 108,
+        "femmine": 150,
+        "celibi_nubili": 27,
+        "coniugati": 121,
+        "vedovi": 110,
+        "divorziati": 0,
+        "totale": 258
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 59,
+        "femmine": 122,
+        "celibi_nubili": 19,
+        "coniugati": 51,
+        "vedovi": 110,
+        "divorziati": 1,
+        "totale": 181
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 24,
+        "femmine": 43,
+        "celibi_nubili": 4,
+        "coniugati": 14,
+        "vedovi": 49,
+        "divorziati": 0,
+        "totale": 67
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 7,
+        "femmine": 17,
+        "celibi_nubili": 0,
+        "coniugati": 3,
+        "vedovi": 21,
+        "divorziati": 0,
+        "totale": 24
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 2,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3306,
+      "femmine": 3410,
+      "celibi_nubili": 3015,
+      "coniugati": 3058,
+      "vedovi": 612,
+      "divorziati": 31,
+      "totale": 6716
+    }
+  },
+  {
+    "anno": 2013,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 144,
+        "femmine": 138,
+        "celibi_nubili": 282,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 282
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 166,
+        "femmine": 146,
+        "celibi_nubili": 312,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 312
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 141,
+        "femmine": 141,
+        "celibi_nubili": 282,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 282
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 173,
+        "femmine": 147,
+        "celibi_nubili": 319,
+        "coniugati": 1,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 320
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 222,
+        "femmine": 195,
+        "celibi_nubili": 389,
+        "coniugati": 28,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 417
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 249,
+        "femmine": 223,
+        "celibi_nubili": 353,
+        "coniugati": 119,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 472
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 216,
+        "femmine": 203,
+        "celibi_nubili": 222,
+        "coniugati": 196,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 419
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 213,
+        "femmine": 191,
+        "celibi_nubili": 153,
+        "coniugati": 248,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 404
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 229,
+        "femmine": 226,
+        "celibi_nubili": 134,
+        "coniugati": 311,
+        "vedovi": 6,
+        "divorziati": 4,
+        "totale": 455
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 245,
+        "femmine": 235,
+        "celibi_nubili": 112,
+        "coniugati": 350,
+        "vedovi": 12,
+        "divorziati": 6,
+        "totale": 480
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 249,
+        "femmine": 247,
+        "celibi_nubili": 100,
+        "coniugati": 367,
+        "vedovi": 19,
+        "divorziati": 10,
+        "totale": 496
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 194,
+        "femmine": 202,
+        "celibi_nubili": 80,
+        "coniugati": 294,
+        "vedovi": 18,
+        "divorziati": 4,
+        "totale": 396
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 179,
+        "femmine": 199,
+        "celibi_nubili": 52,
+        "coniugati": 278,
+        "vedovi": 45,
+        "divorziati": 3,
+        "totale": 378
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 142,
+        "femmine": 165,
+        "celibi_nubili": 31,
+        "coniugati": 240,
+        "vedovi": 35,
+        "divorziati": 1,
+        "totale": 307
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 141,
+        "femmine": 194,
+        "celibi_nubili": 33,
+        "coniugati": 223,
+        "vedovi": 77,
+        "divorziati": 2,
+        "totale": 335
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 136,
+        "femmine": 184,
+        "celibi_nubili": 29,
+        "coniugati": 189,
+        "vedovi": 102,
+        "divorziati": 0,
+        "totale": 320
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 113,
+        "femmine": 150,
+        "celibi_nubili": 19,
+        "coniugati": 126,
+        "vedovi": 118,
+        "divorziati": 0,
+        "totale": 263
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 52,
+        "femmine": 109,
+        "celibi_nubili": 23,
+        "coniugati": 50,
+        "vedovi": 87,
+        "divorziati": 1,
+        "totale": 161
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 24,
+        "femmine": 53,
+        "celibi_nubili": 3,
+        "coniugati": 15,
+        "vedovi": 59,
+        "divorziati": 0,
+        "totale": 77
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 6,
+        "femmine": 15,
+        "celibi_nubili": 1,
+        "coniugati": 4,
+        "vedovi": 16,
+        "divorziati": 0,
+        "totale": 21
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3234,
+      "femmine": 3364,
+      "celibi_nubili": 2929,
+      "coniugati": 3039,
+      "vedovi": 595,
+      "divorziati": 35,
+      "totale": 6598
+    }
+  },
+  {
+    "anno": 2014,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 137,
+        "femmine": 140,
+        "celibi_nubili": 277,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 277
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 182,
+        "femmine": 136,
+        "celibi_nubili": 318,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 318
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 138,
+        "femmine": 146,
+        "celibi_nubili": 284,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 284
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 151,
+        "femmine": 145,
+        "celibi_nubili": 296,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 296
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 216,
+        "femmine": 185,
+        "celibi_nubili": 376,
+        "coniugati": 25,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 401
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 233,
+        "femmine": 216,
+        "celibi_nubili": 334,
+        "coniugati": 115,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 449
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 228,
+        "femmine": 204,
+        "celibi_nubili": 230,
+        "coniugati": 199,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 432
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 224,
+        "femmine": 187,
+        "celibi_nubili": 158,
+        "coniugati": 246,
+        "vedovi": 1,
+        "divorziati": 6,
+        "totale": 411
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 220,
+        "femmine": 224,
+        "celibi_nubili": 140,
+        "coniugati": 298,
+        "vedovi": 3,
+        "divorziati": 3,
+        "totale": 444
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 239,
+        "femmine": 231,
+        "celibi_nubili": 114,
+        "coniugati": 339,
+        "vedovi": 11,
+        "divorziati": 6,
+        "totale": 470
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 254,
+        "femmine": 249,
+        "celibi_nubili": 101,
+        "coniugati": 369,
+        "vedovi": 22,
+        "divorziati": 11,
+        "totale": 503
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 197,
+        "femmine": 209,
+        "celibi_nubili": 81,
+        "coniugati": 293,
+        "vedovi": 27,
+        "divorziati": 5,
+        "totale": 406
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 174,
+        "femmine": 199,
+        "celibi_nubili": 57,
+        "coniugati": 277,
+        "vedovi": 35,
+        "divorziati": 4,
+        "totale": 373
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 162,
+        "femmine": 163,
+        "celibi_nubili": 38,
+        "coniugati": 245,
+        "vedovi": 40,
+        "divorziati": 2,
+        "totale": 325
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 136,
+        "femmine": 181,
+        "celibi_nubili": 28,
+        "coniugati": 219,
+        "vedovi": 69,
+        "divorziati": 1,
+        "totale": 317
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 121,
+        "femmine": 180,
+        "celibi_nubili": 25,
+        "coniugati": 170,
+        "vedovi": 105,
+        "divorziati": 1,
+        "totale": 301
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 115,
+        "femmine": 158,
+        "celibi_nubili": 21,
+        "coniugati": 140,
+        "vedovi": 112,
+        "divorziati": 0,
+        "totale": 273
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 56,
+        "femmine": 117,
+        "celibi_nubili": 24,
+        "coniugati": 59,
+        "vedovi": 89,
+        "divorziati": 1,
+        "totale": 173
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 31,
+        "femmine": 55,
+        "celibi_nubili": 4,
+        "coniugati": 16,
+        "vedovi": 66,
+        "divorziati": 0,
+        "totale": 86
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 8,
+        "femmine": 9,
+        "celibi_nubili": 0,
+        "coniugati": 4,
+        "vedovi": 13,
+        "divorziati": 0,
+        "totale": 17
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3222,
+      "femmine": 3335,
+      "celibi_nubili": 2906,
+      "coniugati": 3014,
+      "vedovi": 594,
+      "divorziati": 43,
+      "totale": 6557
+    }
+  },
+  {
+    "anno": 2015,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 132,
+        "femmine": 137,
+        "celibi_nubili": 269,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 269
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 170,
+        "femmine": 136,
+        "celibi_nubili": 306,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 306
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 146,
+        "femmine": 131,
+        "celibi_nubili": 277,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 277
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 153,
+        "femmine": 144,
+        "celibi_nubili": 297,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 297
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 202,
+        "femmine": 186,
+        "celibi_nubili": 362,
+        "coniugati": 26,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 388
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 234,
+        "femmine": 209,
+        "celibi_nubili": 342,
+        "coniugati": 100,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 443
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 212,
+        "femmine": 212,
+        "celibi_nubili": 227,
+        "coniugati": 195,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 424
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 232,
+        "femmine": 171,
+        "celibi_nubili": 162,
+        "coniugati": 235,
+        "vedovi": 1,
+        "divorziati": 5,
+        "totale": 403
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 203,
+        "femmine": 221,
+        "celibi_nubili": 133,
+        "coniugati": 285,
+        "vedovi": 2,
+        "divorziati": 4,
+        "totale": 424
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 245,
+        "femmine": 235,
+        "celibi_nubili": 122,
+        "coniugati": 341,
+        "vedovi": 11,
+        "divorziati": 6,
+        "totale": 480
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 254,
+        "femmine": 242,
+        "celibi_nubili": 97,
+        "coniugati": 374,
+        "vedovi": 18,
+        "divorziati": 7,
+        "totale": 496
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 196,
+        "femmine": 221,
+        "celibi_nubili": 90,
+        "coniugati": 294,
+        "vedovi": 26,
+        "divorziati": 7,
+        "totale": 417
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 182,
+        "femmine": 196,
+        "celibi_nubili": 54,
+        "coniugati": 283,
+        "vedovi": 36,
+        "divorziati": 5,
+        "totale": 378
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 168,
+        "femmine": 172,
+        "celibi_nubili": 41,
+        "coniugati": 250,
+        "vedovi": 46,
+        "divorziati": 3,
+        "totale": 340
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 130,
+        "femmine": 157,
+        "celibi_nubili": 33,
+        "coniugati": 202,
+        "vedovi": 51,
+        "divorziati": 1,
+        "totale": 287
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 123,
+        "femmine": 185,
+        "celibi_nubili": 22,
+        "coniugati": 180,
+        "vedovi": 105,
+        "divorziati": 1,
+        "totale": 308
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 115,
+        "femmine": 167,
+        "celibi_nubili": 20,
+        "coniugati": 138,
+        "vedovi": 123,
+        "divorziati": 1,
+        "totale": 282
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 60,
+        "femmine": 106,
+        "celibi_nubili": 21,
+        "coniugati": 59,
+        "vedovi": 85,
+        "divorziati": 1,
+        "totale": 166
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 29,
+        "femmine": 58,
+        "celibi_nubili": 6,
+        "coniugati": 18,
+        "vedovi": 63,
+        "divorziati": 0,
+        "totale": 87
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 7,
+        "femmine": 10,
+        "celibi_nubili": 0,
+        "coniugati": 5,
+        "vedovi": 12,
+        "divorziati": 0,
+        "totale": 17
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3193,
+      "femmine": 3297,
+      "celibi_nubili": 2881,
+      "coniugati": 2985,
+      "vedovi": 580,
+      "divorziati": 44,
+      "totale": 6490
+    }
+  },
+  {
+    "anno": 2016,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 138,
+        "femmine": 144,
+        "celibi_nubili": 282,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 282
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 160,
+        "femmine": 124,
+        "celibi_nubili": 284,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 284
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 143,
+        "femmine": 139,
+        "celibi_nubili": 282,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 282
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 153,
+        "femmine": 133,
+        "celibi_nubili": 285,
+        "coniugati": 1,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 286
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 188,
+        "femmine": 179,
+        "celibi_nubili": 341,
+        "coniugati": 26,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 367
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 233,
+        "femmine": 201,
+        "celibi_nubili": 340,
+        "coniugati": 94,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 434
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 202,
+        "femmine": 217,
+        "celibi_nubili": 229,
+        "coniugati": 187,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 419
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 235,
+        "femmine": 172,
+        "celibi_nubili": 169,
+        "coniugati": 235,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 407
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 203,
+        "femmine": 214,
+        "celibi_nubili": 134,
+        "coniugati": 273,
+        "vedovi": 2,
+        "divorziati": 8,
+        "totale": 417
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 240,
+        "femmine": 234,
+        "celibi_nubili": 121,
+        "coniugati": 336,
+        "vedovi": 13,
+        "divorziati": 4,
+        "totale": 474
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 243,
+        "femmine": 237,
+        "celibi_nubili": 93,
+        "coniugati": 366,
+        "vedovi": 15,
+        "divorziati": 6,
+        "totale": 480
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 216,
+        "femmine": 230,
+        "celibi_nubili": 99,
+        "coniugati": 310,
+        "vedovi": 27,
+        "divorziati": 10,
+        "totale": 446
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 177,
+        "femmine": 193,
+        "celibi_nubili": 55,
+        "coniugati": 277,
+        "vedovi": 33,
+        "divorziati": 5,
+        "totale": 370
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 178,
+        "femmine": 192,
+        "celibi_nubili": 42,
+        "coniugati": 276,
+        "vedovi": 49,
+        "divorziati": 3,
+        "totale": 370
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 120,
+        "femmine": 136,
+        "celibi_nubili": 26,
+        "coniugati": 185,
+        "vedovi": 45,
+        "divorziati": 0,
+        "totale": 256
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 129,
+        "femmine": 184,
+        "celibi_nubili": 26,
+        "coniugati": 176,
+        "vedovi": 110,
+        "divorziati": 1,
+        "totale": 313
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 98,
+        "femmine": 162,
+        "celibi_nubili": 21,
+        "coniugati": 125,
+        "vedovi": 114,
+        "divorziati": 0,
+        "totale": 260
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 73,
+        "femmine": 101,
+        "celibi_nubili": 17,
+        "coniugati": 67,
+        "vedovi": 90,
+        "divorziati": 0,
+        "totale": 174
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 26,
+        "femmine": 65,
+        "celibi_nubili": 8,
+        "coniugati": 21,
+        "vedovi": 62,
+        "divorziati": 0,
+        "totale": 91
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 6,
+        "femmine": 14,
+        "celibi_nubili": 1,
+        "coniugati": 5,
+        "vedovi": 14,
+        "divorziati": 0,
+        "totale": 20
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 2,
+        "celibi_nubili": 0,
+        "coniugati": 1,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 3
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3162,
+      "femmine": 3273,
+      "celibi_nubili": 2855,
+      "coniugati": 2961,
+      "vedovi": 576,
+      "divorziati": 43,
+      "totale": 6435
+    }
+  },
+  {
+    "anno": 2017,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 118,
+        "femmine": 120,
+        "celibi_nubili": 238,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 238
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 160,
+        "femmine": 147,
+        "celibi_nubili": 307,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 307
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 144,
+        "femmine": 140,
+        "celibi_nubili": 284,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 284
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 139,
+        "femmine": 126,
+        "celibi_nubili": 265,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 265
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 175,
+        "femmine": 162,
+        "celibi_nubili": 321,
+        "coniugati": 16,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 337
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 222,
+        "femmine": 194,
+        "celibi_nubili": 322,
+        "coniugati": 94,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 416
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 213,
+        "femmine": 210,
+        "celibi_nubili": 228,
+        "coniugati": 193,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 423
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 207,
+        "femmine": 183,
+        "celibi_nubili": 170,
+        "coniugati": 217,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 390
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 207,
+        "femmine": 205,
+        "celibi_nubili": 127,
+        "coniugati": 274,
+        "vedovi": 2,
+        "divorziati": 9,
+        "totale": 412
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 249,
+        "femmine": 214,
+        "celibi_nubili": 127,
+        "coniugati": 322,
+        "vedovi": 9,
+        "divorziati": 5,
+        "totale": 463
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 224,
+        "femmine": 233,
+        "celibi_nubili": 95,
+        "coniugati": 337,
+        "vedovi": 19,
+        "divorziati": 6,
+        "totale": 457
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 233,
+        "femmine": 238,
+        "celibi_nubili": 98,
+        "coniugati": 334,
+        "vedovi": 28,
+        "divorziati": 11,
+        "totale": 471
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 173,
+        "femmine": 202,
+        "celibi_nubili": 59,
+        "coniugati": 285,
+        "vedovi": 27,
+        "divorziati": 4,
+        "totale": 375
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 183,
+        "femmine": 191,
+        "celibi_nubili": 48,
+        "coniugati": 265,
+        "vedovi": 57,
+        "divorziati": 4,
+        "totale": 374
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 117,
+        "femmine": 143,
+        "celibi_nubili": 22,
+        "coniugati": 195,
+        "vedovi": 42,
+        "divorziati": 1,
+        "totale": 260
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 134,
+        "femmine": 181,
+        "celibi_nubili": 26,
+        "coniugati": 181,
+        "vedovi": 106,
+        "divorziati": 2,
+        "totale": 315
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 97,
+        "femmine": 155,
+        "celibi_nubili": 19,
+        "coniugati": 119,
+        "vedovi": 114,
+        "divorziati": 0,
+        "totale": 252
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 71,
+        "femmine": 101,
+        "celibi_nubili": 13,
+        "coniugati": 65,
+        "vedovi": 94,
+        "divorziati": 0,
+        "totale": 172
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 2,
+        "femmine": 88,
+        "celibi_nubili": 12,
+        "coniugati": 18,
+        "vedovi": 60,
+        "divorziati": 0,
+        "totale": 90
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 4,
+        "femmine": 10,
+        "celibi_nubili": 1,
+        "coniugati": 2,
+        "vedovi": 11,
+        "divorziati": 0,
+        "totale": 14
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 2,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 3,
+        "divorziati": 0,
+        "totale": 3
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3074,
+      "femmine": 3244,
+      "celibi_nubili": 2782,
+      "coniugati": 2917,
+      "vedovi": 572,
+      "divorziati": 47,
+      "totale": 6318
+    }
+  },
+  {
+    "anno": 2018,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 125,
+        "femmine": 114,
+        "celibi_nubili": 239,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 239
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 140,
+        "femmine": 130,
+        "celibi_nubili": 270,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 270
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 168,
+        "femmine": 146,
+        "celibi_nubili": 314,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 314
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 132,
+        "femmine": 136,
+        "celibi_nubili": 268,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 268
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 156,
+        "femmine": 140,
+        "celibi_nubili": 286,
+        "coniugati": 9,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 296
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 209,
+        "femmine": 187,
+        "celibi_nubili": 309,
+        "coniugati": 87,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 396
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 225,
+        "femmine": 211,
+        "celibi_nubili": 244,
+        "coniugati": 187,
+        "vedovi": 0,
+        "divorziati": 5,
+        "totale": 436
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 210,
+        "femmine": 191,
+        "celibi_nubili": 170,
+        "coniugati": 225,
+        "vedovi": 0,
+        "divorziati": 6,
+        "totale": 401
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 208,
+        "femmine": 186,
+        "celibi_nubili": 129,
+        "coniugati": 255,
+        "vedovi": 2,
+        "divorziati": 8,
+        "totale": 394
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 217,
+        "femmine": 215,
+        "celibi_nubili": 121,
+        "coniugati": 296,
+        "vedovi": 10,
+        "divorziati": 5,
+        "totale": 432
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 231,
+        "femmine": 230,
+        "celibi_nubili": 105,
+        "coniugati": 333,
+        "vedovi": 16,
+        "divorziati": 7,
+        "totale": 461
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 239,
+        "femmine": 245,
+        "celibi_nubili": 93,
+        "coniugati": 352,
+        "vedovi": 28,
+        "divorziati": 11,
+        "totale": 484
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 193,
+        "femmine": 198,
+        "celibi_nubili": 76,
+        "coniugati": 284,
+        "vedovi": 26,
+        "divorziati": 5,
+        "totale": 391
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 171,
+        "femmine": 196,
+        "celibi_nubili": 43,
+        "coniugati": 263,
+        "vedovi": 56,
+        "divorziati": 5,
+        "totale": 367
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 126,
+        "femmine": 148,
+        "celibi_nubili": 22,
+        "coniugati": 207,
+        "vedovi": 44,
+        "divorziati": 1,
+        "totale": 274
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 123,
+        "femmine": 178,
+        "celibi_nubili": 27,
+        "coniugati": 176,
+        "vedovi": 96,
+        "divorziati": 2,
+        "totale": 301
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 106,
+        "femmine": 145,
+        "celibi_nubili": 18,
+        "coniugati": 130,
+        "vedovi": 103,
+        "divorziati": 0,
+        "totale": 251
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 69,
+        "femmine": 105,
+        "celibi_nubili": 11,
+        "coniugati": 61,
+        "vedovi": 102,
+        "divorziati": 0,
+        "totale": 174
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 23,
+        "femmine": 60,
+        "celibi_nubili": 13,
+        "coniugati": 19,
+        "vedovi": 51,
+        "divorziati": 0,
+        "totale": 83
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 5,
+        "femmine": 20,
+        "celibi_nubili": 0,
+        "coniugati": 1,
+        "vedovi": 24,
+        "divorziati": 0,
+        "totale": 25
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3077,
+      "femmine": 3182,
+      "celibi_nubili": 2758,
+      "coniugati": 2885,
+      "vedovi": 560,
+      "divorziati": 56,
+      "totale": 6259
+    }
+  },
+  {
+    "anno": 2019,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 123,
+        "femmine": 114,
+        "celibi_nubili": 237,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 237
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 132,
+        "femmine": 139,
+        "celibi_nubili": 271,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 271
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 178,
+        "femmine": 136,
+        "celibi_nubili": 314,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 314
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 128,
+        "femmine": 138,
+        "celibi_nubili": 266,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 266
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 140,
+        "femmine": 132,
+        "celibi_nubili": 265,
+        "coniugati": 7,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 272
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 192,
+        "femmine": 174,
+        "celibi_nubili": 289,
+        "coniugati": 76,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 366
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 210,
+        "femmine": 193,
+        "celibi_nubili": 230,
+        "coniugati": 168,
+        "vedovi": 1,
+        "divorziati": 4,
+        "totale": 403
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 212,
+        "femmine": 192,
+        "celibi_nubili": 173,
+        "coniugati": 225,
+        "vedovi": 0,
+        "divorziati": 6,
+        "totale": 404
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 211,
+        "femmine": 179,
+        "celibi_nubili": 128,
+        "coniugati": 249,
+        "vedovi": 1,
+        "divorziati": 12,
+        "totale": 390
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 208,
+        "femmine": 212,
+        "celibi_nubili": 121,
+        "coniugati": 289,
+        "vedovi": 8,
+        "divorziati": 2,
+        "totale": 420
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 229,
+        "femmine": 225,
+        "celibi_nubili": 106,
+        "coniugati": 326,
+        "vedovi": 14,
+        "divorziati": 8,
+        "totale": 454
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 237,
+        "femmine": 241,
+        "celibi_nubili": 94,
+        "coniugati": 348,
+        "vedovi": 27,
+        "divorziati": 9,
+        "totale": 478
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 196,
+        "femmine": 203,
+        "celibi_nubili": 79,
+        "coniugati": 284,
+        "vedovi": 29,
+        "divorziati": 7,
+        "totale": 399
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 161,
+        "femmine": 193,
+        "celibi_nubili": 46,
+        "coniugati": 254,
+        "vedovi": 48,
+        "divorziati": 6,
+        "totale": 354
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 145,
+        "femmine": 150,
+        "celibi_nubili": 27,
+        "coniugati": 209,
+        "vedovi": 57,
+        "divorziati": 2,
+        "totale": 295
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 122,
+        "femmine": 162,
+        "celibi_nubili": 23,
+        "coniugati": 175,
+        "vedovi": 85,
+        "divorziati": 1,
+        "totale": 284
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 98,
+        "femmine": 143,
+        "celibi_nubili": 19,
+        "coniugati": 115,
+        "vedovi": 106,
+        "divorziati": 1,
+        "totale": 241
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 69,
+        "femmine": 114,
+        "celibi_nubili": 11,
+        "coniugati": 65,
+        "vedovi": 107,
+        "divorziati": 0,
+        "totale": 183
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 22,
+        "femmine": 56,
+        "celibi_nubili": 12,
+        "coniugati": 18,
+        "vedovi": 48,
+        "divorziati": 0,
+        "totale": 78
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 7,
+        "femmine": 20,
+        "celibi_nubili": 1,
+        "coniugati": 3,
+        "vedovi": 23,
+        "divorziati": 0,
+        "totale": 27
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 3021,
+      "femmine": 3117,
+      "celibi_nubili": 2712,
+      "coniugati": 2811,
+      "vedovi": 556,
+      "divorziati": 59,
+      "totale": 6138
+    }
+  },
+  {
+    "anno": 2020,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 123,
+        "femmine": 112,
+        "celibi_nubili": 235,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 235
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 123,
+        "femmine": 135,
+        "celibi_nubili": 258,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 258
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 165,
+        "femmine": 134,
+        "celibi_nubili": 299,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 299
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 143,
+        "femmine": 128,
+        "celibi_nubili": 271,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 271
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 145,
+        "femmine": 131,
+        "celibi_nubili": 269,
+        "coniugati": 7,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 276
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 181,
+        "femmine": 166,
+        "celibi_nubili": 268,
+        "coniugati": 77,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 347
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 204,
+        "femmine": 180,
+        "celibi_nubili": 233,
+        "coniugati": 146,
+        "vedovi": 1,
+        "divorziati": 4,
+        "totale": 384
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 196,
+        "femmine": 202,
+        "celibi_nubili": 166,
+        "coniugati": 229,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 398
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 220,
+        "femmine": 161,
+        "celibi_nubili": 137,
+        "coniugati": 232,
+        "vedovi": 1,
+        "divorziati": 11,
+        "totale": 381
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 196,
+        "femmine": 207,
+        "celibi_nubili": 116,
+        "coniugati": 277,
+        "vedovi": 5,
+        "divorziati": 5,
+        "totale": 403
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 235,
+        "femmine": 226,
+        "celibi_nubili": 113,
+        "coniugati": 323,
+        "vedovi": 16,
+        "divorziati": 9,
+        "totale": 461
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 238,
+        "femmine": 233,
+        "celibi_nubili": 88,
+        "coniugati": 355,
+        "vedovi": 22,
+        "divorziati": 6,
+        "totale": 471
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 189,
+        "femmine": 216,
+        "celibi_nubili": 85,
+        "coniugati": 284,
+        "vedovi": 29,
+        "divorziati": 7,
+        "totale": 405
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 172,
+        "femmine": 189,
+        "celibi_nubili": 46,
+        "coniugati": 258,
+        "vedovi": 49,
+        "divorziati": 8,
+        "totale": 361
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 147,
+        "femmine": 162,
+        "celibi_nubili": 34,
+        "coniugati": 207,
+        "vedovi": 65,
+        "divorziati": 3,
+        "totale": 309
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 112,
+        "femmine": 142,
+        "celibi_nubili": 26,
+        "coniugati": 161,
+        "vedovi": 66,
+        "divorziati": 1,
+        "totale": 254
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 99,
+        "femmine": 150,
+        "celibi_nubili": 15,
+        "coniugati": 118,
+        "vedovi": 115,
+        "divorziati": 1,
+        "totale": 249
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 67,
+        "femmine": 113,
+        "celibi_nubili": 9,
+        "coniugati": 60,
+        "vedovi": 111,
+        "divorziati": 0,
+        "totale": 180
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 24,
+        "femmine": 52,
+        "celibi_nubili": 10,
+        "coniugati": 20,
+        "vedovi": 46,
+        "divorziati": 0,
+        "totale": 76
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 6,
+        "femmine": 18,
+        "celibi_nubili": 0,
+        "coniugati": 4,
+        "vedovi": 20,
+        "divorziati": 0,
+        "totale": 24
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 2986,
+      "femmine": 3058,
+      "celibi_nubili": 2678,
+      "coniugati": 2758,
+      "vedovi": 548,
+      "divorziati": 60,
+      "totale": 6044
+    }
+  },
+  {
+    "anno": 2021,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 114,
+        "femmine": 106,
+        "celibi_nubili": 220,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 220
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 124,
+        "femmine": 139,
+        "celibi_nubili": 263,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 263
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 157,
+        "femmine": 123,
+        "celibi_nubili": 280,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 280
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 140,
+        "femmine": 137,
+        "celibi_nubili": 277,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 277
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 140,
+        "femmine": 124,
+        "celibi_nubili": 253,
+        "coniugati": 11,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 264
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 167,
+        "femmine": 156,
+        "celibi_nubili": 250,
+        "coniugati": 72,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 323
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 196,
+        "femmine": 166,
+        "celibi_nubili": 229,
+        "coniugati": 131,
+        "vedovi": 1,
+        "divorziati": 1,
+        "totale": 362
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 181,
+        "femmine": 205,
+        "celibi_nubili": 162,
+        "coniugati": 217,
+        "vedovi": 0,
+        "divorziati": 7,
+        "totale": 386
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 216,
+        "femmine": 159,
+        "celibi_nubili": 133,
+        "coniugati": 234,
+        "vedovi": 0,
+        "divorziati": 8,
+        "totale": 375
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 194,
+        "femmine": 197,
+        "celibi_nubili": 115,
+        "coniugati": 262,
+        "vedovi": 4,
+        "divorziati": 10,
+        "totale": 391
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 221,
+        "femmine": 221,
+        "celibi_nubili": 110,
+        "coniugati": 309,
+        "vedovi": 17,
+        "divorziati": 6,
+        "totale": 442
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 228,
+        "femmine": 230,
+        "celibi_nubili": 84,
+        "coniugati": 348,
+        "vedovi": 19,
+        "divorziati": 7,
+        "totale": 458
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 200,
+        "femmine": 222,
+        "celibi_nubili": 86,
+        "coniugati": 295,
+        "vedovi": 32,
+        "divorziati": 9,
+        "totale": 422
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 161,
+        "femmine": 175,
+        "celibi_nubili": 47,
+        "coniugati": 242,
+        "vedovi": 42,
+        "divorziati": 5,
+        "totale": 336
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 160,
+        "femmine": 182,
+        "celibi_nubili": 37,
+        "coniugati": 233,
+        "vedovi": 68,
+        "divorziati": 4,
+        "totale": 342
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 101,
+        "femmine": 126,
+        "celibi_nubili": 21,
+        "coniugati": 145,
+        "vedovi": 61,
+        "divorziati": 0,
+        "totale": 227
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 108,
+        "femmine": 148,
+        "celibi_nubili": 22,
+        "coniugati": 123,
+        "vedovi": 109,
+        "divorziati": 2,
+        "totale": 256
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 63,
+        "femmine": 114,
+        "celibi_nubili": 8,
+        "coniugati": 58,
+        "vedovi": 111,
+        "divorziati": 0,
+        "totale": 177
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 26,
+        "femmine": 57,
+        "celibi_nubili": 7,
+        "coniugati": 26,
+        "vedovi": 50,
+        "divorziati": 0,
+        "totale": 83
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 4,
+        "femmine": 18,
+        "celibi_nubili": 2,
+        "coniugati": 3,
+        "vedovi": 17,
+        "divorziati": 0,
+        "totale": 22
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 2902,
+      "femmine": 3006,
+      "celibi_nubili": 2606,
+      "coniugati": 2709,
+      "vedovi": 533,
+      "divorziati": 60,
+      "totale": 5908
+    }
+  },
+  {
+    "anno": 2022,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 116,
+        "femmine": 97,
+        "celibi_nubili": 213,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 213
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 111,
+        "femmine": 115,
+        "celibi_nubili": 226,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 226
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 149,
+        "femmine": 142,
+        "celibi_nubili": 291,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 291
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 141,
+        "femmine": 135,
+        "celibi_nubili": 276,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 276
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 132,
+        "femmine": 116,
+        "celibi_nubili": 241,
+        "coniugati": 7,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 248
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 151,
+        "femmine": 134,
+        "celibi_nubili": 225,
+        "coniugati": 60,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 285
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 191,
+        "femmine": 162,
+        "celibi_nubili": 228,
+        "coniugati": 121,
+        "vedovi": 1,
+        "divorziati": 3,
+        "totale": 353
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 195,
+        "femmine": 192,
+        "celibi_nubili": 170,
+        "coniugati": 209,
+        "vedovi": 1,
+        "divorziati": 7,
+        "totale": 387
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 194,
+        "femmine": 168,
+        "celibi_nubili": 139,
+        "coniugati": 216,
+        "vedovi": 1,
+        "divorziati": 6,
+        "totale": 362
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 194,
+        "femmine": 192,
+        "celibi_nubili": 112,
+        "coniugati": 261,
+        "vedovi": 2,
+        "divorziati": 11,
+        "totale": 386
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 229,
+        "femmine": 207,
+        "celibi_nubili": 116,
+        "coniugati": 299,
+        "vedovi": 16,
+        "divorziati": 5,
+        "totale": 436
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 217,
+        "femmine": 227,
+        "celibi_nubili": 89,
+        "coniugati": 325,
+        "vedovi": 23,
+        "divorziati": 7,
+        "totale": 444
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 217,
+        "femmine": 227,
+        "celibi_nubili": 85,
+        "coniugati": 320,
+        "vedovi": 30,
+        "divorziati": 9,
+        "totale": 444
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 161,
+        "femmine": 181,
+        "celibi_nubili": 51,
+        "coniugati": 252,
+        "vedovi": 35,
+        "divorziati": 4,
+        "totale": 342
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 160,
+        "femmine": 181,
+        "celibi_nubili": 39,
+        "coniugati": 222,
+        "vedovi": 75,
+        "divorziati": 5,
+        "totale": 341
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 97,
+        "femmine": 131,
+        "celibi_nubili": 18,
+        "coniugati": 149,
+        "vedovi": 60,
+        "divorziati": 1,
+        "totale": 228
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 106,
+        "femmine": 145,
+        "celibi_nubili": 20,
+        "coniugati": 129,
+        "vedovi": 100,
+        "divorziati": 2,
+        "totale": 251
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 62,
+        "femmine": 109,
+        "celibi_nubili": 8,
+        "coniugati": 63,
+        "vedovi": 100,
+        "divorziati": 0,
+        "totale": 171
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 26,
+        "femmine": 61,
+        "celibi_nubili": 3,
+        "coniugati": 22,
+        "vedovi": 62,
+        "divorziati": 0,
+        "totale": 87
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 5,
+        "femmine": 15,
+        "celibi_nubili": 2,
+        "coniugati": 4,
+        "vedovi": 14,
+        "divorziati": 0,
+        "totale": 20
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 0,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 2855,
+      "femmine": 2937,
+      "celibi_nubili": 2552,
+      "coniugati": 2659,
+      "vedovi": 521,
+      "divorziati": 60,
+      "totale": 5792
+    }
+  },
+  {
+    "anno": 2023,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 108,
+        "femmine": 100,
+        "celibi_nubili": 208,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 208
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 118,
+        "femmine": 112,
+        "celibi_nubili": 230,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 230
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 127,
+        "femmine": 123,
+        "celibi_nubili": 250,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 250
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 163,
+        "femmine": 141,
+        "celibi_nubili": 304,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 304
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 129,
+        "femmine": 126,
+        "celibi_nubili": 247,
+        "coniugati": 8,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 255
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 134,
+        "femmine": 116,
+        "celibi_nubili": 203,
+        "coniugati": 47,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 250
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 159,
+        "femmine": 157,
+        "celibi_nubili": 195,
+        "coniugati": 118,
+        "vedovi": 0,
+        "divorziati": 3,
+        "totale": 316
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 208,
+        "femmine": 193,
+        "celibi_nubili": 190,
+        "coniugati": 201,
+        "vedovi": 2,
+        "divorziati": 8,
+        "totale": 401
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 196,
+        "femmine": 176,
+        "celibi_nubili": 139,
+        "coniugati": 226,
+        "vedovi": 1,
+        "divorziati": 6,
+        "totale": 372
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 195,
+        "femmine": 173,
+        "celibi_nubili": 115,
+        "coniugati": 242,
+        "vedovi": 2,
+        "divorziati": 9,
+        "totale": 368
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 203,
+        "femmine": 208,
+        "celibi_nubili": 113,
+        "coniugati": 280,
+        "vedovi": 10,
+        "divorziati": 8,
+        "totale": 411
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 219,
+        "femmine": 222,
+        "celibi_nubili": 97,
+        "coniugati": 313,
+        "vedovi": 23,
+        "divorziati": 8,
+        "totale": 441
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 228,
+        "femmine": 230,
+        "celibi_nubili": 84,
+        "coniugati": 331,
+        "vedovi": 33,
+        "divorziati": 10,
+        "totale": 458
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 173,
+        "femmine": 189,
+        "celibi_nubili": 62,
+        "coniugati": 257,
+        "vedovi": 36,
+        "divorziati": 7,
+        "totale": 362
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 146,
+        "femmine": 177,
+        "celibi_nubili": 34,
+        "coniugati": 212,
+        "vedovi": 72,
+        "divorziati": 5,
+        "totale": 323
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 107,
+        "femmine": 136,
+        "celibi_nubili": 19,
+        "coniugati": 158,
+        "vedovi": 65,
+        "divorziati": 1,
+        "totale": 243
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 95,
+        "femmine": 141,
+        "celibi_nubili": 19,
+        "coniugati": 124,
+        "vedovi": 91,
+        "divorziati": 2,
+        "totale": 236
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 69,
+        "femmine": 106,
+        "celibi_nubili": 9,
+        "coniugati": 70,
+        "vedovi": 96,
+        "divorziati": 0,
+        "totale": 175
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 27,
+        "femmine": 60,
+        "celibi_nubili": 4,
+        "coniugati": 23,
+        "vedovi": 60,
+        "divorziati": 0,
+        "totale": 87
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 3,
+        "femmine": 14,
+        "celibi_nubili": 1,
+        "coniugati": 3,
+        "vedovi": 13,
+        "divorziati": 0,
+        "totale": 17
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 2808,
+      "femmine": 2901,
+      "celibi_nubili": 2523,
+      "coniugati": 2613,
+      "vedovi": 506,
+      "divorziati": 67,
+      "totale": 5709
+    }
+  },
+  {
+    "anno": 2024,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 101,
+        "femmine": 99,
+        "celibi_nubili": 200,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 200
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 116,
+        "femmine": 114,
+        "celibi_nubili": 230,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 230
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 120,
+        "femmine": 128,
+        "celibi_nubili": 248,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 248
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 177,
+        "femmine": 131,
+        "celibi_nubili": 308,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 308
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 122,
+        "femmine": 131,
+        "celibi_nubili": 239,
+        "coniugati": 14,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 253
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 128,
+        "femmine": 116,
+        "celibi_nubili": 206,
+        "coniugati": 38,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 244
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 150,
+        "femmine": 146,
+        "celibi_nubili": 185,
+        "coniugati": 109,
+        "vedovi": 0,
+        "divorziati": 2,
+        "totale": 296
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 192,
+        "femmine": 177,
+        "celibi_nubili": 179,
+        "coniugati": 182,
+        "vedovi": 2,
+        "divorziati": 6,
+        "totale": 369
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 199,
+        "femmine": 181,
+        "celibi_nubili": 143,
+        "coniugati": 228,
+        "vedovi": 1,
+        "divorziati": 8,
+        "totale": 380
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 202,
+        "femmine": 161,
+        "celibi_nubili": 114,
+        "coniugati": 238,
+        "vedovi": 1,
+        "divorziati": 10,
+        "totale": 363
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 191,
+        "femmine": 205,
+        "celibi_nubili": 109,
+        "coniugati": 272,
+        "vedovi": 8,
+        "divorziati": 7,
+        "totale": 396
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 219,
+        "femmine": 217,
+        "celibi_nubili": 100,
+        "coniugati": 306,
+        "vedovi": 22,
+        "divorziati": 8,
+        "totale": 436
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 229,
+        "femmine": 233,
+        "celibi_nubili": 89,
+        "coniugati": 326,
+        "vedovi": 36,
+        "divorziati": 11,
+        "totale": 462
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 177,
+        "femmine": 192,
+        "celibi_nubili": 67,
+        "coniugati": 258,
+        "vedovi": 37,
+        "divorziati": 7,
+        "totale": 369
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 143,
+        "femmine": 175,
+        "celibi_nubili": 39,
+        "coniugati": 212,
+        "vedovi": 64,
+        "divorziati": 3,
+        "totale": 318
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 118,
+        "femmine": 138,
+        "celibi_nubili": 22,
+        "coniugati": 159,
+        "vedovi": 73,
+        "divorziati": 2,
+        "totale": 256
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 87,
+        "femmine": 138,
+        "celibi_nubili": 15,
+        "coniugati": 117,
+        "vedovi": 92,
+        "divorziati": 1,
+        "totale": 225
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 66,
+        "femmine": 91,
+        "celibi_nubili": 10,
+        "coniugati": 67,
+        "vedovi": 79,
+        "divorziati": 1,
+        "totale": 157
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 31,
+        "femmine": 61,
+        "celibi_nubili": 3,
+        "coniugati": 26,
+        "vedovi": 63,
+        "divorziati": 0,
+        "totale": 92
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 4,
+        "femmine": 22,
+        "celibi_nubili": 3,
+        "coniugati": 2,
+        "vedovi": 21,
+        "divorziati": 0,
+        "totale": 26
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 1,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 2,
+        "divorziati": 0,
+        "totale": 2
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 2773,
+      "femmine": 2857,
+      "celibi_nubili": 2509,
+      "coniugati": 2554,
+      "vedovi": 501,
+      "divorziati": 66,
+      "totale": 5630
+    }
+  },
+  {
+    "anno": 2025,
+    "fasce": [
+      {
+        "fascia_eta": "0-4",
+        "maschi": 104,
+        "femmine": 90,
+        "celibi_nubili": 194,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 194
+      },
+      {
+        "fascia_eta": "5-9",
+        "maschi": 112,
+        "femmine": 114,
+        "celibi_nubili": 226,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 226
+      },
+      {
+        "fascia_eta": "10-14",
+        "maschi": 114,
+        "femmine": 123,
+        "celibi_nubili": 237,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 237
+      },
+      {
+        "fascia_eta": "15-19",
+        "maschi": 160,
+        "femmine": 127,
+        "celibi_nubili": 287,
+        "coniugati": 0,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 287
+      },
+      {
+        "fascia_eta": "20-24",
+        "maschi": 133,
+        "femmine": 117,
+        "celibi_nubili": 242,
+        "coniugati": 8,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 250
+      },
+      {
+        "fascia_eta": "25-29",
+        "maschi": 130,
+        "femmine": 119,
+        "celibi_nubili": 207,
+        "coniugati": 42,
+        "vedovi": 0,
+        "divorziati": 0,
+        "totale": 249
+      },
+      {
+        "fascia_eta": "30-34",
+        "maschi": 145,
+        "femmine": 140,
+        "celibi_nubili": 178,
+        "coniugati": 106,
+        "vedovi": 0,
+        "divorziati": 1,
+        "totale": 285
+      },
+      {
+        "fascia_eta": "35-39",
+        "maschi": 179,
+        "femmine": 159,
+        "celibi_nubili": 169,
+        "coniugati": 160,
+        "vedovi": 2,
+        "divorziati": 7,
+        "totale": 338
+      },
+      {
+        "fascia_eta": "40-44",
+        "maschi": 180,
+        "femmine": 189,
+        "celibi_nubili": 139,
+        "coniugati": 222,
+        "vedovi": 0,
+        "divorziati": 8,
+        "totale": 369
+      },
+      {
+        "fascia_eta": "45-49",
+        "maschi": 214,
+        "femmine": 152,
+        "celibi_nubili": 126,
+        "coniugati": 224,
+        "vedovi": 2,
+        "divorziati": 14,
+        "totale": 366
+      },
+      {
+        "fascia_eta": "50-54",
+        "maschi": 182,
+        "femmine": 201,
+        "celibi_nubili": 102,
+        "coniugati": 265,
+        "vedovi": 5,
+        "divorziati": 11,
+        "totale": 383
+      },
+      {
+        "fascia_eta": "55-59",
+        "maschi": 221,
+        "femmine": 215,
+        "celibi_nubili": 104,
+        "coniugati": 296,
+        "vedovi": 24,
+        "divorziati": 12,
+        "totale": 436
+      },
+      {
+        "fascia_eta": "60-64",
+        "maschi": 226,
+        "femmine": 226,
+        "celibi_nubili": 82,
+        "coniugati": 329,
+        "vedovi": 33,
+        "divorziati": 8,
+        "totale": 452
+      },
+      {
+        "fascia_eta": "65-69",
+        "maschi": 179,
+        "femmine": 205,
+        "celibi_nubili": 76,
+        "coniugati": 265,
+        "vedovi": 37,
+        "divorziati": 6,
+        "totale": 384
+      },
+      {
+        "fascia_eta": "70-74",
+        "maschi": 158,
+        "femmine": 179,
+        "celibi_nubili": 41,
+        "coniugati": 227,
+        "vedovi": 62,
+        "divorziati": 7,
+        "totale": 337
+      },
+      {
+        "fascia_eta": "75-79",
+        "maschi": 116,
+        "femmine": 142,
+        "celibi_nubili": 25,
+        "coniugati": 149,
+        "vedovi": 82,
+        "divorziati": 2,
+        "totale": 258
+      },
+      {
+        "fascia_eta": "80-84",
+        "maschi": 81,
+        "femmine": 118,
+        "celibi_nubili": 17,
+        "coniugati": 111,
+        "vedovi": 70,
+        "divorziati": 1,
+        "totale": 199
+      },
+      {
+        "fascia_eta": "85-89",
+        "maschi": 66,
+        "femmine": 99,
+        "celibi_nubili": 8,
+        "coniugati": 65,
+        "vedovi": 91,
+        "divorziati": 1,
+        "totale": 165
+      },
+      {
+        "fascia_eta": "90-94",
+        "maschi": 34,
+        "femmine": 58,
+        "celibi_nubili": 3,
+        "coniugati": 29,
+        "vedovi": 60,
+        "divorziati": 0,
+        "totale": 92
+      },
+      {
+        "fascia_eta": "95-99",
+        "maschi": 5,
+        "femmine": 18,
+        "celibi_nubili": 2,
+        "coniugati": 2,
+        "vedovi": 19,
+        "divorziati": 0,
+        "totale": 23
+      },
+      {
+        "fascia_eta": "100+",
+        "maschi": 0,
+        "femmine": 1,
+        "celibi_nubili": 0,
+        "coniugati": 0,
+        "vedovi": 1,
+        "divorziati": 0,
+        "totale": 1
+      }
+    ],
+    "totale": {
+      "fascia_eta": "Totale",
+      "maschi": 2739,
+      "femmine": 2792,
+      "celibi_nubili": 2465,
+      "coniugati": 2500,
+      "vedovi": 488,
+      "divorziati": 78,
+      "totale": 5531
+    }
+  }
+]

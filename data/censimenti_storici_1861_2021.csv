@@ -1,0 +1,17 @@
+numero_censimento;anno;data_rilevamento;popolazione_residente;variazione_percentuale;note_storiche
+1°;1861;31 dic;6532;;Il primo censimento della popolazione viene effettuato nell'anno dell'unità d'Italia.
+2°;1871;31 dic;7932;21.4;"Come nel precedente censimento, l'unità di rilevazione basata sul concetto di ""famiglia"" non prevede la distinzione tra famiglie e convivenze."
+3°;1881;31 dic;10285;29.7;Viene adottato il metodo di rilevazione della popolazione residente, ne fanno parte i presenti con dimora abituale e gli assenti temporanei.
+4°;1901;10 feb;10808;5.1;La data di riferimento del censimento viene spostata a febbraio. Vengono introdotte schede individuali per ogni componente della famiglia.
+5°;1911;10 giu;12027;11.3;Per la prima volta viene previsto il limite di età di 10 anni per rispondere alle domande sul lavoro.
+6°;1921;1 dic;16269;35.3;L'ultimo censimento gestito dai comuni gravati anche delle spese di rilevazione. In seguito le indagini statistiche verranno affidate all'Istat.
+7°;1931;21 apr;12380;-23.9;Per la prima volta i dati raccolti vengono elaborati con macchine perforatrici utilizzando due tabulatori Hollerith a schede.
+8°;1936;21 apr;11398;-7.9;Il primo ed unico censimento effettuato con periodicità quinquennale.
+9°;1951;4 nov;10871;-4.6;Il primo censimento della popolazione a cui è stato abbinato anche quello delle abitazioni.
+10°;1961;15 ott;11112;2.2;Il questionario viene diviso in sezioni. Per la raccolta dei dati si utilizzano elaboratori di seconda generazione con l'applicazione del transistor e l'introduzione dei nastri magnetici.
+11°;1971;24 ott;10512;-5.4;Il primo censimento di rilevazione dei gruppi linguistici di Trieste e Bolzano con questionario tradotto anche in lingua tedesca.
+12°;1981;25 ott;10194;-3.0;Viene migliorata l'informazione statistica attraverso indagini pilota che testano l'affidabilità del questionario e l'attendibilità dei risultati.
+13°;1991;20 ott;8484;-16.8;"Il questionario viene tradotto in sei lingue oltre all'italiano ed è corredato di un ""foglio individuale per straniero non residente in Italia""."
+14°;2001;21 ott;7535;-11.2;Lo sviluppo della telematica consente l'attivazione del primo sito web dedicato al Censimento e la diffusione dei risultati online.
+15°;2011;9 ott;6732;-10.7;Il Censimento 2011 è stato il primo censimento online con i questionari compilati anche via web ed anche l'ultimo censimento di tipo tradizionale con rilevazione a cadenza decennale.
+III;2021;31 dic;5792;-14.0;Il Censimento 2021 è stato il primo censimento permanente della popolazione ad essere utilizzato per determinare la popolazione legale , che d'ora in poi sarà aggiornata con cadenza quinquennale invece che decennale.

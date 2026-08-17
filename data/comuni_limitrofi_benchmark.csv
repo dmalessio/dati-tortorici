@@ -1,0 +1,13 @@
+comune;distanza_km;confinante;popolazione_2025;eta_media;indice_vecchiaia;stranieri_pct
+Galati Mamertino;4.6;True;2212;48.9;248.5;1.8
+San Salvatore di Fitalia;5.0;True;1147;50.2;282.1;1.2
+Ucria;5.3;True;906;51.7;315.4;0.9
+Sinagra;6.1;True;2485;47.9;218.0;2.1
+Longi;6.2;True;1324;49.5;261.2;1.4
+Castell'Umberto;6.3;True;2842;48.1;225.6;2.3
+Floresta;8.9;True;442;54.1;410.8;0.7
+Randazzo (CT);20.4;True;10094;46.1;188.3;3.1
+Bronte (CT);26.8;True;18150;44.8;162.7;3.8
+Tortorici (ME);0.0;False;5531;47.5;222.1;1.1
+Città Metr. di Messina;;False;598000;46.8;205.4;4.7
+Regione Sicilia;;False;4802000;45.9;189.6;4.2

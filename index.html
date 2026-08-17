@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tortorici: dati demografici e socioeconomici - Statistiche ISTAT, MEF e ACI</title>
+  <meta name="description" content="Quadro statistico e demografico del comune di Tortorici (ME): piramide delle età, bilancio naturale e migratorio, redditi IRPEF, mobilità veicolare e simulatore previsionale 2025–2050.">
+  
+  <!-- Tipografia Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Foglio di stile -->
+  <link rel="stylesheet" href="css/styles.css?v=2.2">
+</head>
+<body>
+
+  <!-- Header Istituzionale -->
+  <header class="app-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-badges">
+          <span class="badge badge-istat">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Dati certificati ISTAT
+          </span>
+          <span class="badge badge-mef">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Integrazione MEF e ACI
+          </span>
+          <span class="badge">Codice ISTAT: 083099</span>
+        </div>
+      </div>
+
+      <div class="header-title-wrap">
+        <h1>Tortorici: dati demografici e socioeconomici</h1>
+        <p class="header-subtitle">
+          Quadro informativo statistico: struttura per età e genere, dinamica dei flussi naturali e migratori, indicatori di reddito IRPEF, mobilità veicolare e modello previsionale 2025–2050.
+        </p>
+      </div>
+
+      <div class="header-meta-tags">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Città Metropolitana di Messina • Parco dei Nebrodi</span>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 22 22 22 12 2"/></svg>
+          <span>Altitudine: 450 m s.l.m.</span>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+          <span>Superficie: 70,16 km²</span>
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Densità: 78,8 ab./km²</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigazione Principale a Schede -->
+  <nav class="nav-tabs-container" aria-label="Sezioni della dashboard">
+    <div class="container">
+      <div class="nav-tabs">
+        <button class="nav-tab-btn active" data-target="sezione-piramide">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          Piramide età
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-flussi">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+          Flussi demografici
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-scuola">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Scuola 0–18
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-economia">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Redditi e auto
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-stranieri">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Stranieri
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-censimenti">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Censimenti storici
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-simulatore">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+          Simulatore What-If
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-benchmark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Benchmark Nebrodi
+        </button>
+        <button class="nav-tab-btn" data-target="sezione-dati">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Dati CSV
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Barra Fissa di Controllo Anno (Sticky Year Scrubber Bar) -->
+  <div class="sticky-year-bar" id="sticky-year-controller">
+    <div class="container">
+      <div class="sticky-year-content">
+        <div class="year-control-left">
+          <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Anno di analisi:</span>
+          <div class="year-badge-active" id="sticky-year-display">2025</div>
+          <button id="btn-sticky-play" class="btn-ctrl" aria-label="Avvia riproduzione temporale">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Avvia
+          </button>
+          <button id="btn-sticky-prev" class="btn-ctrl" title="Anno precedente">◀ Prec.</button>
+          <button id="btn-sticky-next" class="btn-ctrl" title="Anno successivo">Succ. ▶</button>
+        </div>
+
+        <div class="year-slider-track">
+          <input type="range" id="sticky-time-slider" class="time-slider-sticky" min="2002" max="2025" step="1" value="2025" aria-label="Scorri anno di rilevazione">
+        </div>
+
+        <div class="year-quick-jump">
+          <span style="font-size: 0.72rem; color: #64748b; margin-right: 0.2rem;">Anni chiave:</span>
+          <button class="btn-quick-year" data-year="2002">2002</button>
+          <button class="btn-quick-year" data-year="2008">2008</button>
+          <button class="btn-quick-year" data-year="2011">2011</button>
+          <button class="btn-quick-year" data-year="2016">2016</button>
+          <button class="btn-quick-year" data-year="2020">2020</button>
+          <button class="btn-quick-year active" data-year="2025">2025</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- Schede KPI in Tempo Reale -->
+    <section class="kpi-section" aria-label="Indicatori chiave">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Popolazione residente</div>
+          <div class="kpi-value" id="kpi-popolazione">5.531</div>
+          <div class="kpi-subtext">
+            <span>Rilevamento al 1° gen <span class="kpi-year-label">2025</span></span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Età media</div>
+          <div class="kpi-value" id="kpi-eta-media">47,5 anni</div>
+          <div class="kpi-subtext">
+            <span>Era 40,8 nel 2002</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Indice di vecchiaia</div>
+          <div class="kpi-value" id="kpi-indice-vecchiaia">222,1</div>
+          <div class="kpi-subtext">
+            <span>Anziani ogni 100 giovani</span>
+          </div>
+        </div>
+
+        <div class="kpi-card" title="Rapporto percentuale tra la popolazione che sta per uscire dal mondo del lavoro (60-64 anni) e quella che vi sta entrando (15-19 anni). Valori sopra 100 indicano deficit di sostituzione generazionale.">
+          <div class="kpi-label">Ricambio pop. attiva</div>
+          <div class="kpi-value" id="kpi-ricambio-attiva">157,5</div>
+          <div class="kpi-subtext">
+            <span>Uscite (60–64) ogni 100 giovani (15–19)</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Saldo naturale</div>
+          <div class="kpi-value" id="kpi-saldo-naturale">-47</div>
+          <div class="kpi-subtext">
+            <span>Nascite vs decessi annui</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Cittadini stranieri</div>
+          <div class="kpi-value" id="kpi-stranieri">63 (1,1%)</div>
+          <div class="kpi-subtext">
+            <span>17 nazioni di provenienza</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 1: Piramide delle Età -->
+    <section id="sezione-piramide" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Piramide delle età e struttura della popolazione</h2>
+          <p>Distribuzione dei residenti per classi quinquennali d'età, genere e stato civile (serie annuale 2002–2025).</p>
+        </div>
+        <div class="chart-controls">
+          <button class="btn-toggle active" data-pyramid-mode="gender">Genere (Maschi / Femmine)</button>
+          <button class="btn-toggle" data-pyramid-mode="civil">Stato civile</button>
+        </div>
+      </div>
+
+      <div class="card-grid-2">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Piramide demografica per età</h3>
+              <span>Maschi a sinistra, femmine a destra</span>
+            </div>
+          </div>
+          <div id="pyramid-chart-container" class="chart-container"></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Struttura demografica e macro-fasce</h3>
+              <span>Ripartizione della popolazione residente</span>
+            </div>
+          </div>
+          <div style="padding: 0.25rem 0;">
+            <p style="margin-bottom: 0.85rem;">
+              La struttura evidenzia una configurazione <strong>regressiva</strong> con base ristretta, causata dal costante calo delle nascite e dalla concentrazione delle coorti più numerose nelle età centrali e avanzate (<strong>50–65 anni</strong>).
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div class="flow-card">
+                <div class="flow-card-header">
+                  <strong>Fascia giovanile (0–14 anni)</strong>
+                  <span class="badge" style="background: #e0f2fe; color: #0369a1;">11,9% del totale</span>
+                </div>
+                <p style="font-size: 0.825rem; margin-top: 0.2rem;">657 residenti al 2025 (erano 1.214 nel 2002, contrazione del -45,9%).</p>
+              </div>
+
+              <div class="flow-card">
+                <div class="flow-card-header">
+                  <strong>Popolazione in età attiva (15–64 anni)</strong>
+                  <span class="badge" style="background: #f1f5f9; color: #334155;">61,7% del totale</span>
+                </div>
+                <p style="font-size: 0.825rem; margin-top: 0.2rem;">3.415 individui in età lavorativa al 2025 (erano 4.773 nel 2002).</p>
+              </div>
+
+              <div class="flow-card">
+                <div class="flow-card-header">
+                  <strong>Popolazione anziana (65 anni e oltre)</strong>
+                  <span class="badge" style="background: #fef2f2; color: #b91c1c;">26,4% del totale</span>
+                </div>
+                <p style="font-size: 0.825rem; margin-top: 0.2rem;">1.459 anziani residenti al 2025 (222 anziani ogni 100 giovani).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 2: Bilancio Demografico e Flussi -->
+    <section id="sezione-flussi" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Bilancio demografico e flussi annuali di popolazione</h2>
+          <p>Scomposizione delle componenti di movimento: entrate (nascite e immigrazioni) ed uscite (decessi ed emigrazioni).</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-wrap">
+            <h3>Dinamica idraulica dei flussi anagrafici</h3>
+            <span>Rilevamento ISTAT annuale per il comune di Tortorici</span>
+          </div>
+        </div>
+        <div id="flow-diagram-wrapper"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 3: Scuola e Nuove Generazioni -->
+    <section id="sezione-scuola" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Osservatorio scuola e generazioni in età evolutiva (0–18 anni)</h2>
+          <p>Bacino potenziale per i servizi educativi e scolastici comunali, dai nidi alla scuola secondaria di secondo grado.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-wrap">
+            <h3>Consistenza della popolazione per ciclo scolastico</h3>
+            <span>Nido (0–2), Infanzia (3–5), Primaria (6–10), Secondaria I grado (11–13), Secondaria II grado (14–18)</span>
+          </div>
+        </div>
+        <div id="school-chart-container"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 4: Redditi IRPEF e Mobilità Veicolare (MEF e ACI) -->
+    <section id="sezione-economia" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Indicatori economico-fiscali e mobilità veicolare (MEF e ACI)</h2>
+          <p>Reddito imponibile dichiarato per addizionale IRPEF e consistenza del parco veicolare registrato al PRA.</p>
+        </div>
+      </div>
+
+      <div class="card-grid-2">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Redditi imponibili IRPEF (Ministero Economia e Finanze)</h3>
+              <span>Serie storica contribuenti e reddito medio pro capite</span>
+            </div>
+          </div>
+          <div id="redditi-chart-container"></div>
+          <p style="font-size: 0.8rem; color: var(--text-subtle); margin-top: 0.5rem;">
+            Nel 2024 (dichiarazioni anno d'imposta 2023) il monte imponibile complessivo dichiarato a Tortorici ha raggiunto <strong>€ 61.623.028</strong>, con un reddito medio per contribuente salito a <strong>€ 15.253</strong> e <strong>€ 11.141</strong> per residente (erano € 6.913 nel 2001).
+          </p>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Parco veicolare e motorizzazione (ACI / PRA)</h3>
+              <span>Automobili, motocicli e mezzi per il trasporto merci</span>
+            </div>
+          </div>
+          <div id="veicoli-chart-container"></div>
+          <p style="font-size: 0.8rem; color: var(--text-subtle); margin-top: 0.5rem;">
+            Tortorici registra un tasso di motorizzazione elevato pari a <strong>722 autovetture ogni 1.000 residenti</strong>, legato all'estensione territoriale e all'orografia collinare dei Nebrodi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 5: Comunità Straniere -->
+    <section id="sezione-stranieri" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Origine geografica delle comunità straniere residenti</h2>
+          <p>Provenienza dei 63 cittadini con cittadinanza non italiana residenti a Tortorici (dati ufficiali 2025).</p>
+        </div>
+      </div>
+
+      <div class="card-grid-2">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Planisfero delle origini verso Tortorici</h3>
+              <span>Archi di collegamento dai paesi d'origine</span>
+            </div>
+          </div>
+          <div id="world-map-wrapper"></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Piramide d'età della popolazione straniera</h3>
+              <span>Prevalenza femminile nelle fasce anagrafiche centrali (30–59 anni)</span>
+            </div>
+          </div>
+          <div id="foreign-pyramid-wrapper"></div>
+        </div>
+      </div>
+
+      <div id="country-cards-wrapper" style="margin-top: 0.75rem;"></div>
+    </section>
+
+    <!-- SEZIONE 6: Censimenti Storici (1861-2021) -->
+    <section id="sezione-censimenti" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Cronologia secolare dei censimenti generali (1861–2021)</h2>
+          <p>160 anni di rilevazioni ufficiali: dal primo censimento post-unitario al massimo storico del 1921 fino al censimento permanente.</p>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-title-wrap">
+            <h3>Popolazione legale ai censimenti generali ISTAT</h3>
+            <span>Passa il cursore sui punti per leggere le note storiche di ciascun censimento</span>
+          </div>
+        </div>
+        <div id="history-chart-svg" style="padding: 0.5rem 0;"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 7: Simulatore What-If (2025-2050) -->
+    <section id="sezione-simulatore" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Simulatore previsionale di scenari demografici futuri (2025–2050)</h2>
+          <p>Modello di proiezione a componenti di coorte su natalità, saldo migratorio netto e mortalità.</p>
+        </div>
+      </div>
+
+      <div class="card-grid-2">
+        <div class="simulator-panel">
+          <h3 style="margin-bottom: 0.85rem;">Parametri previsionali</h3>
+
+          <div class="sim-control-group">
+            <div class="sim-control-header">
+              <label class="sim-control-label" for="sim-fertility-slider">Variazione nascite annue</label>
+              <span id="sim-fertility-val" class="sim-control-val">+0%</span>
+            </div>
+            <input type="range" id="sim-fertility-slider" class="sim-slider" min="-50" max="100" step="5" value="0">
+            <small style="color: var(--text-subtle);">Base attuale: ~38 nascite all'anno</small>
+          </div>
+
+          <div class="sim-control-group">
+            <div class="sim-control-header">
+              <label class="sim-control-label" for="sim-migration-slider">Saldo migratorio annuo netto</label>
+              <span id="sim-migration-val" class="sim-control-val">-57 ab./anno</span>
+            </div>
+            <input type="range" id="sim-migration-slider" class="sim-slider" min="-100" max="100" step="5" value="-57">
+            <small style="color: var(--text-subtle);">Base attuale: -57 residenti all'anno</small>
+          </div>
+
+          <div class="sim-control-group">
+            <div class="sim-control-header">
+              <label class="sim-control-label" for="sim-mortality-slider">Variazione mortalità / longevità</label>
+              <span id="sim-mortality-val" class="sim-control-val">+0%</span>
+            </div>
+            <input type="range" id="sim-mortality-slider" class="sim-slider" min="-25" max="25" step="5" value="0">
+            <small style="color: var(--text-subtle);">Base attuale: ~85 decessi all'anno</small>
+          </div>
+
+          <div class="sim-presets">
+            <button class="btn-preset active" data-preset="current">Scenario mediano ISTAT</button>
+            <button class="btn-preset" data-preset="stabilization">Obiettivo SNAI Coesione</button>
+            <button class="btn-preset" data-preset="optimistic">Attrattività borgo</button>
+            <button class="btn-preset" data-preset="accelerated-decline">Spopolamento severo</button>
+          </div>
+
+          <div style="margin-top: 1.15rem; padding-top: 0.9rem; border-top: 1px solid var(--border-light); font-size: 0.775rem; color: var(--text-subtle); line-height: 1.45;">
+            <strong>Inquadramento SNAI e ISTAT</strong>: Tortorici appartiene all'area di progetto <em>SNAI Nebrodi</em> (distanza media dal polo servizi: 55 min). Nel Focus ISTAT 2024 sulle Aree Interne, l'82,1% dei comuni interni è proiettato in declino continuo (-14,2% a 20 anni nel Mezzogiorno).
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <div class="chart-title-wrap">
+              <h3>Traiettoria previsionale della popolazione residente</h3>
+              <span>Stima a componenti di coorte a confronto con il benchmark ISTAT Aree Interne</span>
+            </div>
+          </div>
+          
+          <div id="simulation-chart-svg"></div>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid var(--border-light); text-align: center;">
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-subtle);">Anno 2030</div>
+              <div id="sim-out-2030" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono);">-</div>
+            </div>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-subtle);">Anno 2040</div>
+              <div id="sim-out-2040" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono);">-</div>
+            </div>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-subtle);">Anno 2050</div>
+              <div id="sim-out-2050" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono);">-</div>
+            </div>
+            <div>
+              <div style="font-size: 0.72rem; color: var(--text-subtle);">Delta 2025–2050</div>
+              <div id="sim-out-delta" style="font-size: 0.9rem; font-weight: 800; font-family: var(--font-mono);">-</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 8: Benchmark Nebrodi -->
+    <section id="sezione-benchmark" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Benchmark territoriale dei Nebrodi e della provincia di Messina</h2>
+          <p>Confronto su popolazione, età media, indice di vecchiaia e incidenza di cittadini stranieri con i comuni limitrofi.</p>
+        </div>
+      </div>
+
+      <div class="data-table-container">
+        <div id="benchmark-table-container"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 9: Centro Dati & Download CSV -->
+    <section id="sezione-dati" class="section-block">
+      <div class="section-header">
+        <div class="section-header-text">
+          <h2>Centro dati e download CSV (Ground Truth verificata)</h2>
+          <p>Esplora, filtra e scarica direttamente i dataset estratti dalle statistiche ufficiali ISTAT, MEF e ACI.</p>
+        </div>
+      </div>
+
+      <div class="data-table-container">
+        <div class="data-table-toolbar">
+          <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+            <label for="dataset-selector" style="font-weight: 700; font-size: 0.85rem;">Dataset:</label>
+            <select id="dataset-selector" style="padding: 0.4rem 0.75rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-family: var(--font-sans); font-size: 0.85rem;">
+              <option value="popolazione">Andamento popolazione 2001–2024</option>
+              <option value="movimento">Movimento naturale (nascite e decessi)</option>
+              <option value="migrazioni">Flussi migratori (iscritti e cancellati)</option>
+              <option value="redditi">Redditi IRPEF e contribuenti (MEF OpenData 2001–2024)</option>
+              <option value="veicoli">Parco veicolare e motorizzazione (ACI 2004–2016)</option>
+              <option value="indici">Indici demografici e di struttura (2002–2025)</option>
+              <option value="stranieri_paesi">Cittadini stranieri per paese d'origine 2025</option>
+              <option value="censimenti">Censimenti storici 1861–2021</option>
+            </select>
+            
+            <input type="text" id="table-search-input" class="table-search-input" placeholder="Cerca nel dataset selezionato..." aria-label="Filtra dati">
+          </div>
+
+          <button id="btn-download-active-csv" class="btn-download-csv">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Scarica file CSV
+          </button>
+        </div>
+
+        <div id="explorer-table-container"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Istituzionale -->
+  <footer class="app-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h4>Tortorici: dati demografici e socioeconomici</h4>
+          <p>
+            Piattaforma di analisi statistica e modelli previsionali sviluppata su dati pubblici ISTAT, Ministero dell'Economia e delle Finanze, Automobile Club d'Italia e Tuttitalia.it.
+          </p>
+        </div>
+
+        <div class="footer-sources">
+          <h5 style="color: #ffffff; margin-bottom: 0.4rem; font-size: 0.85rem;">Fonti ufficiali e riferimenti</h5>
+          <ul>
+            <li>• ISTAT - Istituto Nazionale di Statistica (Censimento permanente e serie anagrafiche)</li>
+            <li>• MEF - Dipartimento delle Finanze (Dichiarazioni dei redditi IRPEF persone fisiche)</li>
+            <li>• ACI / PRA - Pubblico Registro Automobilistico (Statistiche parco veicolare)</li>
+            <li>• Elaborazioni su dati territoriali da <a href="https://www.tuttitalia.it/sicilia/55-tortorici/statistiche/" target="_blank" rel="noopener noreferrer">Tuttitalia.it</a> e <a href="https://www.comuni-italiani.it/083/099/statistiche/" target="_blank" rel="noopener noreferrer">Comuni-Italiani.it</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Dati conformi agli standard ufficiali ISTAT, MEF e ACI</div>
+        <div>Codice ISTAT: 083099 • Città Metropolitana di Messina (ME)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script applicativi con cache-busting -->
+  <script src="js/data.js?v=2.2"></script>
+  <script src="js/charts.js?v=2.2"></script>
+  <script src="js/map.js?v=2.2"></script>
+  <script src="js/simulator.js?v=2.2"></script>
+  <script src="js/app.js?v=2.2"></script>
+</body>
+</html>

@@ -1,0 +1,4491 @@
+[
+  {
+    "anno": 2002,
+    "dati_eta": []
+  },
+  {
+    "anno": 2003,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 26,
+        "femmine_totale": 36,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 39,
+        "femmine_totale": 30,
+        "totale": 69,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 35,
+        "femmine_totale": 29,
+        "totale": 64,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 39,
+        "femmine_totale": 45,
+        "totale": 84,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 23,
+        "femmine_totale": 31,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 37,
+        "femmine_totale": 19,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 40,
+        "femmine_totale": 33,
+        "totale": 73,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 30,
+        "femmine_totale": 33,
+        "totale": 63,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 33,
+        "femmine_totale": 46,
+        "totale": 79,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 48,
+        "femmine_totale": 40,
+        "totale": 88,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 57,
+        "femmine_totale": 53,
+        "totale": 110,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 44,
+        "femmine_totale": 34,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 46,
+        "femmine_totale": 39,
+        "totale": 85,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 50,
+        "femmine_totale": 45,
+        "totale": 95,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 64,
+        "femmine_totale": 47,
+        "totale": 111,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 60,
+        "femmine_totale": 52,
+        "totale": 112,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 48,
+        "femmine_totale": 49,
+        "totale": 97,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 44,
+        "femmine_totale": 55,
+        "totale": 99,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2004,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 24,
+        "femmine_totale": 35,
+        "totale": 59,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 24,
+        "femmine_totale": 36,
+        "totale": 60,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 38,
+        "femmine_totale": 29,
+        "totale": 67,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 34,
+        "femmine_totale": 27,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 39,
+        "femmine_totale": 43,
+        "totale": 82,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 23,
+        "femmine_totale": 29,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 35,
+        "femmine_totale": 19,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 41,
+        "femmine_totale": 34,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 30,
+        "femmine_totale": 33,
+        "totale": 63,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 33,
+        "femmine_totale": 45,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 47,
+        "femmine_totale": 39,
+        "totale": 86,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 54,
+        "femmine_totale": 51,
+        "totale": 105,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 45,
+        "femmine_totale": 33,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 44,
+        "femmine_totale": 39,
+        "totale": 83,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 48,
+        "femmine_totale": 45,
+        "totale": 93,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 63,
+        "femmine_totale": 44,
+        "totale": 107,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 60,
+        "femmine_totale": 51,
+        "totale": 111,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 46,
+        "femmine_totale": 49,
+        "totale": 95,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2005,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 49,
+        "femmine_totale": 32,
+        "totale": 81,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 23,
+        "femmine_totale": 35,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 25,
+        "femmine_totale": 36,
+        "totale": 61,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 36,
+        "femmine_totale": 29,
+        "totale": 65,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 34,
+        "femmine_totale": 24,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 39,
+        "femmine_totale": 39,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 24,
+        "femmine_totale": 30,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.9
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 33,
+        "femmine_totale": 19,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 43,
+        "femmine_totale": 34,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 30,
+        "femmine_totale": 32,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 33,
+        "femmine_totale": 45,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 46,
+        "femmine_totale": 41,
+        "totale": 87,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 54,
+        "femmine_totale": 51,
+        "totale": 105,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 43,
+        "femmine_totale": 33,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 44,
+        "femmine_totale": 39,
+        "totale": 83,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 48,
+        "femmine_totale": 45,
+        "totale": 93,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 63,
+        "femmine_totale": 45,
+        "totale": 108,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 59,
+        "femmine_totale": 50,
+        "totale": 109,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2006,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 32,
+        "femmine_totale": 34,
+        "totale": 66,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 45,
+        "femmine_totale": 32,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 21,
+        "femmine_totale": 34,
+        "totale": 55,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 25,
+        "femmine_totale": 28,
+        "totale": 53,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.9
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 36,
+        "femmine_totale": 28,
+        "totale": 64,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 35,
+        "femmine_totale": 23,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 36,
+        "femmine_totale": 39,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 25,
+        "femmine_totale": 29,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.9
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 31,
+        "femmine_totale": 18,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 43,
+        "femmine_totale": 34,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 30,
+        "femmine_totale": 31,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 30,
+        "femmine_totale": 43,
+        "totale": 73,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 41,
+        "femmine_totale": 32,
+        "totale": 73,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 45,
+        "femmine_totale": 41,
+        "totale": 86,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 54,
+        "femmine_totale": 51,
+        "totale": 105,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 42,
+        "femmine_totale": 39,
+        "totale": 81,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 47,
+        "femmine_totale": 45,
+        "totale": 92,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 62,
+        "femmine_totale": 44,
+        "totale": 106,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2007,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 37,
+        "femmine_totale": 28,
+        "totale": 65,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 33,
+        "femmine_totale": 33,
+        "totale": 66,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 45,
+        "femmine_totale": 31,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 21,
+        "femmine_totale": 33,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 22,
+        "femmine_totale": 29,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 36,
+        "femmine_totale": 28,
+        "totale": 64,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 33,
+        "femmine_totale": 23,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 36,
+        "femmine_totale": 41,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 25,
+        "femmine_totale": 28,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 32,
+        "femmine_totale": 19,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 42,
+        "femmine_totale": 34,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 30,
+        "femmine_totale": 31,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 29,
+        "femmine_totale": 43,
+        "totale": 72,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 41,
+        "femmine_totale": 31,
+        "totale": 72,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 44,
+        "femmine_totale": 41,
+        "totale": 85,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 54,
+        "femmine_totale": 51,
+        "totale": 105,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 41,
+        "femmine_totale": 33,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 41,
+        "femmine_totale": 39,
+        "totale": 80,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 47,
+        "femmine_totale": 43,
+        "totale": 90,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2008,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 44,
+        "femmine_totale": 36,
+        "totale": 80,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 35,
+        "femmine_totale": 29,
+        "totale": 64,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 32,
+        "femmine_totale": 31,
+        "totale": 63,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 47,
+        "femmine_totale": 31,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 21,
+        "femmine_totale": 32,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 22,
+        "femmine_totale": 28,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 36,
+        "femmine_totale": 26,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 32,
+        "femmine_totale": 23,
+        "totale": 55,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 36,
+        "femmine_totale": 41,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 24,
+        "femmine_totale": 25,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 30,
+        "femmine_totale": 19,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 42,
+        "femmine_totale": 34,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 30,
+        "femmine_totale": 31,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 28,
+        "femmine_totale": 43,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 40,
+        "femmine_totale": 30,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 44,
+        "femmine_totale": 41,
+        "totale": 85,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 54,
+        "femmine_totale": 51,
+        "totale": 105,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 42,
+        "femmine_totale": 39,
+        "totale": 81,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.2
+      }
+    ]
+  },
+  {
+    "anno": 2009,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 38,
+        "femmine_totale": 24,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 43,
+        "femmine_totale": 36,
+        "totale": 79,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 35,
+        "femmine_totale": 27,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 32,
+        "femmine_totale": 31,
+        "totale": 63,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 48,
+        "femmine_totale": 29,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 21,
+        "femmine_totale": 31,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 22,
+        "femmine_totale": 29,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 36,
+        "femmine_totale": 26,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 36,
+        "femmine_totale": 39,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 24,
+        "femmine_totale": 25,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 28,
+        "femmine_totale": 18,
+        "totale": 46,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 31,
+        "femmine_totale": 31,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 29,
+        "femmine_totale": 43,
+        "totale": 72,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 40,
+        "femmine_totale": 28,
+        "totale": 68,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 44,
+        "femmine_totale": 38,
+        "totale": 82,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 53,
+        "femmine_totale": 51,
+        "totale": 104,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 43,
+        "femmine_totale": 34,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2010,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 34,
+        "femmine_totale": 27,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 36,
+        "femmine_totale": 23,
+        "totale": 59,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 43,
+        "femmine_totale": 37,
+        "totale": 80,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 33,
+        "femmine_totale": 26,
+        "totale": 59,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 32,
+        "femmine_totale": 33,
+        "totale": 65,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 49,
+        "femmine_totale": 27,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 20,
+        "femmine_totale": 31,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 22,
+        "femmine_totale": 29,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 37,
+        "femmine_totale": 25,
+        "totale": 62,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 36,
+        "femmine_totale": 38,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 23,
+        "femmine_totale": 25,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 28,
+        "femmine_totale": 18,
+        "totale": 46,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 41,
+        "femmine_totale": 34,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 32,
+        "femmine_totale": 30,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 29,
+        "femmine_totale": 42,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 42,
+        "femmine_totale": 28,
+        "totale": 70,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 44,
+        "femmine_totale": 38,
+        "totale": 82,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 53,
+        "femmine_totale": 51,
+        "totale": 104,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.0
+      }
+    ]
+  },
+  {
+    "anno": 2011,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 23,
+        "femmine_totale": 22,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 33,
+        "femmine_totale": 26,
+        "totale": 59,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 37,
+        "femmine_totale": 23,
+        "totale": 60,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 43,
+        "femmine_totale": 34,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 33,
+        "femmine_totale": 26,
+        "totale": 59,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 31,
+        "femmine_totale": 30,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 45,
+        "femmine_totale": 26,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 20,
+        "femmine_totale": 31,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 21,
+        "femmine_totale": 28,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 38,
+        "femmine_totale": 25,
+        "totale": 63,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 37,
+        "femmine_totale": 39,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 23,
+        "femmine_totale": 26,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 28,
+        "femmine_totale": 18,
+        "totale": 46,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 41,
+        "femmine_totale": 34,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 32,
+        "femmine_totale": 30,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 29,
+        "femmine_totale": 42,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 41,
+        "femmine_totale": 28,
+        "totale": 69,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 44,
+        "femmine_totale": 37,
+        "totale": 81,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2012,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 32,
+        "femmine_totale": 43,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 22,
+        "femmine_totale": 22,
+        "totale": 44,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 32,
+        "femmine_totale": 26,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 36,
+        "femmine_totale": 23,
+        "totale": 59,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 43,
+        "femmine_totale": 35,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 33,
+        "femmine_totale": 25,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 31,
+        "femmine_totale": 30,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 42,
+        "femmine_totale": 27,
+        "totale": 69,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 20,
+        "femmine_totale": 30,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 21,
+        "femmine_totale": 28,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 36,
+        "femmine_totale": 25,
+        "totale": 61,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 32,
+        "femmine_totale": 22,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 36,
+        "femmine_totale": 39,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 21,
+        "femmine_totale": 26,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 28,
+        "femmine_totale": 17,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 42,
+        "femmine_totale": 33,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 32,
+        "femmine_totale": 30,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 29,
+        "femmine_totale": 40,
+        "totale": 69,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 41,
+        "femmine_totale": 28,
+        "totale": 69,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      }
+    ]
+  },
+  {
+    "anno": 2013,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 26,
+        "femmine_totale": 22,
+        "totale": 48,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.1
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 32,
+        "femmine_totale": 44,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 22,
+        "femmine_totale": 23,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 30,
+        "femmine_totale": 27,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 34,
+        "femmine_totale": 22,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 41,
+        "femmine_totale": 35,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 33,
+        "femmine_totale": 25,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 31,
+        "femmine_totale": 30,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 42,
+        "femmine_totale": 26,
+        "totale": 68,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 19,
+        "femmine_totale": 30,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 21,
+        "femmine_totale": 29,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 34,
+        "femmine_totale": 25,
+        "totale": 59,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 35,
+        "femmine_totale": 39,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 20,
+        "femmine_totale": 26,
+        "totale": 46,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 28,
+        "femmine_totale": 17,
+        "totale": 45,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.2
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 41,
+        "femmine_totale": 32,
+        "totale": 73,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 32,
+        "femmine_totale": 30,
+        "totale": 62,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 29,
+        "femmine_totale": 40,
+        "totale": 69,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      }
+    ]
+  },
+  {
+    "anno": 2014,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 28,
+        "femmine_totale": 29,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 24,
+        "femmine_totale": 20,
+        "totale": 44,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 33,
+        "femmine_totale": 44,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 22,
+        "femmine_totale": 20,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 30,
+        "femmine_totale": 27,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 33,
+        "femmine_totale": 19,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 42,
+        "femmine_totale": 36,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 33,
+        "femmine_totale": 24,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 31,
+        "femmine_totale": 30,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 43,
+        "femmine_totale": 27,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 19,
+        "femmine_totale": 30,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 21,
+        "femmine_totale": 29,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 33,
+        "femmine_totale": 25,
+        "totale": 58,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 32,
+        "femmine_totale": 22,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 33,
+        "femmine_totale": 40,
+        "totale": 73,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 21,
+        "femmine_totale": 25,
+        "totale": 46,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.2
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 27,
+        "femmine_totale": 16,
+        "totale": 43,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 41,
+        "femmine_totale": 33,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 32,
+        "femmine_totale": 31,
+        "totale": 63,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      }
+    ]
+  },
+  {
+    "anno": 2015,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 26,
+        "femmine_totale": 22,
+        "totale": 48,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.1
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 28,
+        "femmine_totale": 29,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 23,
+        "femmine_totale": 21,
+        "totale": 44,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 33,
+        "femmine_totale": 45,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 22,
+        "femmine_totale": 20,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 30,
+        "femmine_totale": 27,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 33,
+        "femmine_totale": 19,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 44,
+        "femmine_totale": 36,
+        "totale": 80,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 32,
+        "femmine_totale": 24,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 31,
+        "femmine_totale": 30,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 44,
+        "femmine_totale": 27,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 18,
+        "femmine_totale": 30,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 20,
+        "femmine_totale": 29,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 32,
+        "femmine_totale": 25,
+        "totale": 57,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 32,
+        "femmine_totale": 20,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 34,
+        "femmine_totale": 39,
+        "totale": 73,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 2.7
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 20,
+        "femmine_totale": 25,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 27,
+        "femmine_totale": 16,
+        "totale": 43,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 41,
+        "femmine_totale": 33,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.4
+      }
+    ]
+  },
+  {
+    "anno": 2016,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 26,
+        "femmine_totale": 25,
+        "totale": 51,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 26,
+        "femmine_totale": 22,
+        "totale": 48,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.1
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 29,
+        "femmine_totale": 29,
+        "totale": 58,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 24,
+        "femmine_totale": 21,
+        "totale": 45,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.2
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 33,
+        "femmine_totale": 47,
+        "totale": 80,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 22,
+        "femmine_totale": 19,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 30,
+        "femmine_totale": 26,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 33,
+        "femmine_totale": 19,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 44,
+        "femmine_totale": 36,
+        "totale": 80,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 31,
+        "femmine_totale": 24,
+        "totale": 55,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 31,
+        "femmine_totale": 30,
+        "totale": 61,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 43,
+        "femmine_totale": 27,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 18,
+        "femmine_totale": 30,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 20,
+        "femmine_totale": 28,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 31,
+        "femmine_totale": 24,
+        "totale": 55,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 32,
+        "femmine_totale": 20,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 33,
+        "femmine_totale": 40,
+        "totale": 73,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 2,
+        "stranieri_totale": 3,
+        "percentuale_stranieri": 4.1
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 20,
+        "femmine_totale": 25,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 26,
+        "femmine_totale": 16,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2017,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 17,
+        "femmine_totale": 24,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 25,
+        "femmine_totale": 26,
+        "totale": 51,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 24,
+        "femmine_totale": 22,
+        "totale": 46,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 29,
+        "femmine_totale": 28,
+        "totale": 57,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 23,
+        "femmine_totale": 20,
+        "totale": 43,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 32,
+        "femmine_totale": 46,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 22,
+        "femmine_totale": 19,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 30,
+        "femmine_totale": 26,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 33,
+        "femmine_totale": 20,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 43,
+        "femmine_totale": 36,
+        "totale": 79,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 31,
+        "femmine_totale": 24,
+        "totale": 55,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 32,
+        "femmine_totale": 30,
+        "totale": 62,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 43,
+        "femmine_totale": 28,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 18,
+        "femmine_totale": 29,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 20,
+        "femmine_totale": 29,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 31,
+        "femmine_totale": 24,
+        "totale": 55,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 30,
+        "femmine_totale": 20,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 32,
+        "femmine_totale": 40,
+        "totale": 72,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 2,
+        "stranieri_totale": 3,
+        "percentuale_stranieri": 4.2
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 20,
+        "femmine_totale": 25,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2018,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 30,
+        "femmine_totale": 15,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 17,
+        "femmine_totale": 24,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 24,
+        "femmine_totale": 26,
+        "totale": 50,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 25,
+        "femmine_totale": 22,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 29,
+        "femmine_totale": 27,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 24,
+        "femmine_totale": 20,
+        "totale": 44,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.5
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 31,
+        "femmine_totale": 45,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 22,
+        "femmine_totale": 19,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 30,
+        "femmine_totale": 26,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 33,
+        "femmine_totale": 20,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 43,
+        "femmine_totale": 36,
+        "totale": 79,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 32,
+        "femmine_totale": 24,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 32,
+        "femmine_totale": 29,
+        "totale": 61,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.6
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 43,
+        "femmine_totale": 28,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 18,
+        "femmine_totale": 29,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 20,
+        "femmine_totale": 29,
+        "totale": 49,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 31,
+        "femmine_totale": 24,
+        "totale": 55,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 30,
+        "femmine_totale": 20,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 31,
+        "femmine_totale": 39,
+        "totale": 70,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 2.9
+      }
+    ]
+  },
+  {
+    "anno": 2019,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 29,
+        "femmine_totale": 26,
+        "totale": 55,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 30,
+        "femmine_totale": 15,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 16,
+        "femmine_totale": 24,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 24,
+        "femmine_totale": 26,
+        "totale": 50,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 24,
+        "femmine_totale": 23,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 27,
+        "femmine_totale": 28,
+        "totale": 55,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 24,
+        "femmine_totale": 20,
+        "totale": 44,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.5
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 29,
+        "femmine_totale": 46,
+        "totale": 75,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 22,
+        "femmine_totale": 19,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 30,
+        "femmine_totale": 26,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 32,
+        "femmine_totale": 20,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 42,
+        "femmine_totale": 35,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 32,
+        "femmine_totale": 24,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 31,
+        "femmine_totale": 29,
+        "totale": 60,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 41,
+        "femmine_totale": 28,
+        "totale": 69,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 18,
+        "femmine_totale": 29,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 19,
+        "femmine_totale": 28,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.1
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 29,
+        "femmine_totale": 24,
+        "totale": 53,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.9
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 30,
+        "femmine_totale": 20,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2020,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 25,
+        "femmine_totale": 20,
+        "totale": 45,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 28,
+        "femmine_totale": 27,
+        "totale": 55,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.6
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 30,
+        "femmine_totale": 14,
+        "totale": 44,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 16,
+        "femmine_totale": 25,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 24,
+        "femmine_totale": 26,
+        "totale": 50,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 23,
+        "femmine_totale": 23,
+        "totale": 46,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 27,
+        "femmine_totale": 27,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 24,
+        "femmine_totale": 19,
+        "totale": 43,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 28,
+        "femmine_totale": 46,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 21,
+        "femmine_totale": 20,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 30,
+        "femmine_totale": 26,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 32,
+        "femmine_totale": 20,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 41,
+        "femmine_totale": 35,
+        "totale": 76,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 32,
+        "femmine_totale": 24,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 30,
+        "femmine_totale": 29,
+        "totale": 59,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 42,
+        "femmine_totale": 28,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 18,
+        "femmine_totale": 29,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 20,
+        "femmine_totale": 28,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.1
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 31,
+        "femmine_totale": 23,
+        "totale": 54,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.9
+      }
+    ]
+  },
+  {
+    "anno": 2021,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 17,
+        "femmine_totale": 20,
+        "totale": 37,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 24,
+        "femmine_totale": 19,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 28,
+        "femmine_totale": 28,
+        "totale": 56,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.6
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 29,
+        "femmine_totale": 14,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 16,
+        "femmine_totale": 25,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 25,
+        "femmine_totale": 26,
+        "totale": 51,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.9
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 22,
+        "femmine_totale": 22,
+        "totale": 44,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 27,
+        "femmine_totale": 27,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 22,
+        "femmine_totale": 18,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 28,
+        "femmine_totale": 46,
+        "totale": 74,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 20,
+        "femmine_totale": 19,
+        "totale": 39,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 30,
+        "femmine_totale": 25,
+        "totale": 55,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 33,
+        "femmine_totale": 20,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 42,
+        "femmine_totale": 35,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 32,
+        "femmine_totale": 24,
+        "totale": 56,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 30,
+        "femmine_totale": 29,
+        "totale": 59,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 42,
+        "femmine_totale": 28,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 18,
+        "femmine_totale": 29,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 19,
+        "femmine_totale": 28,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.1
+      }
+    ]
+  },
+  {
+    "anno": 2022,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 24,
+        "femmine_totale": 16,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 16,
+        "femmine_totale": 20,
+        "totale": 36,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 22,
+        "femmine_totale": 19,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 26,
+        "femmine_totale": 28,
+        "totale": 54,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.7
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 28,
+        "femmine_totale": 14,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 16,
+        "femmine_totale": 25,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 25,
+        "femmine_totale": 25,
+        "totale": 50,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.0
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 22,
+        "femmine_totale": 21,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 27,
+        "femmine_totale": 26,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 21,
+        "femmine_totale": 18,
+        "totale": 39,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 26,
+        "femmine_totale": 45,
+        "totale": 71,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 20,
+        "femmine_totale": 19,
+        "totale": 39,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 29,
+        "femmine_totale": 23,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 32,
+        "femmine_totale": 20,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 42,
+        "femmine_totale": 35,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 32,
+        "femmine_totale": 22,
+        "totale": 54,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 30,
+        "femmine_totale": 29,
+        "totale": 59,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 42,
+        "femmine_totale": 28,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 18,
+        "femmine_totale": 29,
+        "totale": 47,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2023,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 19,
+        "femmine_totale": 20,
+        "totale": 39,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 25,
+        "femmine_totale": 14,
+        "totale": 39,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 16,
+        "femmine_totale": 19,
+        "totale": 35,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 22,
+        "femmine_totale": 19,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 26,
+        "femmine_totale": 28,
+        "totale": 54,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.7
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 28,
+        "femmine_totale": 14,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 16,
+        "femmine_totale": 26,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.4
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 24,
+        "femmine_totale": 26,
+        "totale": 50,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.0
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 23,
+        "femmine_totale": 21,
+        "totale": 44,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 27,
+        "femmine_totale": 25,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 22,
+        "femmine_totale": 18,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 27,
+        "femmine_totale": 43,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 20,
+        "femmine_totale": 19,
+        "totale": 39,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 27,
+        "femmine_totale": 23,
+        "totale": 50,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 31,
+        "femmine_totale": 20,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 42,
+        "femmine_totale": 35,
+        "totale": 77,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 30,
+        "femmine_totale": 28,
+        "totale": 58,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.7
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 42,
+        "femmine_totale": 27,
+        "totale": 69,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  },
+  {
+    "anno": 2024,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 21,
+        "femmine_totale": 23,
+        "totale": 44,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 19,
+        "femmine_totale": 21,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 25,
+        "femmine_totale": 16,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 14,
+        "femmine_totale": 19,
+        "totale": 33,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 22,
+        "femmine_totale": 20,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 25,
+        "femmine_totale": 28,
+        "totale": 53,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.8
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 28,
+        "femmine_totale": 15,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 16,
+        "femmine_totale": 26,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.4
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 24,
+        "femmine_totale": 25,
+        "totale": 49,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.1
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 23,
+        "femmine_totale": 20,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 27,
+        "femmine_totale": 25,
+        "totale": 52,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 22,
+        "femmine_totale": 18,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 27,
+        "femmine_totale": 43,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 19,
+        "femmine_totale": 19,
+        "totale": 38,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 25,
+        "femmine_totale": 23,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 31,
+        "femmine_totale": 20,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 42,
+        "femmine_totale": 36,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 30,
+        "femmine_totale": 27,
+        "totale": 57,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 1.8
+      }
+    ]
+  },
+  {
+    "anno": 2025,
+    "dati_eta": [
+      {
+        "eta": 0,
+        "maschi_totale": 25,
+        "femmine_totale": 13,
+        "totale": 38,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.6
+      },
+      {
+        "eta": 1,
+        "maschi_totale": 21,
+        "femmine_totale": 20,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 2,
+        "maschi_totale": 19,
+        "femmine_totale": 21,
+        "totale": 40,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 3,
+        "maschi_totale": 25,
+        "femmine_totale": 17,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 4,
+        "maschi_totale": 14,
+        "femmine_totale": 19,
+        "totale": 33,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 5,
+        "maschi_totale": 21,
+        "femmine_totale": 20,
+        "totale": 41,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 6,
+        "maschi_totale": 24,
+        "femmine_totale": 28,
+        "totale": 52,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 3.8
+      },
+      {
+        "eta": 7,
+        "maschi_totale": 28,
+        "femmine_totale": 15,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.3
+      },
+      {
+        "eta": 8,
+        "maschi_totale": 16,
+        "femmine_totale": 26,
+        "totale": 42,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 1,
+        "percentuale_stranieri": 2.4
+      },
+      {
+        "eta": 9,
+        "maschi_totale": 23,
+        "femmine_totale": 25,
+        "totale": 48,
+        "stranieri_maschi": 1,
+        "stranieri_femmine": 1,
+        "stranieri_totale": 2,
+        "percentuale_stranieri": 4.2
+      },
+      {
+        "eta": 10,
+        "maschi_totale": 22,
+        "femmine_totale": 21,
+        "totale": 43,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 11,
+        "maschi_totale": 27,
+        "femmine_totale": 24,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 12,
+        "maschi_totale": 19,
+        "femmine_totale": 17,
+        "totale": 36,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 13,
+        "maschi_totale": 27,
+        "femmine_totale": 43,
+        "totale": 70,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 14,
+        "maschi_totale": 19,
+        "femmine_totale": 18,
+        "totale": 37,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 15,
+        "maschi_totale": 25,
+        "femmine_totale": 23,
+        "totale": 48,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 16,
+        "maschi_totale": 31,
+        "femmine_totale": 20,
+        "totale": 51,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 17,
+        "maschi_totale": 42,
+        "femmine_totale": 36,
+        "totale": 78,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      },
+      {
+        "eta": 18,
+        "maschi_totale": 31,
+        "femmine_totale": 22,
+        "totale": 53,
+        "stranieri_maschi": 0,
+        "stranieri_femmine": 0,
+        "stranieri_totale": 0,
+        "percentuale_stranieri": 0.0
+      }
+    ]
+  }
+]

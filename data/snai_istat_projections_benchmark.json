@@ -1,0 +1,38 @@
+{
+  "istat_focus_aree_interne": {
+    "fonte": "ISTAT - Focus Demografia delle Aree Interne (Luglio 2024)",
+    "anno_base": 2023,
+    "scenari_nazionali_aree_interne": {
+      "calo_10_anni_2033_pct": -3.8,
+      "calo_20_anni_2043_pct": -8.7,
+      "comuni_in_declino_pct": 82.1
+    },
+    "scenari_mezzogiorno_aree_interne": {
+      "calo_10_anni_2033_pct": -5.4,
+      "calo_20_anni_2043_pct": -14.2,
+      "calo_2050_stimato_pct": -23.5,
+      "tasso_migratorio_giovani_25_39_pct": 41.2,
+      "tasso_espatrio_per_mille": 2.1,
+      "indice_vecchiaia_medio_2024": 214.0
+    },
+    "snai_nebrodi_dati": {
+      "area_progetto": "Nebrodi (C.M. Messina)",
+      "comuni_totali": 29,
+      "comuni_periferici_ultraperiferici": 25,
+      "popolazione_2020": 79210,
+      "variazione_2011_2020_pct": -9.77,
+      "distanza_media_polo_minuti": 55.02,
+      "popolazione_0_14_pct_2020": 11.58,
+      "popolazione_15_64_pct_2020": 65.1,
+      "popolazione_65_plus_pct_2020": 25.17
+    }
+  },
+  "openkit_indicatori_chiave": {
+    "distanza_polo_servizi_minuti": 55.02,
+    "popolazione_area_nebrodi_2020": 79210,
+    "calo_popolazione_nebrodi_2011_2020_pct": -9.77,
+    "stranieri_residenti_nebrodi_pct": 2.04,
+    "imprese_per_1000_abitanti": 110.48,
+    "reddito_imponibile_medio_nebrodi_2018": 12797.7
+  }
+}
