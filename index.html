@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Foglio di stile -->
-  <link rel="stylesheet" href="css/styles.css?v=2.5">
+  <link rel="stylesheet" href="css/styles.css?v=2.6">
 </head>
 <body>
 
@@ -200,8 +200,14 @@
           <p>Distribuzione dei residenti per classi quinquennali d'età, genere e stato civile (serie annuale 2002–2025).</p>
         </div>
         <div class="chart-controls">
-          <button class="btn-toggle active" data-pyramid-mode="gender">Genere (Maschi / Femmine)</button>
-          <button class="btn-toggle" data-pyramid-mode="civil">Stato civile</button>
+          <button class="btn-toggle active" data-pyramid-mode="gender">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Genere (Maschi / Femmine)</span>
+          </button>
+          <button class="btn-toggle" data-pyramid-mode="civil">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            <span>Stato civile</span>
+          </button>
         </div>
       </div>
 
@@ -378,8 +384,14 @@
           <p>Evoluzione demografica secolare (1861–2021) e dinamica annuale recente (2001–2024).</p>
         </div>
         <div class="chart-controls">
-          <button class="btn-toggle active" data-history-mode="censuses">Censimenti storici (1861–2021)</button>
-          <button class="btn-toggle" data-history-mode="annual">Andamento annuale (2001–2024)</button>
+          <button class="btn-toggle active" data-history-mode="censuses">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            <span>Censimenti storici (1861–2021)</span>
+          </button>
+          <button class="btn-toggle" data-history-mode="annual">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>Andamento annuale (2001–2024)</span>
+          </button>
         </div>
       </div>
 
@@ -561,10 +573,10 @@
   </footer>
 
   <!-- Script applicativi con cache-busting -->
-  <script src="js/data.js?v=2.5"></script>
-  <script src="js/charts.js?v=2.5"></script>
-  <script src="js/map.js?v=2.5"></script>
-  <script src="js/simulator.js?v=2.5"></script>
-  <script src="js/app.js?v=2.5"></script>
+  <script src="js/data.js?v=2.6"></script>
+  <script src="js/charts.js?v=2.6"></script>
+  <script src="js/map.js?v=2.6"></script>
+  <script src="js/simulator.js?v=2.6"></script>
+  <script src="js/app.js?v=2.6"></script>
 </body>
 </html>
