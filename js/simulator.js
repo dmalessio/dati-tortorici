@@ -125,13 +125,17 @@ window.AppSimulator = (function() {
         const istatRate = (istatAreeInterneMezzogiorno.calo2050Pct / 25) * elapsed; // interpolazione lineare
         const popIstat = Math.round(basePop2025 * (1 + istatRate / 100));
 
+        // Calcolo trend storico locale 2001-2024 (-82,92 residenti/anno)
+        const popHistorical = Math.round(basePop2025 - elapsed * 82.92);
+
         projections.push({
           anno: yr,
           popolazione: Math.round(pop),
           nascite: annualBirths,
           decessi: annualDeaths,
           saldo_migratorio: annualMigr,
-          istat_benchmark: popIstat
+          istat_benchmark: popIstat,
+          historical_trend: popHistorical
         });
       }
     }
@@ -178,15 +182,18 @@ window.AppSimulator = (function() {
     const xScale = (yr) => padding.left + ((yr - minYear) / (maxYear - minYear)) * (width - padding.left - padding.right);
     const yScale = (val) => height - padding.bottom - ((val - minPop) / (maxPop - minPop)) * (height - padding.top - padding.bottom);
 
-    // Linea simulazione attiva
+    // Linee delle traiettorie
     let pathD = '';
     let pathIstat = '';
+    let pathHist = '';
     projections.forEach((p, idx) => {
       const x = xScale(p.anno);
       const y = yScale(p.popolazione);
       const yIst = yScale(p.istat_benchmark);
+      const yHist = yScale(p.historical_trend || p.popolazione);
       pathD += (idx === 0 ? `M ${x},${y}` : ` L ${x},${y}`);
       pathIstat += (idx === 0 ? `M ${x},${yIst}` : ` L ${x},${yIst}`);
+      pathHist += (idx === 0 ? `M ${x},${yHist}` : ` L ${x},${yHist}`);
     });
 
     let svg = `
@@ -213,6 +220,9 @@ window.AppSimulator = (function() {
         </defs>
         <path d="${pathD} L ${xScale(2050)},${yScale(minPop)} L ${xScale(2025)},${yScale(minPop)} Z" fill="url(#simGradSober)"/>
 
+        <!-- Trend storico locale 2001-2024 (tratteggiata ardesia) -->
+        <path d="${pathHist}" fill="none" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3 3"/>
+
         <!-- Curva benchmark ufficiale ISTAT Aree Interne (tratteggiata ambra) -->
         <path d="${pathIstat}" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5 3"/>
 
@@ -229,9 +239,13 @@ window.AppSimulator = (function() {
       const y = yScale(p.popolazione);
 
       svg += `
-        <circle cx="${x}" cy="${y}" r="4" fill="#ffffff" stroke="#1e40af" stroke-width="2"/>
-        <text x="${x}" y="${y - 9}" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">${p.popolazione.toLocaleString('it-IT')}</text>
-        <text x="${x}" y="${height - padding.bottom + 16}" font-size="10" fill="#64748b" text-anchor="middle">${yr}</text>
+        <g style="cursor: pointer;"
+           onmouseenter="window.AppCharts.showTooltip(event, 'Proiezione anno ${yr}', 'Scenario simulato: <strong>${p.popolazione.toLocaleString('it-IT')}</strong> ab.<br>Benchmark ISTAT: <strong>${p.istat_benchmark.toLocaleString('it-IT')}</strong> ab.<br>Trend storico 2001–2024: <strong>${(p.historical_trend || p.popolazione).toLocaleString('it-IT')}</strong> ab.')"
+           onmouseleave="window.AppCharts.hideTooltip()">
+          <circle cx="${x}" cy="${y}" r="4" fill="#ffffff" stroke="#1e40af" stroke-width="2"/>
+          <text x="${x}" y="${y - 9}" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">${p.popolazione.toLocaleString('it-IT')}</text>
+          <text x="${x}" y="${height - padding.bottom + 16}" font-size="10" fill="#64748b" text-anchor="middle">${yr}</text>
+        </g>
       `;
     });
 
@@ -239,14 +253,18 @@ window.AppSimulator = (function() {
     
     // Legenda integrata nel grafico per trasparenza scientifica
     svg += `
-      <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.5rem; font-size: 0.775rem; color: var(--text-subtle); flex-wrap: wrap;">
+      <div style="display: flex; justify-content: center; gap: 1.25rem; margin-top: 0.5rem; font-size: 0.775rem; color: var(--text-subtle); flex-wrap: wrap;">
         <div style="display: flex; align-items: center; gap: 0.4rem;">
           <span style="display: inline-block; width: 16px; height: 3px; background: #1e40af;"></span>
           <strong>Scenario Simulato</strong> (Parametri utente)
         </div>
         <div style="display: flex; align-items: center; gap: 0.4rem;">
           <span style="display: inline-block; width: 16px; height: 2px; border-top: 2px dashed #d97706;"></span>
-          <strong>Benchmark ISTAT Aree Interne</strong> (Scenario Mediano 2023–2043)
+          <strong>Benchmark ISTAT Aree Interne</strong> (2023–2043)
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <span style="display: inline-block; width: 16px; height: 2px; border-top: 2px dashed #64748b;"></span>
+          <strong>Trend storico 2001–2024</strong> (-83 ab./anno)
         </div>
       </div>
     `;
