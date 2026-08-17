@@ -634,7 +634,7 @@ window.AppCharts = (function() {
     container.innerHTML = html;
   }
 
-  // Tooltip
+  // Tooltip con protezione bordi viewport mobile
   function showTooltip(event, title, content) {
     let tooltip = document.getElementById('app-universal-tooltip');
     if (!tooltip) {
@@ -642,12 +642,29 @@ window.AppCharts = (function() {
       tooltip.id = 'app-universal-tooltip';
       tooltip.className = 'custom-tooltip';
       document.body.appendChild(tooltip);
+      
+      document.addEventListener('touchstart', (e) => {
+        if (!e.target.closest('.history-point-group') && !e.target.closest('.pyramid-bar') && !e.target.closest('.country-card')) {
+          hideTooltip();
+        }
+      }, { passive: true });
     }
 
     tooltip.innerHTML = `<div class="tooltip-title">${title}</div><div>${content}</div>`;
-    tooltip.style.left = `${event.pageX + 10}px`;
-    tooltip.style.top = `${event.pageY - 26}px`;
     tooltip.style.opacity = '1';
+
+    const pageX = event.pageX || (event.touches && event.touches[0] ? event.touches[0].pageX : 0);
+    const pageY = event.pageY || (event.touches && event.touches[0] ? event.touches[0].pageY : 0);
+    const tooltipWidth = 240;
+    const windowWidth = document.documentElement.clientWidth || window.innerWidth;
+
+    let left = pageX + 12;
+    if (left + tooltipWidth > windowWidth - 10) {
+      left = Math.max(10, windowWidth - tooltipWidth - 15);
+    }
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${Math.max(10, pageY - 32)}px`;
   }
 
   function hideTooltip() {

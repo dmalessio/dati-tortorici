@@ -1,6 +1,6 @@
 /* ==========================================================================
    OSSERVATORIO DEMOGRAFICO TORTORICI - DESIGN SYSTEM ISTITUZIONALE
-   Layout stabile e confortevole: testi sempre leggibili e zero tagli
+   Layout reattivo, stabile e mobile-first confortevole
    ========================================================================== */
 
 :root {
@@ -69,6 +69,7 @@ body {
   color: var(--text-main);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Forzatura numeri tabulari universali per prevenire shifting */
@@ -112,6 +113,7 @@ a:hover {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 /* Header Istituzionale */
@@ -215,6 +217,7 @@ a:hover {
   padding: 0.35rem 0;
   scrollbar-width: none;
   align-items: center;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-tabs::-webkit-scrollbar {
@@ -254,9 +257,9 @@ a:hover {
   background: #0f172a;
   color: #ffffff;
   border-bottom: 1px solid #1e293b;
-  padding: 0.5rem 0;
+  padding: 0.45rem 0;
   position: sticky;
-  top: 43px;
+  top: 41px;
   z-index: 45;
   box-shadow: var(--shadow-md);
   height: 48px;
@@ -268,14 +271,14 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.85rem;
   width: 100%;
 }
 
 .year-control-left {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
@@ -288,9 +291,9 @@ a:hover {
   font-family: var(--font-mono);
   font-weight: 800;
   font-size: 1.05rem;
-  width: 68px;
-  min-width: 68px;
-  max-width: 68px;
+  width: 66px;
+  min-width: 66px;
+  max-width: 66px;
   height: 30px;
   line-height: 28px;
   text-align: center;
@@ -301,16 +304,16 @@ a:hover {
   background: #1e293b;
   border: 1px solid #334155;
   color: #e2e8f0;
-  padding: 0 0.65rem;
+  padding: 0 0.6rem;
   height: 30px;
   line-height: 28px;
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.775rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.3rem;
   transition: all var(--transition);
   flex-shrink: 0;
 }
@@ -322,10 +325,10 @@ a:hover {
 
 .year-slider-track {
   flex: 1;
-  min-width: 180px;
+  min-width: 140px;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .time-slider-sticky {
@@ -340,7 +343,7 @@ a:hover {
 
 .year-quick-jump {
   display: flex;
-  gap: 0.3rem;
+  gap: 0.25rem;
   align-items: center;
   flex-shrink: 0;
 }
@@ -367,29 +370,29 @@ a:hover {
 
 /* KPI Cards con respiro e senza tagli */
 .kpi-section {
-  padding: 1.5rem 0 0.5rem;
+  padding: 1.25rem 0 0.5rem;
 }
 
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
 }
 
 .kpi-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 1rem 1.15rem;
+  padding: 0.9rem 1rem;
   box-shadow: var(--shadow-sm);
-  min-height: 118px;
+  min-height: 110px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .kpi-label {
-  font-size: 0.75rem;
+  font-size: 0.735rem;
   font-weight: 700;
   color: var(--text-subtle);
   text-transform: uppercase;
@@ -398,18 +401,18 @@ a:hover {
 }
 
 .kpi-value {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.1;
   font-family: var(--font-mono);
-  margin: 0.25rem 0;
+  margin: 0.2rem 0;
 }
 
 .kpi-subtext {
-  font-size: 0.775rem;
+  font-size: 0.75rem;
   color: var(--text-subtle);
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 /* Sezioni e Blocchi */
@@ -418,7 +421,7 @@ a:hover {
 }
 
 .section-header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -434,12 +437,12 @@ a:hover {
 
 .section-header-text p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.885rem;
 }
 
 .card-grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
   gap: 1.25rem;
 }
 
@@ -607,7 +610,7 @@ a:hover {
   flex-shrink: 0;
 }
 
-/* Diagramma di Flusso e Flow Card (Nessun testo tagliato) */
+/* Diagramma di Flusso */
 .flow-diagram-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px minmax(0, 1fr);
@@ -733,7 +736,7 @@ a:hover {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
-  min-width: 220px;
+  min-width: 200px;
   outline: none;
   font-family: var(--font-sans);
 }
@@ -765,6 +768,8 @@ a:hover {
 .data-table-wrap {
   max-height: 440px;
   overflow-y: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .data-table {
@@ -807,7 +812,7 @@ a:hover {
 
 .country-card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.65rem;
   margin-top: 1rem;
 }
@@ -867,7 +872,7 @@ a:hover {
   z-index: 100;
   opacity: 0;
   transition: opacity 0.15s ease;
-  max-width: 250px;
+  max-width: 280px;
 }
 
 .tooltip-title { font-weight: 700; margin-bottom: 0.2rem; color: #93c5fd; }
@@ -890,16 +895,153 @@ a:hover {
 .footer-sources a { color: #60a5fa; }
 .footer-bottom { padding-top: 1.25rem; border-top: 1px solid #1e293b; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.775rem; }
 
+/* ==========================================================================
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS (Tablet, Smartphone & Mini-screens)
+   ========================================================================== */
+
 @media (max-width: 992px) {
   .card-grid-2 { grid-template-columns: 1fr; }
   .flow-diagram-container { grid-template-columns: 1fr; gap: 1rem; }
-  .flow-center-node { width: 100%; min-width: 0; max-width: 100%; }
+  .flow-center-node { width: 100%; min-width: 0; max-width: 100%; min-height: 170px; }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  .sticky-year-bar { top: 40px; height: auto; padding: 0.5rem 0; }
-  .sticky-year-content { flex-direction: column; align-items: stretch; gap: 0.5rem; }
-  .year-quick-jump { overflow-x: auto; }
+  html { font-size: 15px; }
+  .container { padding: 0 1rem; }
+  
+  h1 { font-size: 1.45rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1.05rem; }
+  
+  .app-header { padding: 1.5rem 0 1.25rem; }
+  .header-meta-tags { gap: 0.75rem; font-size: 0.775rem; }
+  
+  /* Sticky Controller su Mobile: 2 righe compatte */
+  .sticky-year-bar { 
+    top: 40px; 
+    height: auto; 
+    padding: 0.4rem 0; 
+  }
+  
+  .sticky-year-content { 
+    flex-direction: column; 
+    align-items: stretch; 
+    gap: 0.4rem; 
+  }
+  
+  .year-control-left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .year-slider-track {
+    width: 100%;
+  }
+  
+  .year-quick-jump { 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+  
+  /* KPI Grid a 2 colonne fluide */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+  
+  .kpi-card {
+    min-height: 100px;
+    padding: 0.75rem 0.85rem;
+  }
+  
+  .kpi-value {
+    font-size: 1.35rem;
+  }
+  
+  /* Sezioni e Toolbar */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .chart-controls {
+    width: 100%;
+    display: flex;
+  }
+  
+  .btn-toggle {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .chart-card {
+    padding: 1rem;
+  }
+  
+  /* Piramide ottimizzata per schermi stretti */
+  .pyramid-label {
+    width: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    font-size: 0.68rem;
+  }
+  
+  .pyramid-side {
+    width: calc(50% - 22px);
+  }
+  
+  .pyramid-row {
+    height: 17px;
+    gap: 0.2rem;
+  }
+  
+  /* Simulatore Output Boxes a 2x2 su mobile */
+  .sim-output-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .sim-presets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem;
+  }
+  
+  .btn-preset {
+    text-align: center;
+    width: 100%;
+    font-size: 0.725rem;
+    padding: 0 0.4rem;
+  }
+  
+  /* Toolbar Dati CSV */
+  .data-table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .data-table-toolbar > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #dataset-selector, .table-search-input, .btn-download-csv {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .country-card-list {
+    grid-template-columns: 1fr;
+  }
 }
