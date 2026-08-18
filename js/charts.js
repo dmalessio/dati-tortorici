@@ -552,35 +552,38 @@ window.AppCharts = (function() {
     container.innerHTML = html;
   }
 
-  // 6. Sezione Redditi IRPEF (Dati MEF senza clipping)
+  // 6. Sezione Redditi IRPEF (Dati MEF Dipartimento delle Finanze)
   function renderRedditiChart(year) {
     const container = document.getElementById('redditi-chart-container');
     if (!container || !data.redditi_irpef) return;
 
     const list = data.redditi_irpef;
-    const current = list.find(r => r.anno === year) || list.find(r => r.anno === Math.min(2016, Math.max(2001, year))) || list[list.length - 1];
+    const exact = list.find(r => r.anno === year);
+    const past = list.filter(r => r.anno <= year);
+    const current = exact || (past.length > 0 ? past[past.length - 1] : list[list.length - 1]);
+    const isLatestFallback = !exact && year > current.anno;
 
     let html = `
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.85rem; margin-bottom: 0.75rem;">
         <div class="flow-card">
           <div class="flow-card-header"><span>Reddito medio / dichiarante</span></div>
           <div class="flow-card-val">${formatEuro(current.reddito_medio_per_dichiarante_euro)}</div>
-          <small>Dati MEF per l'anno ${current.anno}</small>
+          <small>Dati MEF per l'anno ${current.anno}${isLatestFallback ? ' (ultimo disponibile)' : ''}</small>
         </div>
         <div class="flow-card">
           <div class="flow-card-header"><span>Reddito medio / residente</span></div>
           <div class="flow-card-val">${formatEuro(current.reddito_medio_pro_capite_residente_euro)}</div>
-          <small>Pro capite sull'intera popolazione</small>
+          <small>Pro capite su intera popolazione (${current.anno})</small>
         </div>
         <div class="flow-card">
           <div class="flow-card-header"><span>Contribuenti dichiaranti</span></div>
           <div class="flow-card-val">${formatInt(current.contribuenti_dichiaranti)}</div>
-          <small>${formatPct(current.percentuale_popolazione_dichiarante)} dei residenti totali</small>
+          <small>${formatPct(current.percentuale_popolazione_dichiarante)} dei residenti (${current.anno})</small>
         </div>
         <div class="flow-card">
           <div class="flow-card-header"><span>Monte imponibile complessivo</span></div>
           <div class="flow-card-val" style="font-size: 1.15rem;">${formatEuro(current.ammontare_imponibile_totale_euro)}</div>
-          <small>Totale addizionale IRPEF dichiarata</small>
+          <small>Totale addizionale IRPEF dichiarata (${current.anno})</small>
         </div>
       </div>
     `;
@@ -588,35 +591,38 @@ window.AppCharts = (function() {
     container.innerHTML = html;
   }
 
-  // 7. Sezione Parco Veicolare (Dati ACI senza clipping)
+  // 7. Sezione Parco Veicolare (Dati ACI / PRA)
   function renderVeicoliChart(year) {
     const container = document.getElementById('veicoli-chart-container');
     if (!container || !data.parco_veicolare) return;
 
     const list = data.parco_veicolare;
-    const current = list.find(v => v.anno === year) || list.find(v => v.anno === Math.min(2016, Math.max(2004, year))) || list[list.length - 1];
+    const exact = list.find(v => v.anno === year);
+    const past = list.filter(v => v.anno <= year);
+    const current = exact || (past.length > 0 ? past[past.length - 1] : list[list.length - 1]);
+    const isLatestFallback = !exact && year > current.anno;
 
     let html = `
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.85rem; margin-bottom: 0.75rem;">
         <div class="flow-card">
           <div class="flow-card-header"><span>Tasso di motorizzazione</span></div>
           <div class="flow-card-val">${current.auto_per_mille_abitanti} auto</div>
-          <small>Ogni 1.000 residenti (anno ${current.anno})</small>
+          <small>Ogni 1.000 residenti (anno ${current.anno}${isLatestFallback ? ' - ultimo ACI' : ''})</small>
         </div>
         <div class="flow-card">
           <div class="flow-card-header"><span>Automobili registrate</span></div>
           <div class="flow-card-val">${formatInt(current.automobili)}</div>
-          <small>Autovetture private al PRA</small>
+          <small>Autovetture private al PRA (${current.anno})</small>
         </div>
         <div class="flow-card">
           <div class="flow-card-header"><span>Mezzi trasporto merci</span></div>
           <div class="flow-card-val">${formatInt(current.trasporto_merci)}</div>
-          <small>Autocarri e veicoli commerciali</small>
+          <small>Autocarri e commerciali (${current.anno})</small>
         </div>
         <div class="flow-card">
           <div class="flow-card-header"><span>Totale parco veicolare</span></div>
           <div class="flow-card-val">${formatInt(current.totale_parco_veicolare)}</div>
-          <small>Inclusi motocicli, autobus e speciali</small>
+          <small>Inclusi motocicli e speciali (${current.anno})</small>
         </div>
       </div>
     `;
