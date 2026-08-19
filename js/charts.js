@@ -9,8 +9,8 @@ window.AppCharts = (function() {
   let pyramidMode = 'gender'; // 'gender' | 'civil'
 
   // Costanti di scala fissa globale (evitano salti di dimensione tra un anno e l'altro)
-  const GLOBAL_MAX_PYRAMID = 210; // Max storico per classe quinquennale M/F
-  const GLOBAL_MAX_SCHOOL = 90;   // Max storico per singolo anno scolastico 0-18
+  const GLOBAL_MAX_PYRAMID = 310; // Max storico per classe quinquennale M/F (max 299 nel 2002)
+  const GLOBAL_MAX_SCHOOL = 120;   // Max storico per singolo anno scolastico 0-18 (max 112 nel 2003)
 
   // Formattatori numerici italiani
   const formatInt = (n) => n !== null && n !== undefined ? n.toLocaleString('it-IT') : '-';
