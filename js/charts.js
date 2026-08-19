@@ -894,20 +894,20 @@ window.AppCharts = (function() {
     let webbTipo = 'G';
     let webbBadgeClass = 'type-g';
     let webbFormula = '|SM| > |SN|';
-    let webbDesc = 'Declino demografico a dominanza migratoria (l\'esodo verso l\'esterno supera il saldo naturale negativo)';
+    let webbDesc = 'declino demografico a dominanza migratoria (l\'esodo verso l\'esterno supera il saldo naturale negativo)';
 
     const tc = sn + sm;
     if (tc >= 0) {
       webbBadgeClass = 'type-prog';
-      if (sn >= 0 && sm < 0 && Math.abs(sn) >= Math.abs(sm)) { webbTipo = 'A'; webbFormula = 'SN(+) ≥ |SM(-)|'; webbDesc = 'Crescita: incremento naturale positivo supera perdite migratorie'; }
-      else if (sn >= 0 && sm >= 0 && sn >= sm) { webbTipo = 'B'; webbFormula = 'SN(+) ≥ SM(+)'; webbDesc = 'Crescita: incremento naturale prevale su immigrazione'; }
-      else if (sn >= 0 && sm >= 0 && sm > sn) { webbTipo = 'C'; webbFormula = 'SM(+) > SN(+)'; webbDesc = 'Crescita: immigrazione prevale su incremento naturale'; }
-      else if (sn < 0 && sm >= 0 && sm >= Math.abs(sn)) { webbTipo = 'D'; webbFormula = 'SM(+) ≥ |SN(-)|'; webbDesc = 'Crescita: immigrazione compensa e supera declino naturale'; }
+      if (sn >= 0 && sm < 0 && Math.abs(sn) >= Math.abs(sm)) { webbTipo = 'A'; webbFormula = 'SN(+) ≥ |SM(-)|'; webbDesc = 'crescita: incremento naturale positivo supera perdite migratorie'; }
+      else if (sn >= 0 && sm >= 0 && sn >= sm) { webbTipo = 'B'; webbFormula = 'SN(+) ≥ SM(+)'; webbDesc = 'crescita: incremento naturale prevale su immigrazione'; }
+      else if (sn >= 0 && sm >= 0 && sm > sn) { webbTipo = 'C'; webbFormula = 'SM(+) > SN(+)'; webbDesc = 'crescita: immigrazione prevale su incremento naturale'; }
+      else if (sn < 0 && sm >= 0 && sm >= Math.abs(sn)) { webbTipo = 'D'; webbFormula = 'SM(+) ≥ |SN(-)|'; webbDesc = 'crescita: immigrazione compensa e supera declino naturale'; }
     } else {
-      if (sn < 0 && sm >= 0 && Math.abs(sn) > sm) { webbTipo = 'E'; webbBadgeClass = 'type-f'; webbFormula = '|SN(-)| > SM(+)'; webbDesc = 'Declino: declino naturale non compensato da immigrazione positiva'; }
-      else if (sn < 0 && sm < 0 && Math.abs(sn) >= Math.abs(sm)) { webbTipo = 'F'; webbBadgeClass = 'type-f'; webbFormula = '|SN(-)| ≥ |SM(-)|'; webbDesc = 'Declino a dominanza naturale/senile (mortalità e calo nascite pesano più dell\'esodo migratorio)'; }
-      else if (sn < 0 && sm < 0 && Math.abs(sm) > Math.abs(sn)) { webbTipo = 'G'; webbBadgeClass = 'type-g'; webbFormula = '|SM(-)| > |SN(-)|'; webbDesc = 'Declino a dominanza migratoria (l\'esodo migratorio supera il declino naturale negativo)'; }
-      else if (sn >= 0 && sm < 0 && Math.abs(sm) > sn) { webbTipo = 'H'; webbBadgeClass = 'type-h'; webbFormula = '|SM(-)| > SN(+)'; webbDesc = 'Declino: emigrazione negativa supera e annulla incremento naturale positivo'; }
+      if (sn < 0 && sm >= 0 && Math.abs(sn) > sm) { webbTipo = 'E'; webbBadgeClass = 'type-f'; webbFormula = '|SN(-)| > SM(+)'; webbDesc = 'declino: declino naturale non compensato da immigrazione positiva'; }
+      else if (sn < 0 && sm < 0 && Math.abs(sn) >= Math.abs(sm)) { webbTipo = 'F'; webbBadgeClass = 'type-f'; webbFormula = '|SN(-)| ≥ |SM(-)|'; webbDesc = 'declino a dominanza naturale/senile (mortalità e calo nascite pesano più dell\'esodo migratorio)'; }
+      else if (sn < 0 && sm < 0 && Math.abs(sn) > Math.abs(sn)) { webbTipo = 'G'; webbBadgeClass = 'type-g'; webbFormula = '|SM(-)| > |SN(-)|'; webbDesc = 'declino a dominanza migratoria (l\'esodo migratorio supera il declino naturale negativo)'; }
+      else if (sn >= 0 && sm < 0 && Math.abs(sn) > sn) { webbTipo = 'H'; webbBadgeClass = 'type-h'; webbFormula = '|SM(-)| > SN(+)'; webbDesc = 'declino: emigrazione negativa supera e annulla incremento naturale positivo'; }
     }
 
     // MEI, TCM, TTD
@@ -1099,7 +1099,7 @@ window.AppCharts = (function() {
     container.innerHTML = `
       <div style="margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
         <h4 style="font-size: 0.925rem; font-weight: 700; color: var(--text-main); margin: 0;">
-          Indicatori ibridi integrati: Demografia, Fisco MEF e Mobilità ACI (${year})
+          Indicatori ibridi integrati: demografia, fisco MEF e mobilità ACI (${year})
         </h4>
         <span style="font-size: 0.725rem; color: var(--text-subtle);">Incrocio anagrafico con dichiarazioni IRPEF e PRA</span>
       </div>
