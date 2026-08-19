@@ -1372,8 +1372,8 @@ a:hover {
 
 .legend-tick {
   display: inline-block;
-  width: 14px;
-  height: 3.5px;
+  width: 3px;
+  height: 12px;
   border-radius: 1px;
   margin-right: 6px;
   vertical-align: middle;

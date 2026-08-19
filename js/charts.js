@@ -156,8 +156,8 @@ window.AppCharts = (function() {
       html += `<div class="pyramid-legend">
                 <div class="legend-item"><span class="legend-color" style="background: var(--color-male);"></span> Maschi (${formatInt(piramideData.totale.maschi)} • ${formatPct((piramideData.totale.maschi/totTor)*100)})</div>
                 <div class="legend-item"><span class="legend-color" style="background: var(--color-female);"></span> Femmine (${formatInt(piramideData.totale.femmine)} • ${formatPct((piramideData.totale.femmine/totTor)*100)})</div>
-                <div class="legend-item"><span class="legend-tick tick-italia"></span> Segno Media Italia</div>
-                <div class="legend-item"><span class="legend-tick tick-sicilia"></span> Segno Media Sicilia</div>
+                <div class="legend-item"><span class="legend-tick tick-italia"></span> Media Italia</div>
+                <div class="legend-item"><span class="legend-tick tick-sicilia"></span> Media Sicilia</div>
                 <div class="legend-item" style="color: var(--text-subtle); font-size: 0.8rem;">Popolazione ${year}: <strong>${formatInt(totTor)}</strong> ab.</div>
               </div>`;
     } else {
