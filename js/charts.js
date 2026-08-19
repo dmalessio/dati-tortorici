@@ -881,6 +881,8 @@ window.AppCharts = (function() {
     if (!container) return;
 
     const yrFlow = year > 2024 ? 2024 : year;
+    const bSic = data.benchmark_sicilia_serie ? data.benchmark_sicilia_serie.find(b => b.anno === yrFlow) : null;
+    const bIt = data.benchmark_italia_serie ? data.benchmark_italia_serie.find(b => b.anno === yrFlow) : null;
     const m = data.movimento_naturale.find(m => m.anno_riferimento.includes(String(yrFlow))) || data.movimento_naturale[data.movimento_naturale.length - 1];
     const f = data.flussi_migratori.find(m => m.anno_riferimento.includes(String(yrFlow))) || data.flussi_migratori[data.flussi_migratori.length - 1];
     const pCurr = data.popolazione_andamento.find(p => p.anno_riferimento.includes(String(yrFlow))) || data.popolazione_andamento[data.popolazione_andamento.length - 1];
@@ -1453,6 +1455,7 @@ window.AppCharts = (function() {
     setYear,
     setPyramidMode,
     setHistoryMode,
+    setBenchmarkTab,
     showPyramidGenderTip,
     showPyramidCivilTip,
     showTooltip,
