@@ -638,7 +638,7 @@ window.AppCharts = (function() {
     container.innerHTML = html;
   }
 
-  // 8. Indicatori Analitici di Ricambio, Struttura e Invecchiamento Profondo
+  // 8. Indicatori Analitici di Ricambio, Struttura e Invecchiamento Profondo (Standard ISTAT / Eurostat)
   function renderAdvancedStructure(year) {
     const container = document.getElementById('advanced-structure-container');
     if (!container || !data.piramidi_eta_annuali) return;
@@ -649,57 +649,139 @@ window.AppCharts = (function() {
     const fasce = piramideData.fasce;
     const getF = (fname) => fasce.find(f => f.fascia_eta === fname);
 
-    // CWR: Pop 0-4 / Donne 15-49 * 1000
+    // Totali
+    const totResidenti = piramideData.totale_residenti || fasce.reduce((a, b) => a + b.totale, 0);
+    const maschiTot = fasce.reduce((a, b) => a + b.maschi, 0);
+    const femmineTot = fasce.reduce((a, b) => a + b.femmine, 0);
+
+    // Fasce per indici di dipendenza (Eurostat / ISTAT)
+    const p0_14 = ['0-4', '5-9', '10-14'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const p15_64 = ['15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const p65Plus = ['65-69', '70-74', '75-79', '80-84', '85-89', '90-94', '95-99', '100+'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+
+    const ids = p15_64 > 0 ? (((p0_14 + p65Plus) / p15_64) * 100).toFixed(1) : '0';
+    const idg = p15_64 > 0 ? ((p0_14 / p15_64) * 100).toFixed(1) : '0';
+    const ida = p15_64 > 0 ? ((p65Plus / p15_64) * 100).toFixed(1) : '0';
+
+    // Età Mediana (Eurostat)
+    const half = totResidenti / 2;
+    let cum = 0;
+    let medianAge = 0;
+    for (let i = 0; i < fasce.length; i++) {
+      const f = fasce[i];
+      if (cum + f.totale >= half) {
+        if (f.fascia_eta.includes('-')) {
+          const parts = f.fascia_eta.split('-');
+          const low = parseInt(parts[0]);
+          const width = parseInt(parts[1]) - low + 1;
+          medianAge = f.totale > 0 ? (low + ((half - cum) / f.totale) * width) : low;
+        } else {
+          medianAge = 100;
+        }
+        break;
+      }
+      cum += f.totale;
+    }
+    const medianAgeFormatted = medianAge.toFixed(1);
+
+    // Ricambio Forze Lavoro: IRCA (15-29 / 50-64) e ISPA (40-64 / 15-39)
+    const p15_29 = ['15-19', '20-24', '25-29'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const p50_64 = ['50-54', '55-59', '60-64'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const irca = p50_64 > 0 ? ((p15_29 / p50_64) * 100).toFixed(1) : '0';
+
+    const p40_64 = ['40-44', '45-49', '50-54', '55-59', '60-64'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const p15_39 = ['15-19', '20-24', '25-29', '30-34', '35-39'].reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const ispa = p15_39 > 0 ? ((p40_64 / p15_39) * 100).toFixed(1) : '0';
+
+    // Genere, Fecondità e Longevità
+    const rm = femmineTot > 0 ? ((maschiTot / femmineTot) * 100).toFixed(1) : '0';
     const f0_4 = getF('0-4');
     const pop0_4 = f0_4 ? f0_4.totale : 0;
     const fertileAges = ['15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49'];
-    const donne15_49 = fertileAges.reduce((acc, age) => {
-      const f = getF(age);
-      return acc + (f ? f.femmine : 0);
-    }, 0);
+    const donne15_49 = fertileAges.reduce((acc, age) => acc + (getF(age) ? getF(age).femmine : 0), 0);
     const cwr = donne15_49 > 0 ? ((pop0_4 / donne15_49) * 1000).toFixed(1) : '0';
 
-    // ISPA: Pop 40-64 / Pop 15-39 * 100
-    const matureAges = ['40-44', '45-49', '50-54', '55-59', '60-64'];
-    const youngAges = ['15-19', '20-24', '25-29', '30-34', '35-39'];
-    const pop40_64 = matureAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
-    const pop15_39 = youngAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
-    const ispa = pop15_39 > 0 ? ((pop40_64 / pop15_39) * 100).toFixed(1) : '0';
-
-    // IVP: Pop 80+ / Pop 65+ * 100
-    const over80Ages = ['80-84', '85-89', '90-94', '95-99', '100 e oltre', '100+'];
-    const over65Ages = ['65-69', '70-74', '75-79', '80-84', '85-89', '90-94', '95-99', '100 e oltre', '100+'];
+    const over80Ages = ['80-84', '85-89', '90-94', '95-99', '100+'];
     const pop80Plus = over80Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
-    const pop65Plus = over65Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
-    const ivp = pop65Plus > 0 ? ((pop80Plus / pop65Plus) * 100).toFixed(1) : '0';
+    const ivp = p65Plus > 0 ? ((pop80Plus / p65Plus) * 100).toFixed(1) : '0';
+    const psr = p50_64 > 0 ? ((pop80Plus / p50_64) * 100).toFixed(1) : '0';
 
-    // PSR: Pop 80+ / Pop 50-64 * 100
-    const parentAges = ['50-54', '55-59', '60-64'];
-    const pop50_64 = parentAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
-    const psr = pop50_64 > 0 ? ((pop80Plus / pop50_64) * 100).toFixed(1) : '0';
-
-    // SR 75+: Uomini 75+ / Donne 75+ * 100
-    const over75Ages = ['75-79', '80-84', '85-89', '90-94', '95-99', '100 e oltre', '100+'];
+    const over75Ages = ['75-79', '80-84', '85-89', '90-94', '95-99', '100+'];
     const uom75Plus = over75Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).maschi : 0), 0);
     const don75Plus = over75Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).femmine : 0), 0);
     const sr75 = don75Plus > 0 ? ((uom75Plus / don75Plus) * 100).toFixed(1) : '0';
 
+    const over65Ages = ['65-69', '70-74', '75-79', '80-84', '85-89', '90-94', '95-99', '100+'];
+    const vedovi65 = over65Ages.reduce((acc, age) => acc + (getF(age) ? (getF(age).vedovi || 0) : 0), 0);
+    const tva = p65Plus > 0 ? ((vedovi65 / p65Plus) * 100).toFixed(1) : '0';
+
     container.innerHTML = `
-      <div style="margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-        <h4 style="font-size: 0.925rem; font-weight: 700; color: var(--text-main); margin: 0;">
-          Indicatori analitici di struttura, ricambio e invecchiamento profondo (${year})
+      <div style="margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-top: 1px solid var(--border-light); padding-top: 1rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-main); margin: 0;">
+          Indicatori analitici di struttura, dipendenza e ricambio (Standard ISTAT / Eurostat • ${year})
         </h4>
-        <span style="font-size: 0.725rem; color: var(--text-subtle);">Derivati da micro-coorti anagrafiche ISTAT</span>
+        <span style="font-size: 0.725rem; color: var(--text-subtle);">Elaborazione deterministica su micro-coorti anagrafiche</span>
       </div>
-      <div class="indicator-matrix-grid">
+
+      <!-- Gruppo 1: Dipendenza Strutturale -->
+      <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.4rem; letter-spacing: 0.04em;">
+        1. Carico sociale e dipendenza generazionale (IDS = IDG + IDA)
+      </div>
+      <div class="indicator-matrix-grid" style="margin-bottom: 1rem;">
+        <div class="indicator-card" style="border-left: 3px solid #0284c7;">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Dipendenza Strutturale (IDS)</span>
+            <span class="indicator-acronym">Totale</span>
+          </div>
+          <div class="indicator-val" style="color: #0284c7;">${ids}%</div>
+          <div class="indicator-formula">(Pop 0–14 + Pop 65+) / Pop 15–64 × 100</div>
+          <div class="indicator-desc">Carico demografico complessivo teorico: residenti non attivi (giovani + anziani) ogni 100 persone in età lavorativa.</div>
+        </div>
+
+        <div class="indicator-card" style="border-left: 3px solid #059669;">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Dipendenza Giovanile (IDG)</span>
+            <span class="indicator-acronym">Under 15</span>
+          </div>
+          <div class="indicator-val" style="color: #059669;">${idg}%</div>
+          <div class="indicator-formula">Pop 0–14 / Pop 15–64 × 100</div>
+          <div class="indicator-desc">Quota di minori a carico della popolazione attiva; isola la componente giovanile dal carico totale.</div>
+        </div>
+
+        <div class="indicator-card" style="border-left: 3px solid #b91c1c;">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Dipendenza Anziani (IDA)</span>
+            <span class="indicator-acronym">Over 65</span>
+          </div>
+          <div class="indicator-val" style="color: #b91c1c;">${ida}%</div>
+          <div class="indicator-formula">Pop 65+ / Pop 15–64 × 100</div>
+          <div class="indicator-desc">Carico previdenziale e sociosanitario senile: ${ida} anziani ogni 100 residenti in età lavorativa.</div>
+        </div>
+      </div>
+
+      <!-- Gruppo 2: Età Mediana e Ricambio Forze Lavoro -->
+      <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.4rem; letter-spacing: 0.04em;">
+        2. Struttura delle coorti, età mediana e mercato del lavoro
+      </div>
+      <div class="indicator-matrix-grid" style="margin-bottom: 1rem;">
         <div class="indicator-card">
           <div class="indicator-card-head">
-            <span class="indicator-title">Rapporto Bambini-Donne (CWR)</span>
-            <span class="indicator-acronym">Fecondità apparente</span>
+            <span class="indicator-title">Età Mediana (Eurostat)</span>
+            <span class="indicator-acronym">Bipartizione 50%</span>
           </div>
-          <div class="indicator-val" style="color: #0284c7;">${cwr} ‰</div>
-          <div class="indicator-formula">(Pop 0–4 / Donne 15–49) × 1.000</div>
-          <div class="indicator-desc">Bambini sotto i 5 anni per 1.000 donne in età fertile. Proxy di fecondità recente al netto della mortalità infantile.</div>
+          <div class="indicator-val" style="color: #4f46e5;">${medianAgeFormatted} anni</div>
+          <div class="indicator-formula">Punto mediano esatto (50% &lt; / 50% &gt;)</div>
+          <div class="indicator-desc">Età che divide la popolazione in due parti uguali; parametro cardine Eurostat meno sensibile ai valori estremi dell'età media.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Rinnovamento Contingente Attivo (IRCA)</span>
+            <span class="indicator-acronym">ISTAT Ricambio</span>
+          </div>
+          <div class="indicator-val" style="color: ${parseFloat(irca) < 100 ? '#b91c1c' : '#059669'};">${irca}%</div>
+          <div class="indicator-formula">(Pop 15–29 / Pop 50–64) × 100</div>
+          <div class="indicator-desc">Capacità di ricambio a medio termine: giovani occupabili (15–29) rispetto ai lavoratori vicini alla pensione (50–64).</div>
         </div>
 
         <div class="indicator-card">
@@ -711,6 +793,42 @@ window.AppCharts = (function() {
           <div class="indicator-formula">(Pop 40–64 / Pop 15–39) × 100</div>
           <div class="indicator-desc">Rapporto tra lavoratori maturi e giovani. Valori > 100% indicano una forza lavoro sbilanciata verso l'anzianità lavorativa.</div>
         </div>
+      </div>
+
+      <!-- Gruppo 3: Genere, Famiglia e Longevità Profonda -->
+      <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.4rem; letter-spacing: 0.04em;">
+        3. Squilibri di genere, fecondità indiretta, stato civile e longevità
+      </div>
+      <div class="indicator-matrix-grid">
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Rapporto Bambini-Donne (CWR)</span>
+            <span class="indicator-acronym">Fecondità apparente</span>
+          </div>
+          <div class="indicator-val" style="color: #0284c7;">${cwr} ‰</div>
+          <div class="indicator-formula">(Pop 0–4 / Donne 15–49) × 1.000</div>
+          <div class="indicator-desc">Bambini sotto i 5 anni per 1.000 donne in età fertile. Proxy robusta di fecondità al netto della mortalità neonatale.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Rapporto di Mascolinità (RM)</span>
+            <span class="indicator-acronym">Sex Ratio Totale</span>
+          </div>
+          <div class="indicator-val" style="color: #0891b2;">${rm}%</div>
+          <div class="indicator-formula">(Pop Maschile / Pop Femminile) × 100</div>
+          <div class="indicator-desc">Equilibrio di genere complessivo: ${maschiTot} maschi ogni ${femmineTot} femmine residenti.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Tasso di Vedovanza Anziana (TVA)</span>
+            <span class="indicator-acronym">Solitudine senile</span>
+          </div>
+          <div class="indicator-val" style="color: #be123c;">${tva}%</div>
+          <div class="indicator-formula">(Vedovi/e 65+ / Pop 65+) × 100</div>
+          <div class="indicator-desc">Isola la fragilità abitativa e familiare: quota di anziani vedovi/e privi di coniuge convivente (${vedovi65} residenti).</div>
+        </div>
 
         <div class="indicator-card">
           <div class="indicator-card-head">
@@ -719,7 +837,7 @@ window.AppCharts = (function() {
           </div>
           <div class="indicator-val" style="color: #be123c;">${ivp}%</div>
           <div class="indicator-formula">(Pop 80+ / Pop 65+) × 100</div>
-          <div class="indicator-desc">Quota di ultraottantenni sul totale anziani: isola il bacino ad alto fabbisogno di cure e assistenza sociosanitaria continua.</div>
+          <div class="indicator-desc">Quota di ultraottantenni sul totale anziani: isola il bacino ad alto fabbisogno sociosanitario continuo.</div>
         </div>
 
         <div class="indicator-card">
@@ -729,7 +847,7 @@ window.AppCharts = (function() {
           </div>
           <div class="indicator-val" style="color: #7c3aed;">${psr}%</div>
           <div class="indicator-formula">(Pop 80+ / Pop 50–64) × 100</div>
-          <div class="indicator-desc">Grandi anziani (80+) ogni 100 figli maturi (50–64 anni): misura la pressione potenziale di cura informale intrafamiliare.</div>
+          <div class="indicator-desc">Grandi anziani (80+) ogni 100 figli maturi (50–64 anni): pressione di cura informale intrafamiliare.</div>
         </div>
 
         <div class="indicator-card">
@@ -739,13 +857,13 @@ window.AppCharts = (function() {
           </div>
           <div class="indicator-val" style="color: #059669;">${sr75}%</div>
           <div class="indicator-formula">(Uomini 75+ / Donne 75+) × 100</div>
-          <div class="indicator-desc">Sopravvivenza differenziale per sesso: valori &lt; 100 evidenziano la forte incidenza di vedovanza e solitudine femminile avanzata.</div>
+          <div class="indicator-desc">Sopravvivenza differenziale: valori &lt; 100 riflettono la marcata prevalenza femminile nelle coorti longeve.</div>
         </div>
       </div>
     `;
   }
 
-  // 9. Modulo Tipologia Demografica di Webb & Efficacia dei Flussi
+  // 9. Modulo Tipologia Demografica di Webb & Tassi Standardizzati Eurostat (Crude Rates)
   function renderAdvancedFlows(year) {
     const container = document.getElementById('advanced-flow-container');
     if (!container) return;
@@ -753,7 +871,8 @@ window.AppCharts = (function() {
     const yrFlow = year > 2024 ? 2024 : year;
     const m = data.movimento_naturale.find(m => m.anno_riferimento.includes(String(yrFlow))) || data.movimento_naturale[data.movimento_naturale.length - 1];
     const f = data.flussi_migratori.find(m => m.anno_riferimento.includes(String(yrFlow))) || data.flussi_migratori[data.flussi_migratori.length - 1];
-    const p = data.popolazione_andamento.find(p => p.anno_riferimento.includes(String(yrFlow))) || data.popolazione_andamento[data.popolazione_andamento.length - 1];
+    const pCurr = data.popolazione_andamento.find(p => p.anno_riferimento.includes(String(yrFlow))) || data.popolazione_andamento[data.popolazione_andamento.length - 1];
+    const pPrev = data.popolazione_andamento.find(p => p.anno_riferimento.includes(String(yrFlow - 1))) || pCurr;
 
     if (!m || !f) return;
 
@@ -761,7 +880,15 @@ window.AppCharts = (function() {
     const sm = f.saldo_migratorio_totale;
     const imm = (f.iscritti_da_altri_comuni || 0) + (f.iscritti_da_estero || 0) + (f.iscritti_altri || 0);
     const emi = (f.cancellati_per_altri_comuni || 0) + (f.cancellati_per_estero || 0) + (f.cancellati_altri || 0);
-    const pop = p ? p.popolazione_residente : 6000;
+
+    const popStart = pPrev ? pPrev.popolazione_residente : 6000;
+    const popEnd = pCurr ? pCurr.popolazione_residente : popStart;
+    const pMed = (popStart + popEnd) / 2;
+
+    // Tassi Standardizzati Eurostat (Crude Rates per 1.000 abitanti medi)
+    const crnc = pMed > 0 ? (((m.nascite - m.decessi) / pMed) * 1000).toFixed(2) : '0';
+    const crnm = pMed > 0 ? ((sm / pMed) * 1000).toFixed(2) : '0';
+    const crtc = pMed > 0 ? (((sn + sm) / pMed) * 1000).toFixed(2) : '0';
 
     // Webb classification
     let webbTipo = 'G';
@@ -786,7 +913,7 @@ window.AppCharts = (function() {
     // MEI, TCM, TTD
     const mei = (imm + emi) > 0 ? ((Math.abs(imm - emi) / (imm + emi)) * 100).toFixed(1) : '0';
     const tcm = Math.abs(sn) > 0 ? (sm / Math.abs(sn)).toFixed(2) : '0';
-    const ttd = pop > 0 ? (((m.nascite + m.decessi + imm + emi) / pop) * 1000).toFixed(1) : '0';
+    const ttd = pMed > 0 ? (((m.nascite + m.decessi + imm + emi) / pMed) * 1000).toFixed(1) : '0';
 
     container.innerHTML = `
       <div class="webb-panel">
@@ -800,7 +927,7 @@ window.AppCharts = (function() {
             </div>
           </div>
           <div style="font-size: 0.775rem; color: var(--text-subtle); max-width: 380px; text-align: right;">
-            Fonti metodologiche: <em>J.W. Webb (1963)</em>; <em>Kamińska & Mularczyk (2014)</em>; <em>Walaszek (Geographia Polonica, 2025)</em>.
+            Fonti: <em>J.W. Webb (1963)</em>; <em>Eurostat Regional Demographic Indicators</em>; <em>ISTAT</em>.
           </div>
         </div>
 
@@ -808,6 +935,46 @@ window.AppCharts = (function() {
           <strong>Diagnosi:</strong> ${webbDesc}. Nella serie storica ventennale 2002–2024, Tortorici è classificato come <strong>Tipo G per l'82,6% del tempo</strong> (19 anni su 23), evidenziando come l'esodo migratorio sia stato il vettore primario dello spopolamento (68,8% della perdita totale).
         </p>
 
+        <!-- Tassi Standardizzati Eurostat (Crude Rates) -->
+        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.4rem; letter-spacing: 0.04em;">
+          Tassi generici standardizzati annuali (Standard Eurostat • per 1.000 ab. medi = ${formatInt(Math.round(pMed))})
+        </div>
+        <div class="indicator-matrix-grid" style="margin-bottom: 0.85rem;">
+          <div class="indicator-card">
+            <div class="indicator-card-head">
+              <span class="indicator-title">Crescita Naturale (CRNC)</span>
+              <span class="indicator-acronym">Eurostat</span>
+            </div>
+            <div class="indicator-val" style="color: ${parseFloat(crnc) < 0 ? '#b91c1c' : '#059669'};">${crnc} ‰</div>
+            <div class="indicator-formula">(Nascite - Decessi) / P_med × 1.000</div>
+            <div class="indicator-desc">Tasso generico di saldo naturale per 1.000 residenti medi (${m.nascite} nati, ${m.decessi} morti).</div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-card-head">
+              <span class="indicator-title">Migrazione Netta (CRNM)</span>
+              <span class="indicator-acronym">Eurostat</span>
+            </div>
+            <div class="indicator-val" style="color: ${parseFloat(crnm) < 0 ? '#b91c1c' : '#059669'};">${crnm} ‰</div>
+            <div class="indicator-formula">(Iscritti - Cancellati) / P_med × 1.000</div>
+            <div class="indicator-desc">Tasso generico di saldo migratorio per 1.000 residenti medi (${imm} iscritti, ${emi} cancellati).</div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-card-head">
+              <span class="indicator-title">Variazione Totale (CRTC)</span>
+              <span class="indicator-acronym">CRNC + CRNM</span>
+            </div>
+            <div class="indicator-val" style="color: ${parseFloat(crtc) < 0 ? '#b91c1c' : '#059669'};">${crtc} ‰</div>
+            <div class="indicator-formula">Δ Popolazione Totale / P_med × 1.000</div>
+            <div class="indicator-desc">Velocità annua di crescita o contrazione demografica complessiva del territorio.</div>
+          </div>
+        </div>
+
+        <!-- Efficacia Flussi & Turnover -->
+        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.4rem; letter-spacing: 0.04em;">
+          Indicatori di dinamica idraulica ed efficacia dei flussi
+        </div>
         <div class="indicator-matrix-grid">
           <div class="indicator-card">
             <div class="indicator-card-head">
@@ -824,9 +991,9 @@ window.AppCharts = (function() {
               <span class="indicator-title">Compensazione Migratoria (TCM)</span>
               <span class="indicator-acronym">Impatto netto</span>
             </div>
-            <div class="indicator-val" style="color: ${tcm < 0 ? '#b91c1c' : '#059669'};">${tcm}</div>
+            <div class="indicator-val" style="color: ${parseFloat(tcm) < 0 ? '#b91c1c' : '#059669'};">${tcm}</div>
             <div class="indicator-formula">Saldo Migratorio / |Saldo Naturale|</div>
-            <div class="indicator-desc">${tcm < 0 ? 'Negativo: l\'esodo migratorio aggrava il deficit tra nascite e decessi anziché compensarlo.' : 'Positivo: i flussi in entrata attenuano o superano il calo naturale.'}</div>
+            <div class="indicator-desc">${parseFloat(tcm) < 0 ? 'Negativo: l\'esodo migratorio aggrava il deficit tra nascite e decessi anziché compensarlo.' : 'Positivo: i flussi in entrata attenuano o superano il calo naturale.'}</div>
           </div>
 
           <div class="indicator-card">
@@ -835,7 +1002,7 @@ window.AppCharts = (function() {
               <span class="indicator-acronym">Mobilità totale</span>
             </div>
             <div class="indicator-val" style="color: #7c3aed;">${ttd} ‰</div>
-            <div class="indicator-formula">(Nascite + Decessi + Iscr + Canc) / Pop × 1.000</div>
+            <div class="indicator-formula">(Nascite + Decessi + Iscr + Canc) / P_med × 1.000</div>
             <div class="indicator-desc">Intensità globale di ricambio e mobilità: ${ttd} eventi anagrafici annui ogni 1.000 residenti.</div>
           </div>
         </div>
