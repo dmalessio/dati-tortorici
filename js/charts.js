@@ -973,7 +973,7 @@ window.AppCharts = (function() {
 
         <!-- Efficacia Flussi & Turnover -->
         <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.4rem; letter-spacing: 0.04em;">
-          Indicatori di dinamica idraulica ed efficacia dei flussi
+          Indicatori di mobilità, efficacia migratoria e turnover
         </div>
         <div class="indicator-matrix-grid">
           <div class="indicator-card">
