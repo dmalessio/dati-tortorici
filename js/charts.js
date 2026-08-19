@@ -89,7 +89,7 @@ window.AppCharts = (function() {
     document.querySelectorAll('.kpi-year-label').forEach(el => el.textContent = year);
   }
 
-  // 2. Piramide delle Età (Genere) oppure Composizione per Stato Civile
+  // 2. Piramide delle Età (Genere) con segni di riferimento Media Nazionale e Regionale
   function renderPyramid(year, mode = 'gender') {
     const container = document.getElementById('pyramid-chart-container');
     if (!container) return;
@@ -97,8 +97,12 @@ window.AppCharts = (function() {
     const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year);
     if (!piramideData || !piramideData.fasce) return;
 
+    const itPir = data.piramidi_italia_serie ? data.piramidi_italia_serie.find(p => p.anno === year) : null;
+    const sicPir = data.piramidi_sicilia_serie ? data.piramidi_sicilia_serie.find(p => p.anno === year) : null;
+
     const fasce = piramideData.fasce;
     const maxVal = GLOBAL_MAX_PYRAMID;
+    const totTor = piramideData.totale ? piramideData.totale.totale : fasce.reduce((a,b) => a+b.totale, 0);
 
     let html = '';
 
@@ -110,23 +114,37 @@ window.AppCharts = (function() {
         const mPct = Math.min(100, (f.maschi / maxVal) * 100);
         const fPct = Math.min(100, (f.femmine / maxVal) * 100);
 
+        const itF = itPir && itPir.fasce ? itPir.fasce[i] : null;
+        const sicF = sicPir && sicPir.fasce ? sicPir.fasce[i] : null;
+
+        // Calcolo posizioni scalate dei segni benchmark (0-100%)
+        const posM_It = itF ? Math.min(100, Math.max(0, ((itF.pct_maschi / 100) * totTor / maxVal) * 100)) : null;
+        const posM_Sic = sicF ? Math.min(100, Math.max(0, ((sicF.pct_maschi / 100) * totTor / maxVal) * 100)) : null;
+
+        const posF_It = itF ? Math.min(100, Math.max(0, ((itF.pct_femmine / 100) * totTor / maxVal) * 100)) : null;
+        const posF_Sic = sicF ? Math.min(100, Math.max(0, ((sicF.pct_femmine / 100) * totTor / maxVal) * 100)) : null;
+
         html += `
           <div class="pyramid-row">
-            <div class="pyramid-side male">
-              <div class="pyramid-bar male-bar" style="width: ${mPct}%;" 
-                   onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')" 
-                   onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')"
-                   onmouseleave="window.AppCharts.hideTooltip()"></div>
+            <div class="pyramid-side male"
+                 onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')" 
+                 onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'male')"
+                 onmouseleave="window.AppCharts.hideTooltip()">
+              <div class="pyramid-bar male-bar" style="width: ${mPct}%;"></div>
+              ${posM_It !== null ? `<div class="pyramid-benchmark-tick tick-italia" style="right: ${posM_It.toFixed(2)}%;" title="Media Italia: ${itF.pct_maschi}%"></div>` : ''}
+              ${posM_Sic !== null ? `<div class="pyramid-benchmark-tick tick-sicilia" style="right: ${posM_Sic.toFixed(2)}%;" title="Media Sicilia: ${sicF.pct_maschi}%"></div>` : ''}
             </div>
             <div class="pyramid-label" 
                  onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
                  onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'row')"
                  onmouseleave="window.AppCharts.hideTooltip()">${f.fascia_eta}</div>
-            <div class="pyramid-side female">
-              <div class="pyramid-bar female-bar" style="width: ${fPct}%;" 
+            <div class="pyramid-side female"
                  onmouseenter="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'female')" 
                  onclick="window.AppCharts.showPyramidGenderTip(event, ${year}, ${i}, 'female')"
-                 onmouseleave="window.AppCharts.hideTooltip()"></div>
+                 onmouseleave="window.AppCharts.hideTooltip()">
+              <div class="pyramid-bar female-bar" style="width: ${fPct}%;"></div>
+              ${posF_It !== null ? `<div class="pyramid-benchmark-tick tick-italia" style="left: ${posF_It.toFixed(2)}%;" title="Media Italia: ${itF.pct_femmine}%"></div>` : ''}
+              ${posF_Sic !== null ? `<div class="pyramid-benchmark-tick tick-sicilia" style="left: ${posF_Sic.toFixed(2)}%;" title="Media Sicilia: ${sicF.pct_femmine}%"></div>` : ''}
             </div>
           </div>
         `;
@@ -134,11 +152,13 @@ window.AppCharts = (function() {
 
       html += '</div>';
 
-      // Legenda Genere
+      // Legenda Genere con Segni Benchmark
       html += `<div class="pyramid-legend">
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-male);"></span> Maschi (${formatInt(piramideData.totale.maschi)} • ${formatPct((piramideData.totale.maschi/piramideData.totale.totale)*100)})</div>
-                <div class="legend-item"><span class="legend-color" style="background: var(--color-female);"></span> Femmine (${formatInt(piramideData.totale.femmine)} • ${formatPct((piramideData.totale.femmine/piramideData.totale.totale)*100)})</div>
-                <div class="legend-item" style="color: var(--text-subtle); font-size: 0.8rem;">Popolazione ${year}: <strong>${formatInt(piramideData.totale.totale)}</strong> residenti</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-male);"></span> Maschi (${formatInt(piramideData.totale.maschi)} • ${formatPct((piramideData.totale.maschi/totTor)*100)})</div>
+                <div class="legend-item"><span class="legend-color" style="background: var(--color-female);"></span> Femmine (${formatInt(piramideData.totale.femmine)} • ${formatPct((piramideData.totale.femmine/totTor)*100)})</div>
+                <div class="legend-item"><span class="legend-tick tick-italia"></span> Segno Media Italia</div>
+                <div class="legend-item"><span class="legend-tick tick-sicilia"></span> Segno Media Sicilia</div>
+                <div class="legend-item" style="color: var(--text-subtle); font-size: 0.8rem;">Popolazione ${year}: <strong>${formatInt(totTor)}</strong> ab.</div>
               </div>`;
     } else {
       // Vista Stato Civile a Barre Proporzionali alla popolazione di coorte
@@ -573,22 +593,22 @@ window.AppCharts = (function() {
 
     let html = `
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.85rem; margin-bottom: 0.75rem;">
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #0284c7;">
           <div class="flow-card-header"><span>Reddito medio / dichiarante</span></div>
           <div class="flow-card-val">${formatEuro(current.reddito_medio_per_dichiarante_euro)}</div>
           <small>Dati MEF per l'anno ${current.anno}${isLatestFallback ? ' (ultimo disponibile)' : ''}</small>
         </div>
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #4f46e5;">
           <div class="flow-card-header"><span>Reddito medio / residente</span></div>
           <div class="flow-card-val">${formatEuro(current.reddito_medio_pro_capite_residente_euro)}</div>
           <small>Pro capite su intera popolazione (${current.anno})</small>
         </div>
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #059669;">
           <div class="flow-card-header"><span>Contribuenti dichiaranti</span></div>
           <div class="flow-card-val">${formatInt(current.contribuenti_dichiaranti)}</div>
           <small>${formatPct(current.percentuale_popolazione_dichiarante)} dei residenti (${current.anno})</small>
         </div>
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #7c3aed;">
           <div class="flow-card-header"><span>Monte imponibile complessivo</span></div>
           <div class="flow-card-val" style="font-size: 1.15rem;">${formatEuro(current.ammontare_imponibile_totale_euro)}</div>
           <small>Totale addizionale IRPEF dichiarata (${current.anno})</small>
@@ -612,22 +632,22 @@ window.AppCharts = (function() {
 
     let html = `
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.85rem; margin-bottom: 0.75rem;">
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #0284c7;">
           <div class="flow-card-header"><span>Tasso di motorizzazione</span></div>
           <div class="flow-card-val">${current.auto_per_mille_abitanti} auto</div>
           <small>Ogni 1.000 residenti (anno ${current.anno}${isLatestFallback ? ' - ultimo ACI' : ''})</small>
         </div>
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #059669;">
           <div class="flow-card-header"><span>Automobili registrate</span></div>
           <div class="flow-card-val">${formatInt(current.automobili)}</div>
           <small>Autovetture private al PRA (${current.anno})</small>
         </div>
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #d97706;">
           <div class="flow-card-header"><span>Mezzi trasporto merci</span></div>
           <div class="flow-card-val">${formatInt(current.trasporto_merci)}</div>
           <small>Autocarri e commerciali (${current.anno})</small>
         </div>
-        <div class="flow-card">
+        <div class="flow-card" style="border-left: 3.5px solid #7c3aed;">
           <div class="flow-card-header"><span>Totale parco veicolare</span></div>
           <div class="flow-card-val">${formatInt(current.totale_parco_veicolare)}</div>
           <small>Inclusi motocicli e speciali (${current.anno})</small>
@@ -770,7 +790,7 @@ window.AppCharts = (function() {
         2. Struttura delle coorti, età mediana e mercato del lavoro
       </div>
       <div class="indicator-matrix-grid" style="margin-bottom: 1rem;">
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #4f46e5;">
           <div class="indicator-card-head">
             <span class="indicator-title">Età Mediana (Eurostat)</span>
             <span class="indicator-acronym">Bipartizione 50%</span>
@@ -781,7 +801,7 @@ window.AppCharts = (function() {
           <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia (media): <strong>${bSic && bSic.eta_media ? bSic.eta_media + " anni" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.eta_media ? bIt.eta_media + " anni" : "-"}</strong></span></div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #0d9488;">
           <div class="indicator-card-head">
             <span class="indicator-title">Rinnovamento Contingente Attivo (IRCA)</span>
             <span class="indicator-acronym">ISTAT Ricambio</span>
@@ -792,7 +812,7 @@ window.AppCharts = (function() {
           <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia (IRPA): <strong>${bSic && bSic.ricambio_attiva !== null ? bSic.ricambio_attiva + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.ricambio_attiva !== null ? bIt.ricambio_attiva + "%" : "-"}</strong></span></div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #d97706;">
           <div class="indicator-card-head">
             <span class="indicator-title">Invecchiamento Forze Lavoro (ISPA)</span>
             <span class="indicator-acronym">Struttura attiva</span>
@@ -809,7 +829,7 @@ window.AppCharts = (function() {
         3. Squilibri di genere, fecondità indiretta, stato civile e longevità
       </div>
       <div class="indicator-matrix-grid">
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #0284c7;">
           <div class="indicator-card-head">
             <span class="indicator-title">Rapporto Bambini-Donne (CWR)</span>
             <span class="indicator-acronym">Fecondità apparente</span>
@@ -820,7 +840,7 @@ window.AppCharts = (function() {
           <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.carico_figli_donna !== null ? (bSic.carico_figli_donna * 10).toFixed(1) + " ‰" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.carico_figli_donna !== null ? (bIt.carico_figli_donna * 10).toFixed(1) + " ‰" : "-"}</strong></span></div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #0891b2;">
           <div class="indicator-card-head">
             <span class="indicator-title">Rapporto di Mascolinità (RM)</span>
             <span class="indicator-acronym">Sex Ratio Totale</span>
@@ -831,7 +851,7 @@ window.AppCharts = (function() {
           <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>94,8%</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>94,6%</strong></span></div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #be123c;">
           <div class="indicator-card-head">
             <span class="indicator-title">Tasso di Vedovanza Anziana (TVA)</span>
             <span class="indicator-acronym">Solitudine senile</span>
@@ -842,7 +862,7 @@ window.AppCharts = (function() {
           <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>~27,5%</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>~26,8%</strong></span></div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #9333ea;">
           <div class="indicator-card-head">
             <span class="indicator-title">Vecchiaia Profonda (IVP)</span>
             <span class="indicator-acronym">Grandi anziani</span>
@@ -852,7 +872,7 @@ window.AppCharts = (function() {
           <div class="indicator-desc">Quota di ultraottantenni sul totale anziani: isola il bacino ad alto fabbisogno sociosanitario continuo.</div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #7c3aed;">
           <div class="indicator-card-head">
             <span class="indicator-title">Carico di Cura Figli-Genitori (PSR)</span>
             <span class="indicator-acronym">Parent Support</span>
@@ -862,7 +882,7 @@ window.AppCharts = (function() {
           <div class="indicator-desc">Grandi anziani (80+) ogni 100 figli maturi (50–64 anni): pressione di cura informale intrafamiliare.</div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #059669;">
           <div class="indicator-card-head">
             <span class="indicator-title">Sex Ratio Longevità (SR 75+)</span>
             <span class="indicator-acronym">Genere senile</span>
@@ -954,7 +974,7 @@ window.AppCharts = (function() {
           Tassi generici standardizzati annuali (Standard Eurostat • per 1.000 ab. medi = ${formatInt(Math.round(pMed))})
         </div>
         <div class="indicator-matrix-grid" style="margin-bottom: 0.85rem;">
-          <div class="indicator-card">
+          <div class="indicator-card" style="border-left: 3.5px solid #059669;">
             <div class="indicator-card-head">
               <span class="indicator-title">Crescita Naturale (CRNC)</span>
               <span class="indicator-acronym">Eurostat</span>
@@ -965,7 +985,7 @@ window.AppCharts = (function() {
             <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.tasso_natalita && bSic.tasso_mortalita ? (bSic.tasso_natalita - bSic.tasso_mortalita).toFixed(2) + " ‰" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.tasso_natalita && bIt.tasso_mortalita ? (bIt.tasso_natalita - bIt.tasso_mortalita).toFixed(2) + " ‰" : "-"}</strong></span></div>
           </div>
 
-          <div class="indicator-card">
+          <div class="indicator-card" style="border-left: 3.5px solid #0284c7;">
             <div class="indicator-card-head">
               <span class="indicator-title">Migrazione Netta (CRNM)</span>
               <span class="indicator-acronym">Eurostat</span>
@@ -976,7 +996,7 @@ window.AppCharts = (function() {
             <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>+1,90 ‰</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>+4,60 ‰</strong></span></div>
           </div>
 
-          <div class="indicator-card">
+          <div class="indicator-card" style="border-left: 3.5px solid #7c3aed;">
             <div class="indicator-card-head">
               <span class="indicator-title">Variazione Totale (CRTC)</span>
               <span class="indicator-acronym">CRNC + CRNM</span>
@@ -993,7 +1013,7 @@ window.AppCharts = (function() {
           Indicatori di mobilità, efficacia migratoria e turnover
         </div>
         <div class="indicator-matrix-grid">
-          <div class="indicator-card">
+          <div class="indicator-card" style="border-left: 3.5px solid #0891b2;">
             <div class="indicator-card-head">
               <span class="indicator-title">Efficacia Migratoria (MEI)</span>
               <span class="indicator-acronym">Direzionalità</span>
@@ -1003,7 +1023,7 @@ window.AppCharts = (function() {
             <div class="indicator-desc">Misura l'asimmetria dei flussi (0% = perfetta rotazione neutrale, 100% = flusso puramente unidirezionale in uscita).</div>
           </div>
 
-          <div class="indicator-card">
+          <div class="indicator-card" style="border-left: 3.5px solid #d97706;">
             <div class="indicator-card-head">
               <span class="indicator-title">Compensazione Migratoria (TCM)</span>
               <span class="indicator-acronym">Impatto netto</span>
@@ -1013,7 +1033,7 @@ window.AppCharts = (function() {
             <div class="indicator-desc">${parseFloat(tcm) < 0 ? 'Negativo: l\'esodo migratorio aggrava il deficit tra nascite e decessi anziché compensarlo.' : 'Positivo: i flussi in entrata attenuano o superano il calo naturale.'}</div>
           </div>
 
-          <div class="indicator-card">
+          <div class="indicator-card" style="border-left: 3.5px solid #6366f1;">
             <div class="indicator-card-head">
               <span class="indicator-title">Turnover Demografico (TTD)</span>
               <span class="indicator-acronym">Mobilità totale</span>
@@ -1124,7 +1144,7 @@ window.AppCharts = (function() {
         <span style="font-size: 0.725rem; color: var(--text-subtle);">Incrocio anagrafico con dichiarazioni IRPEF e PRA</span>
       </div>
       <div class="indicator-matrix-grid">
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #0284c7;">
           <div class="indicator-card-head">
             <span class="indicator-title">Dipendenza Economica Effettiva</span>
             <span class="indicator-acronym">Carico fiscale</span>
@@ -1134,7 +1154,7 @@ window.AppCharts = (function() {
           <div class="indicator-desc">Numero di residenti non dichiaranti (minori, studenti, disoccupati, inattivi) a carico di ciascun contribuente IRPEF.</div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #059669;">
           <div class="indicator-card-head">
             <span class="indicator-title">Capacità Imponibile / Pop. Attiva</span>
             <span class="indicator-acronym">Produttività potenziale</span>
@@ -1144,7 +1164,7 @@ window.AppCharts = (function() {
           <div class="indicator-desc">Monte imponibile dichiarato rapportato ai soli residenti in età lavorativa (15–64 anni) anziché alla popolazione totale.</div>
         </div>
 
-        <div class="indicator-card">
+        <div class="indicator-card" style="border-left: 3.5px solid #d97706;">
           <div class="indicator-card-head">
             <span class="indicator-title">Motorizzazione su Popolazione Attiva</span>
             <span class="indicator-acronym">Dipendenza auto</span>
@@ -1358,21 +1378,63 @@ window.AppCharts = (function() {
     if (!piramideData || !piramideData.fasce || !piramideData.fasce[ageIndex]) return;
     const f = piramideData.fasce[ageIndex];
     const totCohort = f.totale;
+    const totTor = piramideData.totale ? piramideData.totale.totale : 5531;
+
+    const itPir = data.piramidi_italia_serie ? data.piramidi_italia_serie.find(p => p.anno === year) : null;
+    const sicPir = data.piramidi_sicilia_serie ? data.piramidi_sicilia_serie.find(p => p.anno === year) : null;
+    const itF = itPir && itPir.fasce ? itPir.fasce[ageIndex] : null;
+    const sicF = sicPir && sicPir.fasce ? sicPir.fasce[ageIndex] : null;
+
+    const torM_pct = (f.maschi / totTor) * 100;
+    const torF_pct = (f.femmine / totTor) * 100;
+    const torTot_pct = (totCohort / totTor) * 100;
 
     if (side === 'male') {
-      const pct = totCohort > 0 ? (f.maschi / totCohort) * 100 : 0;
-      const content = `Maschi: <strong>${formatInt(f.maschi)}</strong> residenti (<strong>${formatPct(pct)}</strong> della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
+      const itPct = itF ? itF.pct_maschi : null;
+      const sicPct = sicF ? sicF.pct_maschi : null;
+      let bench = '';
+      if (itPct !== null && sicPct !== null) {
+        const dIt = (torM_pct - itPct).toFixed(2);
+        const dSic = (torM_pct - sicPct).toFixed(2);
+        bench = `<div style="margin-top: 6px; padding-top: 5px; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.725rem;">
+          <div><span style="color:#38bdf8;">●</span> Tortorici: <strong>${torM_pct.toFixed(2)}%</strong> del totale</div>
+          <div><span style="color:#ffffff;">●</span> Media Italia: <strong>${itPct}%</strong> (${dIt >= 0 ? '+' : ''}${dIt}%)</div>
+          <div><span style="color:#fb923c;">●</span> Media Sicilia: <strong>${sicPct}%</strong> (${dSic >= 0 ? '+' : ''}${dSic}%)</div>
+        </div>`;
+      }
+      const content = `Maschi: <strong>${formatInt(f.maschi)}</strong> residenti (<strong>${formatPct((f.maschi/totCohort)*100)}</strong> della classe)${bench}`;
       showTooltip(event, `Maschi ${f.fascia_eta} anni (${year})`, content);
     } else if (side === 'female') {
-      const pct = totCohort > 0 ? (f.femmine / totCohort) * 100 : 0;
-      const content = `Femmine: <strong>${formatInt(f.femmine)}</strong> residenti (<strong>${formatPct(pct)}</strong> della classe)<br>Totale classe: <strong>${formatInt(totCohort)}</strong> residenti`;
+      const itPct = itF ? itF.pct_femmine : null;
+      const sicPct = sicF ? sicF.pct_femmine : null;
+      let bench = '';
+      if (itPct !== null && sicPct !== null) {
+        const dIt = (torF_pct - itPct).toFixed(2);
+        const dSic = (torF_pct - sicPct).toFixed(2);
+        bench = `<div style="margin-top: 6px; padding-top: 5px; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.725rem;">
+          <div><span style="color:#f43f5e;">●</span> Tortorici: <strong>${torF_pct.toFixed(2)}%</strong> del totale</div>
+          <div><span style="color:#ffffff;">●</span> Media Italia: <strong>${itPct}%</strong> (${dIt >= 0 ? '+' : ''}${dIt}%)</div>
+          <div><span style="color:#fb923c;">●</span> Media Sicilia: <strong>${sicPct}%</strong> (${dSic >= 0 ? '+' : ''}${dSic}%)</div>
+        </div>`;
+      }
+      const content = `Femmine: <strong>${formatInt(f.femmine)}</strong> residenti (<strong>${formatPct((f.femmine/totCohort)*100)}</strong> della classe)${bench}`;
       showTooltip(event, `Femmine ${f.fascia_eta} anni (${year})`, content);
     } else {
-      const mPct = totCohort > 0 ? (f.maschi / totCohort) * 100 : 0;
-      const fPct = totCohort > 0 ? (f.femmine / totCohort) * 100 : 0;
-      const content = `Totale residenti: <strong>${formatInt(totCohort)}</strong><br>` +
-        `<span style="color:#38bdf8;">●</span> Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct(mPct)})<br>` +
-        `<span style="color:#f43f5e;">●</span> Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct(fPct)})`;
+      const itPct = itF ? itF.pct_totale : null;
+      const sicPct = sicF ? sicF.pct_totale : null;
+      let bench = '';
+      if (itPct !== null && sicPct !== null) {
+        const dIt = (torTot_pct - itPct).toFixed(2);
+        const dSic = (torTot_pct - sicPct).toFixed(2);
+        bench = `<div style="margin-top: 6px; padding-top: 5px; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.725rem;">
+          <div><span style="color:#38bdf8;">●</span> Tortorici: <strong>${torTot_pct.toFixed(2)}%</strong> della popolazione</div>
+          <div><span style="color:#ffffff;">●</span> Media Italia: <strong>${itPct}%</strong> (${dIt >= 0 ? '+' : ''}${dIt}%)</div>
+          <div><span style="color:#fb923c;">●</span> Media Sicilia: <strong>${sicPct}%</strong> (${dSic >= 0 ? '+' : ''}${dSic}%)</div>
+        </div>`;
+      }
+      const content = `Totale classe: <strong>${formatInt(totCohort)}</strong> residenti (${formatPct(torTot_pct)} della popolazione)<br>` +
+        `<span style="color:#38bdf8;">●</span> Maschi: <strong>${formatInt(f.maschi)}</strong> (${formatPct((f.maschi/totCohort)*100)})<br>` +
+        `<span style="color:#f43f5e;">●</span> Femmine: <strong>${formatInt(f.femmine)}</strong> (${formatPct((f.femmine/totCohort)*100)})${bench}`;
       showTooltip(event, `Fascia ${f.fascia_eta} anni (${year})`, content);
     }
   }
