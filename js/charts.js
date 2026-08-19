@@ -646,6 +646,9 @@ window.AppCharts = (function() {
     const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year) || data.piramidi_eta_annuali[data.piramidi_eta_annuali.length - 1];
     if (!piramideData || !piramideData.fasce) return;
 
+    const bSic = data.benchmark_sicilia_serie ? data.benchmark_sicilia_serie.find(b => b.anno === year) : null;
+    const bIt = data.benchmark_italia_serie ? data.benchmark_italia_serie.find(b => b.anno === year) : null;
+
     const fasce = piramideData.fasce;
     const getF = (fname) => fasce.find(f => f.fascia_eta === fname);
 
@@ -736,6 +739,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #0284c7;">${ids}%</div>
           <div class="indicator-formula">(Pop 0–14 + Pop 65+) / Pop 15–64 × 100</div>
           <div class="indicator-desc">Carico demografico complessivo teorico: residenti non attivi (giovani + anziani) ogni 100 persone in età lavorativa.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.dipendenza_strutturale !== null ? bSic.dipendenza_strutturale + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.dipendenza_strutturale !== null ? bIt.dipendenza_strutturale + "%" : "-"}</strong></span></div>
         </div>
 
         <div class="indicator-card" style="border-left: 3px solid #059669;">
@@ -746,6 +750,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #059669;">${idg}%</div>
           <div class="indicator-formula">Pop 0–14 / Pop 15–64 × 100</div>
           <div class="indicator-desc">Quota di minori a carico della popolazione attiva; isola la componente giovanile dal carico totale.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.dipendenza_giovani !== null ? bSic.dipendenza_giovani + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.dipendenza_giovani !== null ? bIt.dipendenza_giovani + "%" : "-"}</strong></span></div>
         </div>
 
         <div class="indicator-card" style="border-left: 3px solid #b91c1c;">
@@ -756,6 +761,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #b91c1c;">${ida}%</div>
           <div class="indicator-formula">Pop 65+ / Pop 15–64 × 100</div>
           <div class="indicator-desc">Carico previdenziale e sociosanitario senile: ${ida} anziani ogni 100 residenti in età lavorativa.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.dipendenza_anziani !== null ? bSic.dipendenza_anziani + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.dipendenza_anziani !== null ? bIt.dipendenza_anziani + "%" : "-"}</strong></span></div>
         </div>
       </div>
 
@@ -772,6 +778,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #4f46e5;">${medianAgeFormatted} anni</div>
           <div class="indicator-formula">Punto mediano esatto (50% &lt; / 50% &gt;)</div>
           <div class="indicator-desc">Età che divide la popolazione in due parti uguali; parametro cardine Eurostat meno sensibile ai valori estremi dell'età media.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia (media): <strong>${bSic && bSic.eta_media ? bSic.eta_media + " anni" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.eta_media ? bIt.eta_media + " anni" : "-"}</strong></span></div>
         </div>
 
         <div class="indicator-card">
@@ -782,6 +789,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: ${parseFloat(irca) < 100 ? '#b91c1c' : '#059669'};">${irca}%</div>
           <div class="indicator-formula">(Pop 15–29 / Pop 50–64) × 100</div>
           <div class="indicator-desc">Capacità di ricambio a medio termine: giovani occupabili (15–29) rispetto ai lavoratori vicini alla pensione (50–64).</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia (IRPA): <strong>${bSic && bSic.ricambio_attiva !== null ? bSic.ricambio_attiva + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.ricambio_attiva !== null ? bIt.ricambio_attiva + "%" : "-"}</strong></span></div>
         </div>
 
         <div class="indicator-card">
@@ -792,6 +800,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #d97706;">${ispa}%</div>
           <div class="indicator-formula">(Pop 40–64 / Pop 15–39) × 100</div>
           <div class="indicator-desc">Rapporto tra lavoratori maturi e giovani. Valori > 100% indicano una forza lavoro sbilanciata verso l'anzianità lavorativa.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.struttura_attiva !== null ? bSic.struttura_attiva + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.struttura_attiva !== null ? bIt.struttura_attiva + "%" : "-"}</strong></span></div>
         </div>
       </div>
 
@@ -808,6 +817,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #0284c7;">${cwr} ‰</div>
           <div class="indicator-formula">(Pop 0–4 / Donne 15–49) × 1.000</div>
           <div class="indicator-desc">Bambini sotto i 5 anni per 1.000 donne in età fertile. Proxy robusta di fecondità al netto della mortalità neonatale.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.carico_figli_donna !== null ? (bSic.carico_figli_donna * 10).toFixed(1) + " ‰" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.carico_figli_donna !== null ? (bIt.carico_figli_donna * 10).toFixed(1) + " ‰" : "-"}</strong></span></div>
         </div>
 
         <div class="indicator-card">
@@ -818,6 +828,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #0891b2;">${rm}%</div>
           <div class="indicator-formula">(Pop Maschile / Pop Femminile) × 100</div>
           <div class="indicator-desc">Equilibrio di genere complessivo: ${maschiTot} maschi ogni ${femmineTot} femmine residenti.</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>94,8%</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>94,6%</strong></span></div>
         </div>
 
         <div class="indicator-card">
@@ -828,6 +839,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: #be123c;">${tva}%</div>
           <div class="indicator-formula">(Vedovi/e 65+ / Pop 65+) × 100</div>
           <div class="indicator-desc">Isola la fragilità abitativa e familiare: quota di anziani vedovi/e privi di coniuge convivente (${vedovi65} residenti).</div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>~27,5%</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>~26,8%</strong></span></div>
         </div>
 
         <div class="indicator-card">
@@ -948,6 +960,7 @@ window.AppCharts = (function() {
             <div class="indicator-val" style="color: ${parseFloat(crnc) < 0 ? '#b91c1c' : '#059669'};">${crnc} ‰</div>
             <div class="indicator-formula">(Nascite - Decessi) / P_med × 1.000</div>
             <div class="indicator-desc">Tasso generico di saldo naturale per 1.000 residenti medi (${m.nascite} nati, ${m.decessi} morti).</div>
+            <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.tasso_natalita && bSic.tasso_mortalita ? (bSic.tasso_natalita - bSic.tasso_mortalita).toFixed(2) + " ‰" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.tasso_natalita && bIt.tasso_mortalita ? (bIt.tasso_natalita - bIt.tasso_mortalita).toFixed(2) + " ‰" : "-"}</strong></span></div>
           </div>
 
           <div class="indicator-card">
@@ -958,6 +971,7 @@ window.AppCharts = (function() {
             <div class="indicator-val" style="color: ${parseFloat(crnm) < 0 ? '#b91c1c' : '#059669'};">${crnm} ‰</div>
             <div class="indicator-formula">(Iscritti - Cancellati) / P_med × 1.000</div>
             <div class="indicator-desc">Tasso generico di saldo migratorio per 1.000 residenti medi (${imm} iscritti, ${emi} cancellati).</div>
+            <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>+1,90 ‰</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>+4,60 ‰</strong></span></div>
           </div>
 
           <div class="indicator-card">
@@ -968,6 +982,7 @@ window.AppCharts = (function() {
             <div class="indicator-val" style="color: ${parseFloat(crtc) < 0 ? '#b91c1c' : '#059669'};">${crtc} ‰</div>
             <div class="indicator-formula">Δ Popolazione Totale / P_med × 1.000</div>
             <div class="indicator-desc">Velocità annua di crescita o contrazione demografica complessiva del territorio.</div>
+            <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>-2,10 ‰</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>-0,20 ‰</strong></span></div>
           </div>
         </div>
 
@@ -1061,6 +1076,9 @@ window.AppCharts = (function() {
     const container = document.getElementById('advanced-economy-container');
     if (!container || !data.redditi_irpef) return;
 
+    const bSic = data.benchmark_sicilia_serie ? data.benchmark_sicilia_serie.find(b => b.anno === year) : null;
+    const bIt = data.benchmark_italia_serie ? data.benchmark_italia_serie.find(b => b.anno === year) : null;
+
     // MEF
     const rList = data.redditi_irpef;
     const exactR = rList.find(r => r.anno === year);
@@ -1137,43 +1155,200 @@ window.AppCharts = (function() {
     `;
   }
 
-  // 12. Benchmark Nebrodi
+  // 12. Benchmark Territoriale: Nebrodi & Serie Storica Regionale/Nazionale
+  let activeBenchmarkTab = 'nebrodi';
+
+  function setBenchmarkTab(tab) {
+    activeBenchmarkTab = tab;
+    const btnNeb = document.getElementById('btn-tab-nebrodi');
+    const btnReg = document.getElementById('btn-tab-regione');
+    if (btnNeb && btnReg) {
+      if (tab === 'nebrodi') {
+        btnNeb.classList.add('active');
+        btnReg.classList.remove('active');
+      } else {
+        btnNeb.classList.remove('active');
+        btnReg.classList.add('active');
+      }
+    }
+    renderBenchmarkChart();
+  }
+
   function renderBenchmarkChart() {
     const container = document.getElementById('benchmark-table-container');
     if (!container) return;
 
-    const list = data.benchmark_limitrofi;
-    let html = `
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Comune / Entità territoriale</th>
-            <th>Distanza</th>
-            <th>Popolazione 2025</th>
-            <th>Età media</th>
-            <th>Indice vecchiaia</th>
-            <th>Stranieri (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
-
-    list.forEach(item => {
-      const isTortorici = item.comune.includes('Tortorici');
-      html += `
-        <tr style="${isTortorici ? 'background-color: #eff6ff; font-weight: 700;' : ''}">
-          <td>${item.comune} ${item.confinante ? '<span class="badge" style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; padding:1px 5px;">Confinante</span>' : ''}</td>
-          <td>${item.distanza_km !== null ? `${formatFloat(item.distanza_km)} km` : '-'}</td>
-          <td>${formatInt(item.popolazione_2025)}</td>
-          <td>${formatFloat(item.eta_media)} anni</td>
-          <td>${formatFloat(item.indice_vecchiaia)}</td>
-          <td>${formatPct(item.stranieri_pct)}</td>
-        </tr>
+    if (activeBenchmarkTab === 'nebrodi') {
+      const list = data.benchmark_limitrofi || [];
+      let html = `
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Comune / Entità territoriale</th>
+              <th>Distanza</th>
+              <th>Popolazione 2025</th>
+              <th>Età media</th>
+              <th>Indice vecchiaia</th>
+              <th>Stranieri (%)</th>
+            </tr>
+          </thead>
+          <tbody>
       `;
-    });
 
-    html += `</tbody></table>`;
-    container.innerHTML = html;
+      list.forEach(item => {
+        const isTortorici = item.comune.includes('Tortorici');
+        html += `
+          <tr style="${isTortorici ? 'background-color: #eff6ff; font-weight: 700;' : ''}">
+            <td>${item.comune} ${item.confinante ? '<span class="badge" style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; padding:1px 5px;">Confinante</span>' : ''}</td>
+            <td>${item.distanza_km !== null ? `${formatFloat(item.distanza_km)} km` : '-'}</td>
+            <td>${formatInt(item.popolazione_2025)}</td>
+            <td>${formatFloat(item.eta_media)} anni</td>
+            <td>${formatFloat(item.indice_vecchiaia)}</td>
+            <td>${formatPct(item.stranieri_pct)}</td>
+          </tr>
+        `;
+      });
+
+      html += `</tbody></table>`;
+      container.innerHTML = html;
+    } else {
+      // Tab 2: Serie Storica Comparativa (Tortorici vs Sicilia vs Italia)
+      const bIt = data.benchmark_italia_serie || [];
+      const bSic = data.benchmark_sicilia_serie || [];
+      const tPir = data.piramidi_eta_annuali || [];
+      const tInd = data.indici_demografici || [];
+      const tMef = data.redditi_irpef || [];
+
+      const yearsMatrix = [2002, 2005, 2011, 2016, 2021, 2024, 2025];
+
+      let html = `
+        <div style="margin-bottom: 0.75rem; font-size: 0.8rem; color: var(--text-muted);">
+          Confronto delle metriche demografiche e fiscali ufficiali (Fonti: <em>ISTAT</em>, <em>Eurostat</em>, <em>MEF OpenData</em>).
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Indicatore</th>
+              <th>Territorio</th>
+              ${yearsMatrix.map(y => `<th style="text-align:right;">${y}</th>`).join('')}
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      const rowsDef = [
+        {
+          label: 'Indice di Vecchiaia',
+          unit: '%',
+          getT: (y) => {
+            const p = tPir.find(item => item.anno === y);
+            if (!p || !p.fasce) return '-';
+            const f = (k) => { const obj = p.fasce.find(x => x.fascia_eta === k); return obj ? obj.totale : 0; };
+            const p0_14 = f('0-4') + f('5-9') + f('10-14');
+            const p65_plus = p.fasce.filter(x => !['0-4','5-9','10-14','15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64'].includes(x.fascia_eta)).reduce((a,b) => a+b.totale, 0);
+            return p0_14 > 0 ? (p65_plus / p0_14 * 100).toFixed(1) + '%' : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.indice_vecchiaia !== null ? s.indice_vecchiaia.toFixed(1) + '%' : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.indice_vecchiaia !== null ? i.indice_vecchiaia.toFixed(1) + '%' : '-'; }
+        },
+        {
+          label: 'Età Media (anni)',
+          unit: '',
+          getT: (y) => {
+            const ind = tInd.find(x => parseInt(x.anno) === y);
+            if (ind && ind.eta_media) return ind.eta_media.toFixed(1);
+            const p = tPir.find(item => item.anno === y);
+            if (!p || !p.fasce) return '-';
+            const ages = [2, 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, 87, 92, 97, 102];
+            const tot = p.fasce.reduce((a,b) => a+b.totale, 0);
+            const sumW = p.fasce.reduce((acc, f, idx) => acc + f.totale * (ages[idx] || 50), 0);
+            return tot > 0 ? (sumW / tot).toFixed(1) : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.eta_media ? s.eta_media.toFixed(1) : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.eta_media ? i.eta_media.toFixed(1) : '-'; }
+        },
+        {
+          label: 'Dipendenza Strutturale (IDS)',
+          unit: '%',
+          getT: (y) => {
+            const p = tPir.find(item => item.anno === y);
+            if (!p || !p.fasce) return '-';
+            const f = (k) => { const obj = p.fasce.find(x => x.fascia_eta === k); return obj ? obj.totale : 0; };
+            const p0_14 = f('0-4') + f('5-9') + f('10-14');
+            const p15_64 = ['15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-64'].reduce((a,k) => a+f(k), 0);
+            const p65_plus = p.fasce.reduce((a,b) => a+b.totale, 0) - p0_14 - p15_64;
+            return p15_64 > 0 ? ((p0_14 + p65_plus) / p15_64 * 100).toFixed(1) + '%' : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.dipendenza_strutturale !== null ? s.dipendenza_strutturale.toFixed(1) + '%' : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.dipendenza_strutturale !== null ? i.dipendenza_strutturale.toFixed(1) + '%' : '-'; }
+        },
+        {
+          label: 'Ricambio Popolazione Attiva (IRPA)',
+          unit: '%',
+          getT: (y) => {
+            const p = tPir.find(item => item.anno === y);
+            if (!p || !p.fasce) return '-';
+            const f = (k) => { const obj = p.fasce.find(x => x.fascia_eta === k); return obj ? obj.totale : 0; };
+            const f60 = f('60-64'); const f15 = f('15-19');
+            return f15 > 0 ? (f60 / f15 * 100).toFixed(1) + '%' : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.ricambio_attiva !== null ? s.ricambio_attiva.toFixed(1) + '%' : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.ricambio_attiva !== null ? i.ricambio_attiva.toFixed(1) + '%' : '-'; }
+        },
+        {
+          label: 'Tasso di Natalità (‰)',
+          unit: '‰',
+          getT: (y) => {
+            const ind = tInd.find(x => parseInt(x.anno) === y);
+            return ind && ind.tasso_natalita_per_mille ? ind.tasso_natalita_per_mille.toFixed(1) + ' ‰' : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.tasso_natalita !== null ? s.tasso_natalita.toFixed(1) + ' ‰' : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.tasso_natalita !== null ? i.tasso_natalita.toFixed(1) + ' ‰' : '-'; }
+        },
+        {
+          label: 'Tasso di Mortalità (‰)',
+          unit: '‰',
+          getT: (y) => {
+            const ind = tInd.find(x => parseInt(x.anno) === y);
+            return ind && ind.tasso_mortalita_per_mille ? ind.tasso_mortalita_per_mille.toFixed(1) + ' ‰' : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.tasso_mortalita !== null ? s.tasso_mortalita.toFixed(1) + ' ‰' : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.tasso_mortalita !== null ? i.tasso_mortalita.toFixed(1) + ' ‰' : '-'; }
+        },
+        {
+          label: 'Reddito Imponibile Medio IRPEF',
+          unit: '€',
+          getT: (y) => {
+            const m = tMef.find(x => x.anno === y);
+            return m && m.reddito_medio_imponibile_dichiarante_euro ? '€ ' + formatInt(m.reddito_medio_imponibile_dichiarante_euro) : '-';
+          },
+          getS: (y) => { const s = bSic.find(x => x.anno === y); return s && s.reddito_medio_irpef ? '€ ' + formatInt(s.reddito_medio_irpef) : '-'; },
+          getI: (y) => { const i = bIt.find(x => x.anno === y); return i && i.reddito_medio_irpef ? '€ ' + formatInt(i.reddito_medio_irpef) : '-'; }
+        }
+      ];
+
+      rowsDef.forEach((rd, idx) => {
+        const bgStyle = idx % 2 === 0 ? 'background-color: rgba(0,0,0,0.015);' : '';
+        html += `
+          <tr style="${bgStyle} border-top: 1px solid var(--border-color);">
+            <td rowspan="3" style="font-weight: 700; vertical-align: middle; border-right: 1px solid var(--border-color);">${rd.label}</td>
+            <td style="font-weight: 700; color: var(--primary-color);">● Tortorici</td>
+            ${yearsMatrix.map(y => `<td style="text-align:right; font-weight:700; color:var(--primary-color);">${rd.getT(y)}</td>`).join('')}
+          </tr>
+          <tr style="${bgStyle}">
+            <td style="color: #0284c7; font-weight: 600;">● Sicilia</td>
+            ${yearsMatrix.map(y => `<td style="text-align:right; color:#0284c7;">${rd.getS(y)}</td>`).join('')}
+          </tr>
+          <tr style="${bgStyle}">
+            <td style="color: #64748b; font-weight: 600;">● Italia</td>
+            ${yearsMatrix.map(y => `<td style="text-align:right; color:#64748b;">${rd.getI(y)}</td>`).join('')}
+          </tr>
+        `;
+      });
+
+      html += `</tbody></table>`;
+      container.innerHTML = html;
+    }
   }
 
   function showPyramidGenderTip(event, year, ageIndex, side) {

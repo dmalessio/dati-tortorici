@@ -488,7 +488,7 @@
               <div id="sim-out-2040" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono);">-</div>
             </div>
             <div>
-              <div style="font-size: 0.72rem; color: var(--text-subtle);">Anno 2050</div>
+        <div style="font-size: 0.72rem; color: var(--text-subtle);">Anno 2050</div>
               <div id="sim-out-2050" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono);">-</div>
             </div>
             <div>
@@ -500,16 +500,20 @@
       </div>
     </section>
 
-    <!-- SEZIONE 8: Benchmark Nebrodi -->
+    <!-- SEZIONE 8: Benchmark Territoriale & Regionale -->
     <section id="sezione-benchmark" class="section-block">
       <div class="section-header">
         <div class="section-header-text">
-          <h2>Benchmark territoriale dei Nebrodi e della provincia di Messina</h2>
-          <p>Confronto su popolazione, età media, indice di vecchiaia e incidenza di cittadini stranieri con i comuni limitrofi.</p>
+          <h2>Benchmark territoriale dei Nebrodi, regionale e nazionale</h2>
+          <p>Confronto su popolazione, età media, indice di vecchiaia, dipendenza strutturale e redditi con i comuni limitrofi, la Sicilia e l'Italia.</p>
         </div>
       </div>
 
       <div class="data-table-container">
+        <div class="benchmark-tab-nav">
+          <button class="benchmark-tab-btn active" id="btn-tab-nebrodi" onclick="window.AppCharts.setBenchmarkTab('nebrodi')">Comuni limitrofi & Nebrodi (2025)</button>
+          <button class="benchmark-tab-btn" id="btn-tab-regione" onclick="window.AppCharts.setBenchmarkTab('regione')">Serie Storica Comparativa (Tortorici vs Sicilia vs Italia)</button>
+        </div>
         <div id="benchmark-table-container"></div>
       </div>
     </section>
@@ -534,6 +538,7 @@
               <option value="redditi">Redditi IRPEF e contribuenti (MEF OpenData 2001–2024)</option>
               <option value="veicoli">Parco veicolare e motorizzazione (ACI 2004–2016)</option>
               <option value="indici">Indici demografici e di struttura (2002–2025)</option>
+              <option value="benchmark_regione">Confronto serie storica: Tortorici vs Sicilia vs Italia (2002–2025)</option>
               <option value="stranieri_paesi">Cittadini stranieri per paese d'origine 2025</option>
               <option value="censimenti">Censimenti storici 1861–2021</option>
             </select>
@@ -558,13 +563,6 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h4>Tortorici: dati demografici e socioeconomici</h4>
-          <p>
-            Piattaforma di analisi statistica e modelli previsionali sviluppata su dati pubblici ISTAT, Ministero dell'Economia e delle Finanze, Automobile Club d'Italia e Tuttitalia.it.
-          </p>
-        </div>
-
-        <div class="footer-sources">
           <h5 style="color: #ffffff; margin-bottom: 0.4rem; font-size: 0.85rem;">Fonti ufficiali e riferimenti</h5>
           <ul>
             <li>• ISTAT - Istituto Nazionale di Statistica (Censimento permanente e serie anagrafiche)</li>
@@ -584,10 +582,10 @@
   </footer>
 
   <!-- Script applicativi con cache-busting -->
-  <script src="js/data.js?v=3.9"></script>
-  <script src="js/charts.js?v=3.9"></script>
-  <script src="js/map.js?v=3.9"></script>
-  <script src="js/simulator.js?v=3.9"></script>
-  <script src="js/app.js?v=3.9"></script>
+  <script src="js/data.js?v=4.0"></script>
+  <script src="js/charts.js?v=4.0"></script>
+  <script src="js/map.js?v=4.0"></script>
+  <script src="js/simulator.js?v=4.0"></script>
+  <script src="js/app.js?v=4.0"></script>
 </body>
 </html>

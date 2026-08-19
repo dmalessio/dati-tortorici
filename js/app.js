@@ -316,6 +316,47 @@ document.addEventListener('DOMContentLoaded', () => {
           { key: 'tasso_mortalita_per_mille', label: 'Tasso mortalità (‰)', format: (v) => v !== null ? v.toLocaleString('it-IT') : '-' }
         ]
       },
+      'benchmark_regione': {
+        title: 'Serie storica comparativa: Tortorici vs Sicilia vs Italia (2002-2025)',
+        filename: 'confronto_benchmark_italia_sicilia_2002_2025.csv',
+        data: (data.benchmark_italia_serie || []).map(it => {
+          const sic = (data.benchmark_sicilia_serie || []).find(s => s.anno === it.anno) || {};
+          const torPir = (data.piramidi_eta_annuali || []).find(p => p.anno === it.anno);
+          const torInd = (data.indici_demografici || []).find(x => parseInt(x.anno) === it.anno);
+          const torMef = (data.redditi_irpef || []).find(m => m.anno === it.anno);
+          const torTot = torPir && torPir.fasce ? torPir.fasce.reduce((a,b) => a+b.totale, 0) : '-';
+          return {
+            anno: it.anno,
+            tortorici_pop: torTot,
+            sicilia_pop: sic.pop_totale || '-',
+            italia_pop: it.pop_totale || '-',
+            tortorici_vecchiaia: torInd && torInd.indice_vecchiaia ? torInd.indice_vecchiaia.toFixed(1) + '%' : '-',
+            sicilia_vecchiaia: sic.indice_vecchiaia !== null ? sic.indice_vecchiaia.toFixed(1) + '%' : '-',
+            italia_vecchiaia: it.indice_vecchiaia !== null ? it.indice_vecchiaia.toFixed(1) + '%' : '-',
+            tortorici_ids: torInd && torInd.indice_dipendenza_strutturale ? torInd.indice_dipendenza_strutturale.toFixed(1) + '%' : '-',
+            sicilia_ids: sic.dipendenza_strutturale !== null ? sic.dipendenza_strutturale.toFixed(1) + '%' : '-',
+            italia_ids: it.dipendenza_strutturale !== null ? it.dipendenza_strutturale.toFixed(1) + '%' : '-',
+            tortorici_reddito: torMef && torMef.reddito_medio_imponibile_dichiarante_euro ? '€ ' + torMef.reddito_medio_imponibile_dichiarante_euro.toLocaleString('it-IT') : '-',
+            sicilia_reddito: sic.reddito_medio_irpef ? '€ ' + sic.reddito_medio_irpef.toLocaleString('it-IT') : '-',
+            italia_reddito: it.reddito_medio_irpef ? '€ ' + it.reddito_medio_irpef.toLocaleString('it-IT') : '-'
+          };
+        }),
+        columns: [
+          { key: 'anno', label: 'Anno' },
+          { key: 'tortorici_pop', label: 'Pop. Tortorici', format: (v) => typeof v === 'number' ? v.toLocaleString('it-IT') : v },
+          { key: 'sicilia_pop', label: 'Pop. Sicilia', format: (v) => typeof v === 'number' ? v.toLocaleString('it-IT') : v },
+          { key: 'italia_pop', label: 'Pop. Italia', format: (v) => typeof v === 'number' ? v.toLocaleString('it-IT') : v },
+          { key: 'tortorici_vecchiaia', label: 'Vecchiaia Tortorici' },
+          { key: 'sicilia_vecchiaia', label: 'Vecchiaia Sicilia' },
+          { key: 'italia_vecchiaia', label: 'Vecchiaia Italia' },
+          { key: 'tortorici_ids', label: 'IDS Tortorici' },
+          { key: 'sicilia_ids', label: 'IDS Sicilia' },
+          { key: 'italia_ids', label: 'IDS Italia' },
+          { key: 'tortorici_reddito', label: 'Reddito Tortorici' },
+          { key: 'sicilia_reddito', label: 'Reddito Sicilia' },
+          { key: 'italia_reddito', label: 'Reddito Italia' }
+        ]
+      },
       'censimenti': {
         title: 'Censimenti storici della popolazione (1861-2021)',
         filename: 'censimenti_storici_1861_2021.csv',
