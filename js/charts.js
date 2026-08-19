@@ -809,7 +809,7 @@ window.AppCharts = (function() {
           <div class="indicator-val" style="color: ${parseFloat(irca) < 100 ? '#b91c1c' : '#059669'};">${irca}%</div>
           <div class="indicator-formula">(Pop 15–29 / Pop 50–64) × 100</div>
           <div class="indicator-desc">Capacità di ricambio a medio termine: giovani occupabili (15–29) rispetto ai lavoratori vicini alla pensione (50–64).</div>
-          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia (IRPA): <strong>${bSic && bSic.ricambio_attiva !== null ? bSic.ricambio_attiva + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.ricambio_attiva !== null ? bIt.ricambio_attiva + "%" : "-"}</strong></span></div>
+          <div class="indicator-benchmark-footer"><span><span style="color:#0284c7;">●</span> Sicilia: <strong>${bSic && bSic.irca !== undefined ? bSic.irca + "%" : "-"}</strong></span><span><span style="color:#64748b;">●</span> Italia: <strong>${bIt && bIt.irca !== undefined ? bIt.irca + "%" : "-"}</strong></span></div>
         </div>
 
         <div class="indicator-card" style="border-left: 3.5px solid #d97706;">

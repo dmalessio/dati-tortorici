@@ -16,7 +16,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 21.2,
       "dipendenza_anziani": 27.9,
-      "reddito_medio_irpef": 16150
+      "reddito_medio_irpef": 16150,
+      "irca": 99.5
     },
     {
       "anno": 2003,
@@ -34,7 +35,8 @@
       "tasso_mortalita": 10.2,
       "dipendenza_giovani": 21.3,
       "dipendenza_anziani": 28.5,
-      "reddito_medio_irpef": 16600
+      "reddito_medio_irpef": 16600,
+      "irca": 96.6
     },
     {
       "anno": 2004,
@@ -52,7 +54,8 @@
       "tasso_mortalita": 9.4,
       "dipendenza_giovani": 21.2,
       "dipendenza_anziani": 28.9,
-      "reddito_medio_irpef": 17050
+      "reddito_medio_irpef": 17050,
+      "irca": 95.1
     },
     {
       "anno": 2005,
@@ -70,7 +73,8 @@
       "tasso_mortalita": 9.7,
       "dipendenza_giovani": 21.3,
       "dipendenza_anziani": 29.3,
-      "reddito_medio_irpef": 17500
+      "reddito_medio_irpef": 17500,
+      "irca": 93.4
     },
     {
       "anno": 2006,
@@ -88,7 +92,8 @@
       "tasso_mortalita": 9.5,
       "dipendenza_giovani": 21.3,
       "dipendenza_anziani": 29.8,
-      "reddito_medio_irpef": 17950
+      "reddito_medio_irpef": 17950,
+      "irca": 91.6
     },
     {
       "anno": 2007,
@@ -106,7 +111,8 @@
       "tasso_mortalita": 9.6,
       "dipendenza_giovani": 21.3,
       "dipendenza_anziani": 30.2,
-      "reddito_medio_irpef": 18400
+      "reddito_medio_irpef": 18400,
+      "irca": 89.1
     },
     {
       "anno": 2008,
@@ -124,7 +130,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 21.3,
       "dipendenza_anziani": 30.4,
-      "reddito_medio_irpef": 18850
+      "reddito_medio_irpef": 18850,
+      "irca": 87.6
     },
     {
       "anno": 2009,
@@ -142,7 +149,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 21.3,
       "dipendenza_anziani": 30.6,
-      "reddito_medio_irpef": 19100
+      "reddito_medio_irpef": 19100,
+      "irca": 85.9
     },
     {
       "anno": 2010,
@@ -160,7 +168,8 @@
       "tasso_mortalita": 9.7,
       "dipendenza_giovani": 21.4,
       "dipendenza_anziani": 30.8,
-      "reddito_medio_irpef": 19350
+      "reddito_medio_irpef": 19350,
+      "irca": 83.8
     },
     {
       "anno": 2011,
@@ -178,7 +187,8 @@
       "tasso_mortalita": 9.9,
       "dipendenza_giovani": 21.4,
       "dipendenza_anziani": 30.9,
-      "reddito_medio_irpef": 19740
+      "reddito_medio_irpef": 19740,
+      "irca": 81.6
     },
     {
       "anno": 2012,
@@ -196,7 +206,8 @@
       "tasso_mortalita": 10.3,
       "dipendenza_giovani": 21.5,
       "dipendenza_anziani": 32.0,
-      "reddito_medio_irpef": 20050
+      "reddito_medio_irpef": 20050,
+      "irca": 79.6
     },
     {
       "anno": 2013,
@@ -214,7 +225,8 @@
       "tasso_mortalita": 10.0,
       "dipendenza_giovani": 21.6,
       "dipendenza_anziani": 32.7,
-      "reddito_medio_irpef": 20200
+      "reddito_medio_irpef": 20200,
+      "irca": 78.1
     },
     {
       "anno": 2014,
@@ -232,7 +244,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 21.5,
       "dipendenza_anziani": 33.1,
-      "reddito_medio_irpef": 20450
+      "reddito_medio_irpef": 20450,
+      "irca": 76.9
     },
     {
       "anno": 2015,
@@ -250,7 +263,8 @@
       "tasso_mortalita": 10.7,
       "dipendenza_giovani": 21.4,
       "dipendenza_anziani": 33.7,
-      "reddito_medio_irpef": 20690
+      "reddito_medio_irpef": 20690,
+      "irca": 75.1
     },
     {
       "anno": 2016,
@@ -268,7 +282,8 @@
       "tasso_mortalita": 10.1,
       "dipendenza_giovani": 21.2,
       "dipendenza_anziani": 34.3,
-      "reddito_medio_irpef": 20940
+      "reddito_medio_irpef": 20940,
+      "irca": 73.4
     },
     {
       "anno": 2017,
@@ -286,7 +301,8 @@
       "tasso_mortalita": 10.7,
       "dipendenza_giovani": 21.0,
       "dipendenza_anziani": 34.8,
-      "reddito_medio_irpef": 21200
+      "reddito_medio_irpef": 21200,
+      "irca": 71.7
     },
     {
       "anno": 2018,
@@ -304,7 +320,8 @@
       "tasso_mortalita": 10.5,
       "dipendenza_giovani": 20.8,
       "dipendenza_anziani": 35.2,
-      "reddito_medio_irpef": 21500
+      "reddito_medio_irpef": 21500,
+      "irca": 70.3
     },
     {
       "anno": 2019,
@@ -322,7 +339,8 @@
       "tasso_mortalita": 10.6,
       "dipendenza_giovani": 20.6,
       "dipendenza_anziani": 35.8,
-      "reddito_medio_irpef": 21800
+      "reddito_medio_irpef": 21800,
+      "irca": 68.8
     },
     {
       "anno": 2020,
@@ -340,7 +358,8 @@
       "tasso_mortalita": 12.5,
       "dipendenza_giovani": 20.3,
       "dipendenza_anziani": 36.4,
-      "reddito_medio_irpef": 21570
+      "reddito_medio_irpef": 21570,
+      "irca": 67.3
     },
     {
       "anno": 2021,
@@ -358,7 +377,8 @@
       "tasso_mortalita": 11.9,
       "dipendenza_giovani": 20.3,
       "dipendenza_anziani": 37.0,
-      "reddito_medio_irpef": 22540
+      "reddito_medio_irpef": 22540,
+      "irca": 66.2
     },
     {
       "anno": 2022,
@@ -376,7 +396,8 @@
       "tasso_mortalita": 12.1,
       "dipendenza_giovani": 20.0,
       "dipendenza_anziani": 37.5,
-      "reddito_medio_irpef": 23150
+      "reddito_medio_irpef": 23150,
+      "irca": 64.7
     },
     {
       "anno": 2023,
@@ -394,7 +415,8 @@
       "tasso_mortalita": 11.4,
       "dipendenza_giovani": 19.6,
       "dipendenza_anziani": 37.8,
-      "reddito_medio_irpef": 23650
+      "reddito_medio_irpef": 23650,
+      "irca": 64.1
     },
     {
       "anno": 2024,
@@ -412,7 +434,8 @@
       "tasso_mortalita": 11.1,
       "dipendenza_giovani": 19.2,
       "dipendenza_anziani": 38.4,
-      "reddito_medio_irpef": 24100
+      "reddito_medio_irpef": 24100,
+      "irca": 63.9
     },
     {
       "anno": 2025,
@@ -430,7 +453,8 @@
       "tasso_mortalita": null,
       "dipendenza_giovani": 18.8,
       "dipendenza_anziani": 39.0,
-      "reddito_medio_irpef": 24500
+      "reddito_medio_irpef": 24500,
+      "irca": 63.8
     }
   ],
   "sicilia": [
@@ -450,7 +474,8 @@
       "tasso_mortalita": 9.3,
       "dipendenza_giovani": 25.9,
       "dipendenza_anziani": 25.7,
-      "reddito_medio_irpef": 13200
+      "reddito_medio_irpef": 13200,
+      "irca": 124.6
     },
     {
       "anno": 2003,
@@ -468,7 +493,8 @@
       "tasso_mortalita": 9.7,
       "dipendenza_giovani": 25.6,
       "dipendenza_anziani": 26.2,
-      "reddito_medio_irpef": 13600
+      "reddito_medio_irpef": 13600,
+      "irca": 121.8
     },
     {
       "anno": 2004,
@@ -486,7 +512,8 @@
       "tasso_mortalita": 8.9,
       "dipendenza_giovani": 25.2,
       "dipendenza_anziani": 26.4,
-      "reddito_medio_irpef": 14000
+      "reddito_medio_irpef": 14000,
+      "irca": 120.6
     },
     {
       "anno": 2005,
@@ -504,7 +531,8 @@
       "tasso_mortalita": 9.4,
       "dipendenza_giovani": 24.9,
       "dipendenza_anziani": 26.8,
-      "reddito_medio_irpef": 14400
+      "reddito_medio_irpef": 14400,
+      "irca": 117.6
     },
     {
       "anno": 2006,
@@ -522,7 +550,8 @@
       "tasso_mortalita": 9.2,
       "dipendenza_giovani": 24.6,
       "dipendenza_anziani": 27.3,
-      "reddito_medio_irpef": 14800
+      "reddito_medio_irpef": 14800,
+      "irca": 115.1
     },
     {
       "anno": 2007,
@@ -540,7 +569,8 @@
       "tasso_mortalita": 9.6,
       "dipendenza_giovani": 24.2,
       "dipendenza_anziani": 27.5,
-      "reddito_medio_irpef": 15200
+      "reddito_medio_irpef": 15200,
+      "irca": 111.9
     },
     {
       "anno": 2008,
@@ -558,7 +588,8 @@
       "tasso_mortalita": 9.5,
       "dipendenza_giovani": 23.7,
       "dipendenza_anziani": 27.6,
-      "reddito_medio_irpef": 15600
+      "reddito_medio_irpef": 15600,
+      "irca": 109.7
     },
     {
       "anno": 2009,
@@ -576,7 +607,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 23.3,
       "dipendenza_anziani": 27.6,
-      "reddito_medio_irpef": 15850
+      "reddito_medio_irpef": 15850,
+      "irca": 107.0
     },
     {
       "anno": 2010,
@@ -594,7 +626,8 @@
       "tasso_mortalita": 9.5,
       "dipendenza_giovani": 23.1,
       "dipendenza_anziani": 27.8,
-      "reddito_medio_irpef": 16100
+      "reddito_medio_irpef": 16100,
+      "irca": 104.1
     },
     {
       "anno": 2011,
@@ -612,7 +645,8 @@
       "tasso_mortalita": 10.0,
       "dipendenza_giovani": 22.9,
       "dipendenza_anziani": 28.0,
-      "reddito_medio_irpef": 16480
+      "reddito_medio_irpef": 16480,
+      "irca": 100.8
     },
     {
       "anno": 2012,
@@ -630,7 +664,8 @@
       "tasso_mortalita": 10.2,
       "dipendenza_giovani": 22.5,
       "dipendenza_anziani": 28.6,
-      "reddito_medio_irpef": 16650
+      "reddito_medio_irpef": 16650,
+      "irca": 96.3
     },
     {
       "anno": 2013,
@@ -648,7 +683,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 22.4,
       "dipendenza_anziani": 29.3,
-      "reddito_medio_irpef": 16750
+      "reddito_medio_irpef": 16750,
+      "irca": 94.4
     },
     {
       "anno": 2014,
@@ -666,7 +702,8 @@
       "tasso_mortalita": 9.8,
       "dipendenza_giovani": 22.2,
       "dipendenza_anziani": 29.8,
-      "reddito_medio_irpef": 16900
+      "reddito_medio_irpef": 16900,
+      "irca": 93.3
     },
     {
       "anno": 2015,
@@ -684,7 +721,8 @@
       "tasso_mortalita": 10.4,
       "dipendenza_giovani": 22.0,
       "dipendenza_anziani": 30.3,
-      "reddito_medio_irpef": 17150
+      "reddito_medio_irpef": 17150,
+      "irca": 90.7
     },
     {
       "anno": 2016,
@@ -702,7 +740,8 @@
       "tasso_mortalita": 9.9,
       "dipendenza_giovani": 21.8,
       "dipendenza_anziani": 30.8,
-      "reddito_medio_irpef": 17300
+      "reddito_medio_irpef": 17300,
+      "irca": 88.6
     },
     {
       "anno": 2017,
@@ -720,7 +759,8 @@
       "tasso_mortalita": 10.8,
       "dipendenza_giovani": 21.6,
       "dipendenza_anziani": 31.5,
-      "reddito_medio_irpef": 17500
+      "reddito_medio_irpef": 17500,
+      "irca": 85.8
     },
     {
       "anno": 2018,
@@ -738,7 +778,8 @@
       "tasso_mortalita": 10.5,
       "dipendenza_giovani": 21.4,
       "dipendenza_anziani": 32.0,
-      "reddito_medio_irpef": 17700
+      "reddito_medio_irpef": 17700,
+      "irca": 83.1
     },
     {
       "anno": 2019,
@@ -756,7 +797,8 @@
       "tasso_mortalita": 10.7,
       "dipendenza_giovani": 21.2,
       "dipendenza_anziani": 32.6,
-      "reddito_medio_irpef": 17890
+      "reddito_medio_irpef": 17890,
+      "irca": 80.5
     },
     {
       "anno": 2020,
@@ -774,7 +816,8 @@
       "tasso_mortalita": 11.4,
       "dipendenza_giovani": 21.0,
       "dipendenza_anziani": 33.5,
-      "reddito_medio_irpef": 17650
+      "reddito_medio_irpef": 17650,
+      "irca": 77.8
     },
     {
       "anno": 2021,
@@ -792,7 +835,8 @@
       "tasso_mortalita": 12.2,
       "dipendenza_giovani": 21.4,
       "dipendenza_anziani": 34.9,
-      "reddito_medio_irpef": 18400
+      "reddito_medio_irpef": 18400,
+      "irca": 74.8
     },
     {
       "anno": 2022,
@@ -810,7 +854,8 @@
       "tasso_mortalita": 12.3,
       "dipendenza_giovani": 21.0,
       "dipendenza_anziani": 35.2,
-      "reddito_medio_irpef": 18950
+      "reddito_medio_irpef": 18950,
+      "irca": 72.8
     },
     {
       "anno": 2023,
@@ -828,7 +873,8 @@
       "tasso_mortalita": 11.8,
       "dipendenza_giovani": 20.8,
       "dipendenza_anziani": 35.8,
-      "reddito_medio_irpef": 19450
+      "reddito_medio_irpef": 19450,
+      "irca": 71.6
     },
     {
       "anno": 2024,
@@ -846,7 +892,8 @@
       "tasso_mortalita": 11.0,
       "dipendenza_giovani": 20.6,
       "dipendenza_anziani": 36.5,
-      "reddito_medio_irpef": 19800
+      "reddito_medio_irpef": 19800,
+      "irca": 70.6
     },
     {
       "anno": 2025,
@@ -864,7 +911,8 @@
       "tasso_mortalita": null,
       "dipendenza_giovani": 20.3,
       "dipendenza_anziani": 37.3,
-      "reddito_medio_irpef": 20100
+      "reddito_medio_irpef": 20100,
+      "irca": 69.9
     }
   ]
 }
