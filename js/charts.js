@@ -635,6 +635,9 @@ window.AppCharts = (function() {
       </div>
     `;
 
+    container.innerHTML = html;
+  }
+
   // 8. Indicatori Analitici di Ricambio, Struttura e Invecchiamento Profondo
   function renderAdvancedStructure(year) {
     const container = document.getElementById('advanced-structure-container');
