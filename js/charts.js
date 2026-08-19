@@ -24,11 +24,15 @@ window.AppCharts = (function() {
   function init() {
     renderKPIs(currentYear);
     renderPyramid(currentYear, pyramidMode);
+    renderAdvancedStructure(currentYear);
     renderFlowDiagram(currentYear > 2024 ? 2024 : currentYear);
+    renderAdvancedFlows(currentYear > 2024 ? 2024 : currentYear);
     renderHistoryChart();
     renderSchoolChart(currentYear);
+    renderAdvancedSchool(currentYear);
     renderRedditiChart(currentYear);
     renderVeicoliChart(currentYear);
+    renderAdvancedEconomy(currentYear);
     renderBenchmarkChart();
   }
 
@@ -36,10 +40,14 @@ window.AppCharts = (function() {
     currentYear = year;
     renderKPIs(year);
     renderPyramid(year, pyramidMode);
+    renderAdvancedStructure(year);
     renderFlowDiagram(year > 2024 ? 2024 : year);
+    renderAdvancedFlows(year > 2024 ? 2024 : year);
     renderSchoolChart(year);
+    renderAdvancedSchool(year);
     renderRedditiChart(year);
     renderVeicoliChart(year);
+    renderAdvancedEconomy(year);
     highlightHistoryYear(year);
   }
 
@@ -627,10 +635,339 @@ window.AppCharts = (function() {
       </div>
     `;
 
-    container.innerHTML = html;
+  // 8. Indicatori Analitici di Ricambio, Struttura e Invecchiamento Profondo
+  function renderAdvancedStructure(year) {
+    const container = document.getElementById('advanced-structure-container');
+    if (!container || !data.piramidi_eta_annuali) return;
+
+    const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year) || data.piramidi_eta_annuali[data.piramidi_eta_annuali.length - 1];
+    if (!piramideData || !piramideData.fasce) return;
+
+    const fasce = piramideData.fasce;
+    const getF = (fname) => fasce.find(f => f.fascia_eta === fname);
+
+    // CWR: Pop 0-4 / Donne 15-49 * 1000
+    const f0_4 = getF('0-4');
+    const pop0_4 = f0_4 ? f0_4.totale : 0;
+    const fertileAges = ['15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49'];
+    const donne15_49 = fertileAges.reduce((acc, age) => {
+      const f = getF(age);
+      return acc + (f ? f.femmine : 0);
+    }, 0);
+    const cwr = donne15_49 > 0 ? ((pop0_4 / donne15_49) * 1000).toFixed(1) : '0';
+
+    // ISPA: Pop 40-64 / Pop 15-39 * 100
+    const matureAges = ['40-44', '45-49', '50-54', '55-59', '60-64'];
+    const youngAges = ['15-19', '20-24', '25-29', '30-34', '35-39'];
+    const pop40_64 = matureAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const pop15_39 = youngAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const ispa = pop15_39 > 0 ? ((pop40_64 / pop15_39) * 100).toFixed(1) : '0';
+
+    // IVP: Pop 80+ / Pop 65+ * 100
+    const over80Ages = ['80-84', '85-89', '90-94', '95-99', '100 e oltre', '100+'];
+    const over65Ages = ['65-69', '70-74', '75-79', '80-84', '85-89', '90-94', '95-99', '100 e oltre', '100+'];
+    const pop80Plus = over80Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const pop65Plus = over65Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const ivp = pop65Plus > 0 ? ((pop80Plus / pop65Plus) * 100).toFixed(1) : '0';
+
+    // PSR: Pop 80+ / Pop 50-64 * 100
+    const parentAges = ['50-54', '55-59', '60-64'];
+    const pop50_64 = parentAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const psr = pop50_64 > 0 ? ((pop80Plus / pop50_64) * 100).toFixed(1) : '0';
+
+    // SR 75+: Uomini 75+ / Donne 75+ * 100
+    const over75Ages = ['75-79', '80-84', '85-89', '90-94', '95-99', '100 e oltre', '100+'];
+    const uom75Plus = over75Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).maschi : 0), 0);
+    const don75Plus = over75Ages.reduce((acc, age) => acc + (getF(age) ? getF(age).femmine : 0), 0);
+    const sr75 = don75Plus > 0 ? ((uom75Plus / don75Plus) * 100).toFixed(1) : '0';
+
+    container.innerHTML = `
+      <div style="margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <h4 style="font-size: 0.925rem; font-weight: 700; color: var(--text-main); margin: 0;">
+          Indicatori analitici di struttura, ricambio e invecchiamento profondo (${year})
+        </h4>
+        <span style="font-size: 0.725rem; color: var(--text-subtle);">Derivati da micro-coorti anagrafiche ISTAT</span>
+      </div>
+      <div class="indicator-matrix-grid">
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Rapporto Bambini-Donne (CWR)</span>
+            <span class="indicator-acronym">Fecondità apparente</span>
+          </div>
+          <div class="indicator-val" style="color: #0284c7;">${cwr} ‰</div>
+          <div class="indicator-formula">(Pop 0–4 / Donne 15–49) × 1.000</div>
+          <div class="indicator-desc">Bambini sotto i 5 anni per 1.000 donne in età fertile. Proxy di fecondità recente al netto della mortalità infantile.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Invecchiamento Forze Lavoro (ISPA)</span>
+            <span class="indicator-acronym">Struttura attiva</span>
+          </div>
+          <div class="indicator-val" style="color: #d97706;">${ispa}%</div>
+          <div class="indicator-formula">(Pop 40–64 / Pop 15–39) × 100</div>
+          <div class="indicator-desc">Rapporto tra lavoratori maturi e giovani. Valori > 100% indicano una forza lavoro sbilanciata verso l'anzianità lavorativa.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Vecchiaia Profonda (IVP)</span>
+            <span class="indicator-acronym">Grandi anziani</span>
+          </div>
+          <div class="indicator-val" style="color: #be123c;">${ivp}%</div>
+          <div class="indicator-formula">(Pop 80+ / Pop 65+) × 100</div>
+          <div class="indicator-desc">Quota di ultraottantenni sul totale anziani: isola il bacino ad alto fabbisogno di cure e assistenza sociosanitaria continua.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Carico di Cura Figli-Genitori (PSR)</span>
+            <span class="indicator-acronym">Parent Support</span>
+          </div>
+          <div class="indicator-val" style="color: #7c3aed;">${psr}%</div>
+          <div class="indicator-formula">(Pop 80+ / Pop 50–64) × 100</div>
+          <div class="indicator-desc">Grandi anziani (80+) ogni 100 figli maturi (50–64 anni): misura la pressione potenziale di cura informale intrafamiliare.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Sex Ratio Longevità (SR 75+)</span>
+            <span class="indicator-acronym">Genere senile</span>
+          </div>
+          <div class="indicator-val" style="color: #059669;">${sr75}%</div>
+          <div class="indicator-formula">(Uomini 75+ / Donne 75+) × 100</div>
+          <div class="indicator-desc">Sopravvivenza differenziale per sesso: valori &lt; 100 evidenziano la forte incidenza di vedovanza e solitudine femminile avanzata.</div>
+        </div>
+      </div>
+    `;
   }
 
-  // 8. Benchmark Nebrodi
+  // 9. Modulo Tipologia Demografica di Webb & Efficacia dei Flussi
+  function renderAdvancedFlows(year) {
+    const container = document.getElementById('advanced-flow-container');
+    if (!container) return;
+
+    const yrFlow = year > 2024 ? 2024 : year;
+    const m = data.movimento_naturale.find(m => m.anno_riferimento.includes(String(yrFlow))) || data.movimento_naturale[data.movimento_naturale.length - 1];
+    const f = data.flussi_migratori.find(m => m.anno_riferimento.includes(String(yrFlow))) || data.flussi_migratori[data.flussi_migratori.length - 1];
+    const p = data.popolazione_andamento.find(p => p.anno_riferimento.includes(String(yrFlow))) || data.popolazione_andamento[data.popolazione_andamento.length - 1];
+
+    if (!m || !f) return;
+
+    const sn = m.saldo_naturale;
+    const sm = f.saldo_migratorio_totale;
+    const imm = (f.iscritti_da_altri_comuni || 0) + (f.iscritti_da_estero || 0) + (f.iscritti_altri || 0);
+    const emi = (f.cancellati_per_altri_comuni || 0) + (f.cancellati_per_estero || 0) + (f.cancellati_altri || 0);
+    const pop = p ? p.popolazione_residente : 6000;
+
+    // Webb classification
+    let webbTipo = 'G';
+    let webbBadgeClass = 'type-g';
+    let webbFormula = '|SM| > |SN|';
+    let webbDesc = 'Declino demografico a dominanza migratoria (l\'esodo verso l\'esterno supera il saldo naturale negativo)';
+
+    const tc = sn + sm;
+    if (tc >= 0) {
+      webbBadgeClass = 'type-prog';
+      if (sn >= 0 && sm < 0 && Math.abs(sn) >= Math.abs(sm)) { webbTipo = 'A'; webbFormula = 'SN(+) ≥ |SM(-)|'; webbDesc = 'Crescita: incremento naturale positivo supera perdite migratorie'; }
+      else if (sn >= 0 && sm >= 0 && sn >= sm) { webbTipo = 'B'; webbFormula = 'SN(+) ≥ SM(+)'; webbDesc = 'Crescita: incremento naturale prevale su immigrazione'; }
+      else if (sn >= 0 && sm >= 0 && sm > sn) { webbTipo = 'C'; webbFormula = 'SM(+) > SN(+)'; webbDesc = 'Crescita: immigrazione prevale su incremento naturale'; }
+      else if (sn < 0 && sm >= 0 && sm >= Math.abs(sn)) { webbTipo = 'D'; webbFormula = 'SM(+) ≥ |SN(-)|'; webbDesc = 'Crescita: immigrazione compensa e supera declino naturale'; }
+    } else {
+      if (sn < 0 && sm >= 0 && Math.abs(sn) > sm) { webbTipo = 'E'; webbBadgeClass = 'type-f'; webbFormula = '|SN(-)| > SM(+)'; webbDesc = 'Declino: declino naturale non compensato da immigrazione positiva'; }
+      else if (sn < 0 && sm < 0 && Math.abs(sn) >= Math.abs(sm)) { webbTipo = 'F'; webbBadgeClass = 'type-f'; webbFormula = '|SN(-)| ≥ |SM(-)|'; webbDesc = 'Declino a dominanza naturale/senile (mortalità e calo nascite pesano più dell\'esodo migratorio)'; }
+      else if (sn < 0 && sm < 0 && Math.abs(sm) > Math.abs(sn)) { webbTipo = 'G'; webbBadgeClass = 'type-g'; webbFormula = '|SM(-)| > |SN(-)|'; webbDesc = 'Declino a dominanza migratoria (l\'esodo migratorio supera il declino naturale negativo)'; }
+      else if (sn >= 0 && sm < 0 && Math.abs(sm) > sn) { webbTipo = 'H'; webbBadgeClass = 'type-h'; webbFormula = '|SM(-)| > SN(+)'; webbDesc = 'Declino: emigrazione negativa supera e annulla incremento naturale positivo'; }
+    }
+
+    // MEI, TCM, TTD
+    const mei = (imm + emi) > 0 ? ((Math.abs(imm - emi) / (imm + emi)) * 100).toFixed(1) : '0';
+    const tcm = Math.abs(sn) > 0 ? (sm / Math.abs(sn)).toFixed(2) : '0';
+    const ttd = pop > 0 ? (((m.nascite + m.decessi + imm + emi) / pop) * 1000).toFixed(1) : '0';
+
+    container.innerHTML = `
+      <div class="webb-panel">
+        <div class="webb-header">
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: var(--text-subtle); letter-spacing: 0.05em; margin-bottom: 0.2rem;">
+              Classificazione Dinamica di John W. Webb (1963) • Anno ${yrFlow}
+            </div>
+            <div style="font-size: 1.05rem; font-weight: 800; color: var(--text-main);">
+              Tipologia Demografica: <span class="webb-badge-type ${webbBadgeClass}">TIPO ${webbTipo} • ${webbFormula}</span>
+            </div>
+          </div>
+          <div style="font-size: 0.775rem; color: var(--text-subtle); max-width: 380px; text-align: right;">
+            Fonti metodologiche: <em>J.W. Webb (1963)</em>; <em>Kamińska & Mularczyk (2014)</em>; <em>Walaszek (Geographia Polonica, 2025)</em>.
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.85rem; line-height: 1.45;">
+          <strong>Diagnosi:</strong> ${webbDesc}. Nella serie storica ventennale 2002–2024, Tortorici è classificato come <strong>Tipo G per l'82,6% del tempo</strong> (19 anni su 23), evidenziando come l'esodo migratorio sia stato il vettore primario dello spopolamento (68,8% della perdita totale).
+        </p>
+
+        <div class="indicator-matrix-grid">
+          <div class="indicator-card">
+            <div class="indicator-card-head">
+              <span class="indicator-title">Efficacia Migratoria (MEI)</span>
+              <span class="indicator-acronym">Direzionalità</span>
+            </div>
+            <div class="indicator-val" style="color: #0284c7;">${mei}%</div>
+            <div class="indicator-formula">|Immigrati - Emigrati| / (Imm + Emi) × 100</div>
+            <div class="indicator-desc">Misura l'asimmetria dei flussi (0% = perfetta rotazione neutrale, 100% = flusso puramente unidirezionale in uscita).</div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-card-head">
+              <span class="indicator-title">Compensazione Migratoria (TCM)</span>
+              <span class="indicator-acronym">Impatto netto</span>
+            </div>
+            <div class="indicator-val" style="color: ${tcm < 0 ? '#b91c1c' : '#059669'};">${tcm}</div>
+            <div class="indicator-formula">Saldo Migratorio / |Saldo Naturale|</div>
+            <div class="indicator-desc">${tcm < 0 ? 'Negativo: l\'esodo migratorio aggrava il deficit tra nascite e decessi anziché compensarlo.' : 'Positivo: i flussi in entrata attenuano o superano il calo naturale.'}</div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-card-head">
+              <span class="indicator-title">Turnover Demografico (TTD)</span>
+              <span class="indicator-acronym">Mobilità totale</span>
+            </div>
+            <div class="indicator-val" style="color: #7c3aed;">${ttd} ‰</div>
+            <div class="indicator-formula">(Nascite + Decessi + Iscr + Canc) / Pop × 1.000</div>
+            <div class="indicator-desc">Intensità globale di ricambio e mobilità: ${ttd} eventi anagrafici annui ogni 1.000 residenti.</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // 10. Pianificazione Servizi Educativi (RPS)
+  function renderAdvancedSchool(year) {
+    const container = document.getElementById('advanced-school-container');
+    if (!container || !data.eta_scolastica_annuale) return;
+
+    const scolData = data.eta_scolastica_annuale.find(s => s.anno === year) || data.eta_scolastica_annuale[data.eta_scolastica_annuale.length - 1];
+    const items = scolData ? scolData.dati_eta : [];
+
+    let nido = items.filter(d => d.eta >= 0 && d.eta <= 2).reduce((a, b) => a + b.totale, 0);
+    let primaria = items.filter(d => d.eta >= 6 && d.eta <= 10).reduce((a, b) => a + b.totale, 0);
+
+    // Fallback 2002 if dati_eta is empty
+    if (items.length === 0) {
+      const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year);
+      if (piramideData && piramideData.fasce) {
+        const f0_4 = piramideData.fasce.find(f => f.fascia_eta === '0-4');
+        const f5_9 = piramideData.fasce.find(f => f.fascia_eta === '5-9');
+        nido = f0_4 ? Math.round(f0_4.totale * 0.6) : 0;
+        primaria = f5_9 ? f5_9.totale : 0;
+      }
+    }
+
+    const rps = primaria > 0 ? ((nido / primaria) * (5 / 3)).toFixed(2) : '0';
+    const isWarning = parseFloat(rps) < 1.0;
+
+    container.innerHTML = `
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+        <div>
+          <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.15rem;">
+            Pianificazione Servizi Educativi • Coorti Mobili Prospettiche (${year})
+          </div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);">
+            Rapporto di Pressione Scolastica Prospettica (RPS): 
+            <span style="font-size: 1.15rem; font-family: var(--font-mono); font-weight: 800; color: ${isWarning ? '#b91c1c' : '#059669'}; margin-left: 0.35rem;">${rps}</span>
+            <span class="badge" style="background: ${isWarning ? '#fef2f2' : '#ecfdf5'}; color: ${isWarning ? '#b91c1c' : '#059669'}; border-color: ${isWarning ? '#fecaca' : '#a7f3d0'}; margin-left: 0.5rem;">
+              ${isWarning ? 'Rischio contrazione classi (< 1,0)' : 'Stabilità coorti (≥ 1,0)'}
+            </span>
+          </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); max-width: 480px; line-height: 1.35;">
+          <strong>Formula:</strong> <code>(Pop 0–2 / Pop 6–10) × 5/3</code>. Misura il rapporto tra i bambini del nido e gli alunni della primaria normalizzato sui 5 anni di corso. Un valore inferiore a 1 indica una contrazione strutturale del numero di classi elementari nell'arco di 4–6 anni.
+        </div>
+      </div>
+    `;
+  }
+
+  // 11. Indicatori Ibridi Demografia, Fisco MEF e Mobilità ACI
+  function renderAdvancedEconomy(year) {
+    const container = document.getElementById('advanced-economy-container');
+    if (!container || !data.redditi_irpef) return;
+
+    // MEF
+    const rList = data.redditi_irpef;
+    const exactR = rList.find(r => r.anno === year);
+    const pastR = rList.filter(r => r.anno <= year);
+    const r = exactR || (pastR.length > 0 ? pastR[pastR.length - 1] : rList[rList.length - 1]);
+
+    // Piramide for active population
+    const piramideData = data.piramidi_eta_annuali.find(p => p.anno === year) || data.piramidi_eta_annuali[data.piramidi_eta_annuali.length - 1];
+    const fasce = piramideData ? piramideData.fasce : [];
+    const getF = (fname) => fasce.find(f => f.fascia_eta === fname);
+
+    const activeAges = ['15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64'];
+    const pop15_64 = activeAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+
+    const popTot = piramideData ? piramideData.totale_residenti : (r ? r.popolazione_residente : 6000);
+    const contr = r ? r.contribuenti_dichiaranti : 1;
+    const impTot = r ? r.ammontare_imponibile_totale_euro : 0;
+
+    const dipEco = contr > 0 ? ((popTot - contr) / contr).toFixed(2) : '0';
+    const pressAttiva = pop15_64 > 0 ? Math.round(impTot / pop15_64) : 0;
+
+    // ACI
+    const vList = data.parco_veicolare || [];
+    const exactV = vList.find(v => v.anno === year);
+    const pastV = vList.filter(v => v.anno <= year);
+    const v = exactV || (pastV.length > 0 ? pastV[pastV.length - 1] : vList[vList.length - 1]);
+
+    const driveAges = ['20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65-69'];
+    let pop18_69 = driveAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
+    const f15_19 = getF('15-19');
+    if (f15_19) pop18_69 += Math.round(f15_19.totale * 0.4);
+
+    const auto = v ? v.automobili : 0;
+    const motAttiva = pop18_69 > 0 ? Math.round((auto / pop18_69) * 1000) : 0;
+
+    container.innerHTML = `
+      <div style="margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <h4 style="font-size: 0.925rem; font-weight: 700; color: var(--text-main); margin: 0;">
+          Indicatori ibridi integrati: Demografia, Fisco MEF e Mobilità ACI (${year})
+        </h4>
+        <span style="font-size: 0.725rem; color: var(--text-subtle);">Incrocio anagrafico con dichiarazioni IRPEF e PRA</span>
+      </div>
+      <div class="indicator-matrix-grid">
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Dipendenza Economica Effettiva</span>
+            <span class="indicator-acronym">Carico fiscale</span>
+          </div>
+          <div class="indicator-val" style="color: #0284c7;">${dipEco}</div>
+          <div class="indicator-formula">(Pop Totale - Contribuenti) / Contribuenti</div>
+          <div class="indicator-desc">Numero di residenti non dichiaranti (minori, studenti, disoccupati, inattivi) a carico di ciascun contribuente IRPEF.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Capacità Imponibile / Pop. Attiva</span>
+            <span class="indicator-acronym">Produttività potenziale</span>
+          </div>
+          <div class="indicator-val" style="color: #059669;">${formatEuro(pressAttiva)}</div>
+          <div class="indicator-formula">Imponibile Totale MEF / Pop 15–64</div>
+          <div class="indicator-desc">Monte imponibile dichiarato rapportato ai soli residenti in età lavorativa (15–64 anni) anziché alla popolazione totale.</div>
+        </div>
+
+        <div class="indicator-card">
+          <div class="indicator-card-head">
+            <span class="indicator-title">Motorizzazione su Popolazione Attiva</span>
+            <span class="indicator-acronym">Dipendenza auto</span>
+          </div>
+          <div class="indicator-val" style="color: #d97706;">${formatInt(motAttiva)} auto</div>
+          <div class="indicator-formula">(Autovetture / Pop 18–69) × 1.000</div>
+          <div class="indicator-desc">Autovetture private per 1.000 residenti in età di guida effettiva (18–69 anni), depurato da minori e anziani non guidatori.</div>
+        </div>
+      </div>
+    `;
+  }
+
+  // 12. Benchmark Nebrodi
   function renderBenchmarkChart() {
     const container = document.getElementById('benchmark-table-container');
     if (!container) return;

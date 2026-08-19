@@ -24,6 +24,7 @@ Thumbs.db
 
 # Script di test, scratch ed elaborazione locale
 scripts/
+scratch/
 *.py
 
 # File sorgenti e documenti grezzi / binari
