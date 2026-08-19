@@ -1075,11 +1075,11 @@ window.AppCharts = (function() {
     const activeAges = ['15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64'];
     const pop15_64 = activeAges.reduce((acc, age) => acc + (getF(age) ? getF(age).totale : 0), 0);
 
-    const popTot = piramideData ? piramideData.totale_residenti : (r ? r.popolazione_residente : 6000);
+    const popTot = fasce.reduce((acc, f) => acc + f.totale, 0) || (r ? r.popolazione_residente : 6000);
     const contr = r ? r.contribuenti_dichiaranti : 1;
     const impTot = r ? r.ammontare_imponibile_totale_euro : 0;
 
-    const dipEco = contr > 0 ? ((popTot - contr) / contr).toFixed(2) : '0';
+    const dipEco = contr > 0 ? ((popTot - contr) / contr).toFixed(2) : '0.00';
     const pressAttiva = pop15_64 > 0 ? Math.round(impTot / pop15_64) : 0;
 
     // ACI
